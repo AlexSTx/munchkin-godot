@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlf3e8yttubnk"]
+
+[ext_resource type="Script" path="res://components/carta/carta.gd" id="1_31pn7"]
+[ext_resource type="Texture2D" uid="uid://c03w5gnd23asw" path="res://assets/exodia.jpeg" id="1_n7qbv"]
+
+[node name="Carta" type="Node2D"]
+script = ExtResource("1_31pn7")
+
+[node name="Imagem" type="Sprite2D" parent="."]
+texture = ExtResource("1_n7qbv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

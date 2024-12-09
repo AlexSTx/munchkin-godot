@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccrygul2ch8gu"]
+
+[ext_resource type="Script" path="res://scripts/scene_manager.gd" id="1_p3ek0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0odav"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="SceneManager" type="CanvasLayer"]
+layer = 128
+script = ExtResource("1_p3ek0")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0odav")

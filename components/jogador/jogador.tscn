@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d33juvc5ivks0"]
+
+[ext_resource type="Script" path="res://components/jogador/jogador.gd" id="1_78n86"]
+[ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://components/mao/mao.tscn" id="2_f78jb"]
+
+[node name="Jogador" type="Node2D"]
+script = ExtResource("1_78n86")
+
+[node name="Mao" parent="." instance=ExtResource("2_f78jb")]

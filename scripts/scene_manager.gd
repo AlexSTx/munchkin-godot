@@ -6,6 +6,7 @@ extends Node
 # a cena (.tscn) diretamente para poder trocar a cena.
 var scena_1 = preload('res://scenes/game.tscn')
 var scena_2 = preload('res://scenes/game2.tscn')
+var scena_3 = preload('res://scenes/Mesa.tscn')
 var scene_atual = 1
 
 func _ready():
@@ -14,10 +15,10 @@ func _ready():
 func change_scene():
 	# troca de cena em loop (1 -> 2 -> 1 -> 2 -> 1 -> ...)
 	if scene_atual == 1:
-		_change_to(scena_2)
-		scene_atual = 2
+		_change_to(scena_3)
+		scene_atual = 1
 	else:
-		_change_to(scena_1)
+		_change_to(scena_3)
 		scene_atual = 1
 
 func _change_to(scena: PackedScene):

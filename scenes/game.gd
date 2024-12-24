@@ -1,7 +1,7 @@
 extends Node2D
 
 # "onready" pega o Node antes da execução do _ready. Apenas para facilitar
-@onready var input = $CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/TextEdit
+#@onready var input = $CanvasLayer/PanelContainer/CenterContainer/VBoxContainer/TextEdit
 
 # executado 1 vez ao ser posto em uma cena
 func _ready():

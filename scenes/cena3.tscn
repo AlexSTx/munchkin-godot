@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dim8nn3r1he54"]
+
+[ext_resource type="PackedScene" uid="uid://dlf3e8yttubnk" path="res://components/carta/carta.tscn" id="1_x6opu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Carta" parent="." instance=ExtResource("1_x6opu")]
+position = Vector2(-8, -20)

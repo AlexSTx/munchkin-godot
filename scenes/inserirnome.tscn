@@ -1,0 +1,142 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv1aum5yo8cws"]
+
+[ext_resource type="Script" path="res://scenes/InserirNome.gd" id="1_mt5ep"]
+[ext_resource type="Texture2D" uid="uid://d1snsy4nmvgq6" path="res://assets/backgrounds/dark_souls_remastered_wallpaper__4k__by_danilloff_dgzpw6k-fullview.jpg" id="2_2oqhp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djtl4"]
+texture = ExtResource("2_2oqhp")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_was6f"]
+bg_color = Color(0.169245, 0.169245, 0.169245, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seiow"]
+bg_color = Color(0.929715, 0.929715, 0.929715, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 3
+shadow_offset = Vector2(0, 4)
+
+[node name="InserirNome" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mt5ep")
+
+[node name="Fundo" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.012
+offset_right = 8.0
+offset_bottom = 0.223938
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_djtl4")
+
+[node name="Nome" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Insira seu nome:"
+
+[node name="LineEdit" type="LineEdit" parent="Nome"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 2.131
+anchor_right = 0.5
+anchor_bottom = 2.131
+offset_left = -240.0
+offset_top = -32.502
+offset_right = 240.0
+offset_bottom = 32.498
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_was6f")
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.392
+anchor_top = 0.752
+anchor_right = 0.392
+anchor_bottom = 0.752
+offset_left = -91.584
+offset_top = -23.296
+offset_right = 92.416
+offset_bottom = 23.704
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_seiow")
+theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
+text = "Hospedar"
+
+[node name="Enter" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.391
+anchor_top = 0.901
+anchor_right = 0.391
+anchor_bottom = 0.901
+offset_left = 157.568
+offset_top = -119.848
+offset_right = 349.568
+offset_bottom = -72.848
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_seiow")
+theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
+text = "Entrar"
+
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.921
+anchor_right = 0.5
+anchor_bottom = 0.921
+offset_left = -64.0
+offset_top = -20.808
+offset_right = 64.0
+offset_bottom = 21.192
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_seiow")
+theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
+text = "Voltar"
+
+[connection signal="text_submitted" from="Nome/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

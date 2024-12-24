@@ -1,0 +1,116 @@
+[gd_scene load_steps=7 format=3 uid="uid://deam38xgqx7x8"]
+
+[ext_resource type="Script" path="res://scenes/Menu.gd" id="1_ywxrm"]
+[ext_resource type="Texture2D" uid="uid://d1snsy4nmvgq6" path="res://assets/backgrounds/dark_souls_remastered_wallpaper__4k__by_danilloff_dgzpw6k-fullview.jpg" id="2_8flav"]
+[ext_resource type="FontFile" uid="uid://caxypl3l1o65u" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_elyjf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fsq4c"]
+texture = ExtResource("2_8flav")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gnj45"]
+bg_color = Color(0.362829, 0.362829, 0.362829, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 3
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seiow"]
+bg_color = Color(0.929715, 0.929715, 0.929715, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 3
+shadow_offset = Vector2(0, 4)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+script = ExtResource("1_ywxrm")
+
+[node name="Fundo" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.8
+anchor_bottom = 16.2
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fsq4c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 13.4
+anchor_top = 9.9
+anchor_right = 13.4
+anchor_bottom = 9.9
+offset_left = -168.0
+offset_top = -76.0
+offset_right = 168.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Iniciar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_gnj45")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_seiow")
+theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
+text = "Iniciar jogo"
+
+[node name="Configuracoes" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
+text = "Configurações"
+
+[node name="Sair" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
+text = "Sair"
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 13.462
+anchor_top = 3.5
+anchor_right = 13.462
+anchor_bottom = 3.5
+offset_left = -229.48
+offset_top = -60.0
+offset_right = 229.52
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_fonts/font = ExtResource("3_elyjf")
+theme_override_font_sizes/font_size = 100
+text = "Munchkin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Configuracoes" to="." method="_on_configuracoes_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]

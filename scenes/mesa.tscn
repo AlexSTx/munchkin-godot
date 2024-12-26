@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmnltqm60q0sd"]
+
+[ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://components/mao/mao.tscn" id="1_efr61"]
+[ext_resource type="PackedScene" uid="uid://dlf3e8yttubnk" path="res://components/carta/carta.tscn" id="2_3guh3"]
+
+[node name="Mesa" type="Node2D"]
+
+[node name="Mao" parent="." instance=ExtResource("1_efr61")]
+
+[node name="Carta" parent="Mao" instance=ExtResource("2_3guh3")]
+position = Vector2(573, 320)

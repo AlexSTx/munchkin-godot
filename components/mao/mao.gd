@@ -1,10 +1,14 @@
 extends Node2D
 class_name Mao
 
+const MASK_COLLISION = 1
+const MASK_COLLISION_SLOT = 2
+
 # Permite adicionar um componente (cena) qualquer para ser usado pelo script através
 # do inspetor da Godot (painel do lado direito ao selecionar Node com este script)
 @export var carta: PackedScene
 @export var sprites: Array[Texture2D]
+
 var card_being_dragged
 var screen_size
 var is_hovering_on_card
@@ -33,7 +37,13 @@ func _input(event):
 			else:
 				card_being_dragged = null
 		else:  # Liberação do botão
+			var card_slot_found= raycast_check_for_card_slot()
+			if card_slot_found and not card_slot_found.card_in_slot:
+				card_being_dragged.position = card_slot_found.position
+				card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
+				card_slot_found.card_in_slot = true
 			card_being_dragged = null
+			
 				
 func connect_card_signals(carta):
 	carta.connect("hovered", on_hovered_over_card)
@@ -68,7 +78,7 @@ func raycast_check_for_card():
 	var parameters = PhysicsPointQueryParameters2D.new()
 	parameters.position = get_global_mouse_position()
 	parameters.collide_with_areas=true
-	parameters.collision_mask = 1
+	parameters.collision_mask = MASK_COLLISION
 	var result = space_state.intersect_point(parameters)
 	if result.size()>0:
 		
@@ -77,6 +87,19 @@ func raycast_check_for_card():
 	print("cheguei aqui")
 	return null
 
+func raycast_check_for_card_slot():
+	var space_state = get_world_2d().direct_space_state
+	var parameters = PhysicsPointQueryParameters2D.new()
+	parameters.position = get_global_mouse_position()
+	parameters.collide_with_areas=true
+	parameters.collision_mask = MASK_COLLISION_SLOT
+	var result = space_state.intersect_point(parameters)
+	if result.size()>0:
+		
+		return result[0].collider.get_parent()
+		
+	print("cheguei aqui")
+	return null
 
 # função pra sempre arrastar a carta que tiver no topo
 func get_card_with_highest_z_index(cartas):

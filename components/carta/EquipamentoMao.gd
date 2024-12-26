@@ -3,7 +3,7 @@ extends Item
 class_name EquipamentoMao
 
 var _qtd_maos: int
-
+var card_in_slot = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

@@ -9,3 +9,5 @@
 
 [node name="Carta" parent="Mao" instance=ExtResource("2_3guh3")]
 position = Vector2(573, 320)
+
+[node name="Carta2" parent="Mao" instance=ExtResource("2_3guh3")]

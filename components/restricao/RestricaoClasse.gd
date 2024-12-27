@@ -2,17 +2,14 @@ extends Restricao
 
 class_name RestricaoClasse
 
-# O nome das classes que satisfazem a restricao
-@export var classes : Array[String]
+# O nome da classe que satisfaz a restricao
+@export var classe : String
 
-func _init(p_classes : Array[String] = []) -> void:
-	self.classes = p_classes
+func _init(p_classe : String = "") -> void:
+	self.classe = classe
 
-# mock
-# NÃO FUNCIONA
 func satisfaz_condicao( alvo : Jogador ) -> bool:
-	for cls in self.classes:
-		if is_instance_of(alvo, cls):
+	for classe in alvo.equipamentos._classe:
+		if classe.titulo == self.classe:
 			return true
-	
 	return false

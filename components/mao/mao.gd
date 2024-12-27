@@ -3,23 +3,52 @@ class_name Mao
 
 const MASK_COLLISION = 1
 const MASK_COLLISION_SLOT = 2
-
+const CARD_SCENE_PATH = "res://components/carta/carta.tscn"
+const CARTA_LARGURA = 200
+const MAO_POS_Y = 890
+var tela_centro_x
 # Permite adicionar um componente (cena) qualquer para ser usado pelo script através
 # do inspetor da Godot (painel do lado direito ao selecionar Node com este script)
 @export var carta: PackedScene
 @export var sprites: Array[Texture2D]
-
+var limite=5
+var cartas_mao = []
 var card_being_dragged
 var screen_size
 var is_hovering_on_card
 func _ready() -> void:
+	tela_centro_x = get_viewport().size.x / 4
 	screen_size = get_viewport_rect().size
-#func pegarCartaNova() -> Carta:
-#	# instancia um componente que foi adicionado no painel direito pelo inspetor
-#	var instancia: Carta = carta.instantiate()
-#	instancia.setSprite(sprites.pop_front())
-#	return instancia
+	var card_scene = preload(CARD_SCENE_PATH)
+	for i in range (limite):
+		var nova_carta = card_scene.instantiate()
+		add_child(nova_carta)
+		nova_carta.name = "Carta"
+		add_carta_para_mao(nova_carta)
+		
+func add_carta_para_mao(carta_n):
+	if carta_n not in cartas_mao:
+		cartas_mao.insert(0,carta_n)
+		atualizar_pos_mao(carta_n)
+	else:
+		animar_carta_para_pos(carta_n, carta_n.pos_inicial_mao)
 	
+func atualizar_pos_mao(carta_n):
+	for i in range(cartas_mao.size()):
+		print (cartas_mao.size())
+		#calcula a posição da nova carta a partir do index passado
+		var nova_pos = Vector2(calcular_pos_carta(i), MAO_POS_Y)
+		carta_n.pos_inicial_mao = nova_pos 
+		animar_carta_para_pos(carta_n, nova_pos)
+
+func calcular_pos_carta(index):
+	var largura_total = cartas_mao.size()-1 * CARTA_LARGURA
+	var x_offset = tela_centro_x + index * CARTA_LARGURA - largura_total
+	return x_offset
+	
+func animar_carta_para_pos(carta_n, nova_pos):
+	var tween = get_tree().create_tween()
+	tween.tween_property(carta_n, "position", nova_pos, 0.1)
 func _process(delta: float) -> void:
 	if card_being_dragged:
 		var mouse_pos = get_global_mouse_position()
@@ -37,14 +66,15 @@ func _input(event):
 			else:
 				card_being_dragged = null
 		else:  # Liberação do botão
-			var card_slot_found= raycast_check_for_card_slot()
-			if card_slot_found and not card_slot_found.card_in_slot:
+			var card_slot_found = raycast_check_for_card_slot()
+			if card_slot_found and not card_slot_found.card_in_slot and card_being_dragged:
+				# Verifica se card_slot_found e card_being_dragged são válidos antes de acessar
 				card_being_dragged.position = card_slot_found.position
 				card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
 				card_slot_found.card_in_slot = true
+			elif carta:  # Garante que "carta" é válido antes de passar para a função
+				add_carta_para_mao(carta)
 			card_being_dragged = null
-			
-				
 func connect_card_signals(carta):
 	carta.connect("hovered", on_hovered_over_card)
 	carta.connect("hovered_off", on_hovered_off_card)

@@ -15,6 +15,7 @@ var _sprite: Texture2D
 var nivel: int
 var titulo: String
 var descricao: String
+var pos_inicial_mao=0
 
 
 func _ready() -> void:

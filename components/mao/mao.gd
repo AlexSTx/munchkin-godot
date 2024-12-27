@@ -3,7 +3,7 @@ class_name Mao
 
 const MASK_COLLISION = 1
 const MASK_COLLISION_SLOT = 2
-const CAMINHO_CENA_CARTA = "res://components/carta/carta.tscn"
+const MASK_COLLISION_PILHA = 4
 const CARTA_LARGURA = 200
 const MAO_POS_Y = 890
 var tela_centro_x
@@ -18,13 +18,9 @@ var tela_tam
 var is_hovering_on_card
 func _ready() -> void:
 	tela_centro_x = get_viewport().size.x / 4
+	$"../GerenciadorInput".connect("mouse_esq_solto", mouse_esq_solto)
 	tela_tam = get_viewport_rect().size
-	var cena_carta = preload(CAMINHO_CENA_CARTA)
-	for i in range (limite):
-		var nova_carta = cena_carta.instantiate()
-		add_child(nova_carta)
-		nova_carta.name = "Carta"
-		add_carta_para_mao(nova_carta)
+	
 		
 func add_carta_para_mao(carta_n):
 	if carta_n not in cartas_mao:
@@ -37,6 +33,10 @@ func remover_carta_da_mao(carta_n):
 	if carta_n in cartas_mao:
 		cartas_mao.erase(carta_n)
 		atualizar_pos_mao(carta_n)
+
+func mouse_esq_solto():
+	if carta_sendo_arrastada:
+		terminar_arraste()
 
 	
 func atualizar_pos_mao(carta_n):
@@ -56,6 +56,7 @@ func calcular_pos_carta(index):
 func animar_carta_para_pos(carta_n, nova_pos):
 	var tween = get_tree().create_tween()
 	tween.tween_property(carta_n, "position", nova_pos, 0.1)
+	
 func _process(delta: float) -> void:
 	if carta_sendo_arrastada:
 		var mouse_pos = get_global_mouse_position()
@@ -64,16 +65,16 @@ func _process(delta: float) -> void:
 		clamp(mouse_pos.y,0,tela_tam.y))
 		
 		
-func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			var carta = raycast_check_for_card()
-			if carta:
-				comecar_arraste(carta)
-		else:
-			if carta_sendo_arrastada:
-				terminar_arraste()
-			
+#func _input(event):
+	#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		#if event.pressed:
+			#var carta = raycast_check_for_card()
+			#if carta:
+				#comecar_arraste(carta)
+		#else:
+			#if carta_sendo_arrastada:
+				#terminar_arraste()
+			#
 			
 
 func comecar_arraste(carta):

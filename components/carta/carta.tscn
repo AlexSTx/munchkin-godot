@@ -7,7 +7,7 @@
 size = Vector2(180, 263)
 
 [node name="Carta" type="Node2D"]
-position = Vector2(273, 112)
+position = Vector2(151, 674)
 script = ExtResource("1_31pn7")
 
 [node name="Imagem" type="Sprite2D" parent="."]

@@ -13,3 +13,9 @@ func _process(delta: float) -> void:
 	
 func baterNaPorta() -> void:
 	Partida.get_mesa().get_porta()
+	
+func chamarMonstro(monstro: Monstro) -> void:
+	Partida
+
+func executar() -> void:
+	pass

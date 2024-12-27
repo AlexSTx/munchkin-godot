@@ -1,10 +1,8 @@
-extends Node2D
+extends Node
 
-class_name Mesa
+class_name Fase
 
-var _tesouro: PilhaTesouro
-var _porta: PilhaPorta
-var descarte: PilhaDescarte
+var titulo: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,8 +13,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func get_porta() -> PilhaPorta:
-	return _porta
-	
-func get_tesouro() -> PilhaTesouro:
-	return _tesouro
+func executar() -> void:
+	pass

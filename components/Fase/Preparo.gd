@@ -1,10 +1,6 @@
-extends Node2D
+extends "res://components/Fase/Fase.gd"
 
-class_name Mesa
-
-var _tesouro: PilhaTesouro
-var _porta: PilhaPorta
-var descarte: PilhaDescarte
+class_name Preparo
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,9 +10,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func get_porta() -> PilhaPorta:
-	return _porta
 	
-func get_tesouro() -> PilhaTesouro:
-	return _tesouro
+func baterNaPorta() -> void:
+	Partida.get_mesa().get_porta()

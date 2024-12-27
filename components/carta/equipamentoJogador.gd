@@ -10,7 +10,7 @@ var _botas : Botas
 var _equipamentoMao : Array[EquipamentoMao]
 var _modificadores : Array
 
-var card_in_slot = false
+var carta_no_slot = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

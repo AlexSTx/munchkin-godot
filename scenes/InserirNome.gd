@@ -1,7 +1,6 @@
 extends Control
 
-var player_name;
-
+var nome_jogador: String
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,10 +10,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_line_edit_text_submitted(new_text: String) -> void:
-	print(new_text)
-	
-
-
 func _on_voltar_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Menu.tscn")
+
+
+func _on_enter_pressed() -> void:
+	Sistema.cadastra(nome_jogador)
+	get_tree().change_scene_to_file("res://scenes/Partida.tscn")
+
+
+func _on_line_edit_text_changed(new_text: String) -> void:
+	nome_jogador = new_text

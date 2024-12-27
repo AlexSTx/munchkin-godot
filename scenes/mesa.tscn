@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://components/mao/mao.tscn" id="1_efr61"]
 [ext_resource type="PackedScene" uid="uid://dlf3e8yttubnk" path="res://components/carta/carta.tscn" id="2_3guh3"]
 [ext_resource type="PackedScene" uid="uid://cpycrr2rrrrkd" path="res://equipamento_jogador.tscn" id="3_pkjp7"]
-[ext_resource type="Script" path="res://components/carta/equipamentoJogador.gd" id="4_ledax"]
+[ext_resource type="Script" path="res://components/carta/EquipamentosJogador.gd" id="4_ledax"]
 
 [node name="Mesa" type="Node2D"]
 

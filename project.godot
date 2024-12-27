@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneManager="*res://scripts/scene_manager.tscn"
+Sistema="*res://Sistema.gd"
 
 [dotnet]
 

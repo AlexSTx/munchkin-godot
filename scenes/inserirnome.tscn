@@ -41,8 +41,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.012
-offset_right = 8.0
-offset_bottom = 0.223938
+offset_bottom = -4.776
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_djtl4")
@@ -138,5 +137,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_seiow")
 theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
 text = "Voltar"
 
-[connection signal="text_submitted" from="Nome/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_changed" from="Nome/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="Enter" to="." method="_on_enter_pressed"]
 [connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

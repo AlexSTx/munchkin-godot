@@ -1,7 +1,8 @@
-extends Node2D
+extends Node
 
 class_name Jogador
 
+var nome : String
 var mao : Mao
 var equipamentos : EquipamentosJogador
 var inventario : Inventario
@@ -13,10 +14,24 @@ var fuga : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	nome = ""
+	mao = Mao.new()
+	equipamentos = EquipamentosJogador.new()
+	inventario = Inventario.new()
+	nivel = 0
+	poder = 0
+	sexo = "Masculino"
+	ouro = 0
+	fuga = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	$"HSplitContainer/Nível".text = "Nível: "+ str(nivel)
+	$"Nome".text = nome
+	$"HSplitContainer/Ouro".text = "Ouro: " + str(ouro)
+	$"HSplitContainer/Poder".text = "Poder: " + str(poder)
+	
 	if Input.is_action_just_pressed("action"):
 		print("apretou meu chapa")
 		var carta : Carta = mao.pegar_carta_nova()
@@ -33,3 +48,6 @@ func vender_item(item : Item) -> int:
 
 func jogar_dado() -> int:
 	return randi() % 6 + 1
+
+func set_nome(novo_nome:String) -> void:
+	nome = novo_nome

@@ -9,8 +9,9 @@ func _ready() -> void:
 	var host = preload("res://jogador_host.tscn").instantiate()
 	print(host.nome)
 	get_tree().current_scene.add_child(host)
-	host.set_nome(Sistema._jogadores_cadastrados[0])
-
+	#Ahost.set_nome(Sistema._jogadores_cadastrados[0])
+	if Sistema._jogadores_cadastrados.size() > 0:
+		host.set_nome(Sistema._jogadores_cadastrados[0])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

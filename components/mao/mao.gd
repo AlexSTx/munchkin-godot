@@ -32,14 +32,21 @@ func add_carta_para_mao(carta_n):
 		atualizar_pos_mao(carta_n)
 	else:
 		animar_carta_para_pos(carta_n, carta_n.pos_inicial_mao)
+
+func remover_carta_da_mao(carta_n):
+	if carta_n in cartas_mao:
+		cartas_mao.erase(carta_n)
+		atualizar_pos_mao(carta_n)
+
 	
 func atualizar_pos_mao(carta_n):
 	for i in range(cartas_mao.size()):
 		print (cartas_mao.size())
 		#calcula a posição da nova carta a partir do index passado
 		var nova_pos = Vector2(calcular_pos_carta(i), MAO_POS_Y)
-		carta_n.pos_inicial_mao = nova_pos 
-		animar_carta_para_pos(carta_n, nova_pos)
+		if carta_n in cartas_mao:
+			carta_n.pos_inicial_mao = nova_pos 
+			animar_carta_para_pos(carta_n, nova_pos)
 
 func calcular_pos_carta(index):
 	var largura_total = cartas_mao.size()-1 * CARTA_LARGURA
@@ -59,22 +66,32 @@ func _process(delta: float) -> void:
 		
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		var carta = raycast_check_for_card()
 		if event.pressed:
+			var carta = raycast_check_for_card()
 			if carta:
-				card_being_dragged = carta
-			else:
-				card_being_dragged = null
-		else:  # Liberação do botão
-			var card_slot_found = raycast_check_for_card_slot()
-			if card_slot_found and not card_slot_found.card_in_slot and card_being_dragged:
-				# Verifica se card_slot_found e card_being_dragged são válidos antes de acessar
-				card_being_dragged.position = card_slot_found.position
-				card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
-				card_slot_found.card_in_slot = true
-			elif carta:  # Garante que "carta" é válido antes de passar para a função
-				add_carta_para_mao(carta)
-			card_being_dragged = null
+				comecar_arraste(carta)
+		else:
+			if card_being_dragged:
+				terminar_arraste()
+			
+			
+
+func comecar_arraste(carta):
+	card_being_dragged = carta
+
+func terminar_arraste():
+	var card_slot_found = raycast_check_for_card_slot()
+	if card_slot_found and not card_slot_found.card_in_slot:
+		remover_carta_da_mao(card_being_dragged)
+		# carta solta em um slot vazio
+		card_being_dragged.position = card_slot_found.position
+		card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
+		card_slot_found.card_in_slot = true
+	else:
+		add_carta_para_mao(card_being_dragged)
+	card_being_dragged = null
+
+			
 func connect_card_signals(carta):
 	carta.connect("hovered", on_hovered_over_card)
 	carta.connect("hovered_off", on_hovered_off_card)

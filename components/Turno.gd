@@ -23,18 +23,13 @@ func set_turno() -> void:
 	fases.append(preload("res://scenes/FaseFinal.tscn").instantiate())
 
 	add_child(fases[0]) # Adicionar novas fases aqui
-	add_child(fases[1])
-	add_child(fases[2])
-	
-	fases[1].visible = false
-	fases[2].visible = false
 	
 	fases[fase_atual].set_fase()
 
 func passar_fase() -> void:
 	print("Passou de fase")
 	remove_child(fases[fase_atual])
-	fases[fase_atual].visible = false
+	#fases[fase_atual].visible = false
 	var lista_jogadores = Partida.get_jogadores()
 	#passa pra próxima fase
 	if fase_atual < fases.size()-1:
@@ -49,7 +44,7 @@ func passar_fase() -> void:
 	add_child(fases[fase_atual])
 	fases[fase_atual].set_jogador_atual(get_jogador_atual())
 	fases[fase_atual].set_fase()
-	fases[fase_atual].visible = true
+	#fases[fase_atual].visible = true
 
 func get_jogador_atual() -> Jogador:
 	return Partida.get_jogadores()[jogador_atual]

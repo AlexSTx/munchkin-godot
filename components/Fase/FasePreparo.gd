@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 	pass
 	
 func TimerTimeout() -> void:
-	var opcoes = get_node("HBoxContainer")
 	opcoes.visible = true
 	timer.stop()
 

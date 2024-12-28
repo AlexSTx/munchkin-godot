@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b5l6klvhy02s"]
 
-[ext_resource type="Script" path="res://components/FaseFinal.gd" id="1_hgxg1"]
+[ext_resource type="Script" path="res://components/Fase/FaseFinal.gd" id="1_hgxg1"]
 
 [node name="Final" type="Control"]
 layout_mode = 3

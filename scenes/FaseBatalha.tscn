@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dfvbhxfmih73u"]
 
-[ext_resource type="Script" path="res://components/FaseBatalha.gd" id="1_gindh"]
+[ext_resource type="Script" path="res://components/Fase/FaseBatalha.gd" id="1_gindh"]
 
 [node name="Batalha" type="Control"]
 layout_mode = 3

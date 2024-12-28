@@ -89,4 +89,6 @@ text = "Buscar confusão"
 
 [node name="Timer" type="Timer" parent="."]
 
+[connection signal="button_up" from="HBoxContainer/BaterNaPorta" to="." method="BaterNaPorta"]
+[connection signal="button_up" from="HBoxContainer/ChamarMonstro" to="." method="ChamarMonstro"]
 [connection signal="timeout" from="Timer" to="." method="TimerTimeout"]

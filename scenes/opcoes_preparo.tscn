@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://kiiute1mg7n7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kjks"]
+bg_color = Color(0.797793, 0.302178, 0.27835, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+shadow_offset = Vector2(0, 2)
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.619
+anchor_right = 0.5
+anchor_bottom = 0.619
+offset_left = -325.0
+offset_top = -40.52
+offset_right = 325.0
+offset_bottom = 41.48
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="BaterNaPorta" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3kjks")
+text = "Bater na porta"
+
+[node name="ChamarMonstro" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3kjks")
+text = "Buscar confusão"

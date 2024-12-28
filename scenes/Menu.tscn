@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d4e5wm5kvq6pn"]
 
-[ext_resource type="Script" path="res://scenes/Menu.gd" id="1_ywxrm"]
+[ext_resource type="Script" path="res://components/Menu.gd" id="1_ywxrm"]
 [ext_resource type="Texture2D" uid="uid://d1snsy4nmvgq6" path="res://assets/backgrounds/dark_souls_remastered_wallpaper__4k__by_danilloff_dgzpw6k-fullview.jpg" id="2_8flav"]
 [ext_resource type="FontFile" uid="uid://caxypl3l1o65u" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_elyjf"]
 
@@ -30,8 +30,10 @@ shadow_offset = Vector2(0, 4)
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 3.0
+offset_right = 1922.0
+offset_bottom = 1081.0
+size_flags_horizontal = 4
 mouse_filter = 1
 script = ExtResource("1_ywxrm")
 
@@ -40,6 +42,8 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 28.8
 anchor_bottom = 16.2
+offset_right = -53430.6
+offset_bottom = -16383.6
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_fsq4c")
@@ -47,14 +51,14 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_fsq4c")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 13.4
-anchor_top = 9.9
-anchor_right = 13.4
-anchor_bottom = 9.9
-offset_left = -168.0
-offset_top = -76.0
-offset_right = 168.0
-offset_bottom = 92.0
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.5
+anchor_bottom = 0.65
+offset_left = -226.0
+offset_top = -100.7
+offset_right = 226.0
+offset_bottom = 101.3
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
@@ -92,21 +96,21 @@ text = "Sair"
 [node name="Titulo" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 13.462
-anchor_top = 3.5
-anchor_right = 13.462
-anchor_bottom = 3.5
-offset_left = -229.48
-offset_top = -60.0
-offset_right = 229.52
-offset_bottom = 60.0
+anchor_left = 0.5
+anchor_top = 0.318
+anchor_right = 0.5
+anchor_bottom = 0.318
+offset_left = -275.0
+offset_top = -72.804
+offset_right = 275.0
+offset_bottom = 72.196
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_fonts/font = ExtResource("3_elyjf")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 120
 text = "Munchkin"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd7hfpffqtxro"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7md2"]
+bg_color = Color(0.797793, 0.302178, 0.27835, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+shadow_offset = Vector2(0, 2)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -556.0
+offset_top = -389.0
+offset_right = 557.0
+offset_bottom = 389.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -479.5
+offset_top = -315.0
+offset_right = 480.5
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.338
+anchor_right = 0.5
+anchor_bottom = 0.338
+offset_left = -469.5
+offset_top = -134.964
+offset_right = 459.5
+offset_bottom = 38.036
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Adicionar cartas Monstro da mão do player aqui visualmente pra ele escolher qual monstro combater"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Confirmar" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.892
+anchor_right = 0.5
+anchor_bottom = 0.892
+offset_left = -144.5
+offset_top = -37.976
+offset_right = 145.5
+offset_bottom = 38.024
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_l7md2")
+text = "Confirmar"

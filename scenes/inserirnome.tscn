@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://usm20bfs4tlc"]
 
-[ext_resource type="Script" path="res://scenes/InserirNome.gd" id="1_mt5ep"]
+[ext_resource type="Script" path="res://components/InserirNome.gd" id="1_mt5ep"]
 [ext_resource type="Texture2D" uid="uid://d1snsy4nmvgq6" path="res://assets/backgrounds/dark_souls_remastered_wallpaper__4k__by_danilloff_dgzpw6k-fullview.jpg" id="2_2oqhp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djtl4"]

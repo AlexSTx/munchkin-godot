@@ -25,25 +25,18 @@ func _ready() -> void:
 	fuga = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	
-	$"HSplitContainer/Nível".text = "Nível: "+ str(nivel)
-	$"Nome".text = nome
-	$"HSplitContainer/Ouro".text = "Ouro: " + str(ouro)
-	$"HSplitContainer/Poder".text = "Poder: " + str(poder)
-	
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("action"):
 		print("apretou meu chapa")
 		var carta : Carta = mao.pegar_carta_nova()
 		carta.global_position = Vector2(randf_range(0, 1000), randf_range(0, 780))
 		mao.add_child(carta)
-		#carta.connect("carta_morreu")
 
 func _on_carta_morreu(carta : Carta) -> void:
 	print("anao, vou tirar a carta")
 	carta.queue_free()
 
-func vender_item(item : Item) -> int:
+func vender_item(_item : Item) -> int:
 	return 0
 
 func jogar_dado() -> int:

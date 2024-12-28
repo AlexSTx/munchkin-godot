@@ -28,11 +28,7 @@ func _init(_nome : String = "", _sexo : String = "Masculino") -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("action"):
-		print("apretou meu chapa")
-		var carta : Carta = mao.pegar_carta_nova()
-		carta.global_position = Vector2(randf_range(0, 1000), randf_range(0, 780))
-		mao.add_child(carta)
+	pass
 
 
 func _on_carta_morreu(carta : Carta) -> void:

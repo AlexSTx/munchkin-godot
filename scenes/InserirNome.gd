@@ -17,6 +17,8 @@ func _on_voltar_pressed() -> void:
 func _on_enter_pressed() -> void:
 	Sistema.cadastra(nome_jogador)
 	get_tree().change_scene_to_file("res://scenes/Partida.tscn")
+	Partida.set_scene()
+	
 
 
 func _on_line_edit_text_changed(new_text: String) -> void:

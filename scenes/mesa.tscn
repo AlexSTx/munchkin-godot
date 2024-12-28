@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmnltqm60q0sd"]
 
 [ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://components/mao/mao.tscn" id="1_efr61"]
-[ext_resource type="PackedScene" uid="uid://cpycrr2rrrrkd" path="res://equipamento_jogador.tscn" id="3_pkjp7"]
+[ext_resource type="PackedScene" uid="uid://cpycrr2rrrrkd" path="res://scenes/equipamento_jogador.tscn" id="3_pkjp7"]
 [ext_resource type="Script" path="res://components/carta/equipamentoJogador.gd" id="4_ledax"]
-[ext_resource type="PackedScene" uid="uid://btbhadkx5r2j3" path="res://pilha.tscn" id="4_tgc8t"]
+[ext_resource type="PackedScene" uid="uid://btbhadkx5r2j3" path="res://scenes/pilha.tscn" id="4_tgc8t"]
 [ext_resource type="Script" path="res://components/Pilha/Pilha.gd" id="5_d6v5y"]
 
 [node name="Mesa" type="Node2D"]

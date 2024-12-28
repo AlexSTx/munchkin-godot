@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d4e5wm5kvq6pn"]
 
-[ext_resource type="Script" path="res://scenes/Menu.gd" id="1_ywxrm"]
+[ext_resource type="Script" path="res://components/Menu.gd" id="1_ywxrm"]
 [ext_resource type="Texture2D" uid="uid://d1snsy4nmvgq6" path="res://assets/backgrounds/dark_souls_remastered_wallpaper__4k__by_danilloff_dgzpw6k-fullview.jpg" id="2_8flav"]
 [ext_resource type="FontFile" uid="uid://caxypl3l1o65u" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_elyjf"]
 

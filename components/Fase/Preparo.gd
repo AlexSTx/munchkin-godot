@@ -2,9 +2,13 @@ extends "res://components/Fase/Fase.gd"
 
 class_name Preparo
 
+@onready var timer = get_node("Timer")
+@onready var opcoes = get_node("HBoxContainer")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	timer.start()
+	opcoes.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,5 +25,7 @@ func baterNaPorta() -> void:
 	# 2- jogador pode escolher um monstro ( ou mais?? n tenho certeza)
 	# 3- botão de confirmar, que quando apertado, envia um sinal pro Turno passar a fase
 
-func executar() -> void:
-	pass
+func TimerTimeout() -> void:
+	var opcoes = get_node("HBoxContainer")
+	opcoes.visible = true
+	timer.stop()

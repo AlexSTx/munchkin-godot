@@ -13,12 +13,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func set_scene() -> void:
-	print("entrou")
-	var host = preload("res://jogador_host.tscn").instantiate()
+func set_Partida() -> void:
+	var host = preload("res://scenes/jogador_host.tscn").instantiate()
 	print(host.nome)
 	add_child(host)
-	
 	if Sistema._jogadores_cadastrados.size() > 0:
 		host.set_nome(Sistema._jogadores_cadastrados[0])
 		

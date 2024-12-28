@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd7hfpffqtxro"]
-
-[ext_resource type="Script" path="res://components/confusao_popup.gd" id="1_oi7kp"]
+[gd_scene load_steps=2 format=3 uid="uid://bd7hfpffqtxro"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7md2"]
 bg_color = Color(0.797793, 0.302178, 0.27835, 1)
@@ -35,7 +33,6 @@ offset_right = 557.0
 offset_bottom = 389.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oi7kp")
 
 [node name="Panel" type="Panel" parent="Panel"]
 layout_mode = 1
@@ -86,5 +83,3 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_l7md2")
 text = "Confirmar"
-
-[connection signal="button_up" from="Panel/Confirmar" to="Panel" method="_on_confirmar_button_up"]

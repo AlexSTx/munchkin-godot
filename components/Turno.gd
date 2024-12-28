@@ -2,9 +2,9 @@ extends Node
 
 class_name Turno
 
-var indice_jogador_atual: int #indice do jogador atual na lista de jogadores em Partida
+var jogador_atual: int #indice do jogador atual na lista de jogadores em Partida
 var fase_atual: int 
-var fases: Array[Fase]
+var fases: Array
 
 # Called when the node enters the scene tree for the first time.
 
@@ -16,15 +16,25 @@ func _process(delta: float) -> void:
 	pass
 
 func set_turno() -> void:
-	indice_jogador_atual = 0
-	#fases = [Preparo.new()]
-	#fase_atual = 0
-	#if indice_jogador_atual < Partida.get_jogadores().size():
-	#	fases[fase_atual].set_jogador_atual(Partida.get_jogadores()[indice_jogador_atual])
-	var preparo = preload("res://scenes/Preparo.tscn").instantiate()
-	add_child(preparo) # Adicionar novas fases aqui
+	jogador_atual = 0
+	fase_atual = 0
+	fases.append(preload("res://scenes/FasePreparo.tscn").instantiate())
+	fases.append(preload("res://scenes/FaseBatalha.tscn").instantiate())
+	fases.append(preload("res://scenes/FaseFinal.tscn").instantiate())
+
+	add_child(fases[0]) # Adicionar novas fases aqui
+	add_child(fases[1])
+	add_child(fases[2])
+	
+	fases[1].visible = false
+	fases[2].visible = false
+	
+	fases[fase_atual].set_fase()
 
 func passar_fase() -> void:
+	print("Passou de fase")
+	remove_child(fases[fase_atual])
+	fases[fase_atual].visible = false
 	var lista_jogadores = Partida.get_jogadores()
 	#passa pra próxima fase
 	if fase_atual < fases.size()-1:
@@ -32,13 +42,14 @@ func passar_fase() -> void:
 	#caso a fase seja a ultima, muda o jogador e volta pra fase inicial (Preparo)
 	else:
 		fase_atual = 0
-		if indice_jogador_atual < lista_jogadores.size()-1:
-			indice_jogador_atual += 1
-		else:
-			indice_jogador_atual = 0
-	fases[fase_atual].set_jogador_atual(lista_jogadores[indice_jogador_atual])
-	fases[fase_atual].executar() # ideia pro executar(): tornar nó visivel (e usar o _process() dele pra alterar
-								 # as labels baseadas no jogador atual, setado na linha de cima)
+		#if indice_jogador_atual < lista_jogadores.size()-1:
+		#	indice_jogador_atual += 1
+		#else:
+		#	indice_jogador_atual = 0
+	add_child(fases[fase_atual])
+	fases[fase_atual].set_jogador_atual(get_jogador_atual())
+	fases[fase_atual].set_fase()
+	fases[fase_atual].visible = true
 
 func get_jogador_atual() -> Jogador:
-	return Partida.get_jogadores()[indice_jogador_atual]
+	return Partida.get_jogadores()[jogador_atual]

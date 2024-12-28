@@ -1,20 +1,19 @@
-extends Node
+extends "res://components/Fase/Fase.gd"
 
-class_name Fase
-
-var titulo: String
-var jogador_atual: Jogador
+signal FimDaBatalha
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	connect("FimDaBatalha", Callable(Partida.get_turno(), "passar_fase"))
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func set_jogador_atual(jogador: Jogador) -> void:
-	jogador_atual = jogador
 
+func FimBatalha() -> void:
+	emit_signal("FimDaBatalha")
+	
 func set_fase() -> void:
 	pass

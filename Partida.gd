@@ -1,6 +1,6 @@
 extends Node
 
-var _jogadores: Array[Jogador]
+var _jogadores: Array
 var _turno: Turno
 var _mesa: Mesa
 
@@ -14,11 +14,11 @@ func _process(delta: float) -> void:
 	pass
 
 func set_Partida() -> void:
-	var host = preload("res://scenes/jogador_host.tscn").instantiate()
-	print(host.nome)
-	add_child(host)
+	_jogadores.append(preload("res://scenes/jogador_host.tscn").instantiate())
+	add_child(_jogadores[0])
+	
 	if Sistema._jogadores_cadastrados.size() > 0:
-		host.set_nome(Sistema._jogadores_cadastrados[0])
+		_jogadores[0].set_nome(Sistema._jogadores_cadastrados[0])
 		
 	_turno = Turno.new()
 	add_child(_turno)
@@ -29,3 +29,6 @@ func get_mesa() -> Mesa:
 
 func get_jogadores() -> Array:
 	return _jogadores
+
+func get_turno() -> Turno:
+	return _turno

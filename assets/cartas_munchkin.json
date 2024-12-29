@@ -192,14 +192,20 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO": "ALT_FORCA",
+			"VALOR": 3
+		}
+	]
   },
   {
 	"DECK": "PORTA",
 	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
 	"SUBTIPO": "",
-	"NIVEL": "",
+	"NIVEL": "2",
 	"NOME": "ESCUDO ONIPRESENTE",
 	"TEXTO": "SÓ PARA GUERREIROS",
 	"COISA RUIM": "",
@@ -207,7 +213,19 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "GUERREIRO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -222,7 +240,19 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"TAMANHO": "GRANDE"
+	"TAMANHO": "GRANDE",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 4,
+			"RESTRICOES": [
+				{
+					"TIPO": "RACA",
+					"VALOR": "HALFLING"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -237,7 +267,19 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "SEM VALOR",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 4,
+			"RESTRICOES": [
+				{
+					"TIPO": "SEXO",
+					"VALOR": "FEM"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -252,7 +294,13 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 4
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -267,7 +315,23 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3
+		},
+		{
+			"TIPO": "ESCAPE",
+			"TRIGGER": "DESCARTE",
+			"RESTRICOES": [
+				{
+					"TIPO": "NIVEL_OPONENTE_MENOR_QUE",
+					"VALOR": 8
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -282,7 +346,19 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "RACA",
+					"VALOR": "ELFO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -297,7 +373,13 @@
 	"QUANTO": 5,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "SEM VALOR",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 5
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -312,7 +394,23 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "RACA",
+					"VALOR": "ELFO"
+				}
+			]
+		},
+		{
+			"TIPO": "ALT_FORCA",
+			"VALOR": 1
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -327,7 +425,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 300,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "LADRAO",
+					"INVERSO": true
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -342,7 +453,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "CLERIGO",
+					"INVERSO": true
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -357,7 +481,13 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "GRANDE",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -372,7 +502,19 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": "GRANDE"
+	"TAMANHO": "GRANDE",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "CLERIGO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "PORTA",
@@ -387,7 +529,19 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "LADRAO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -402,7 +556,13 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 800,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 4
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -417,7 +577,19 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "MAGO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -432,7 +604,19 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3,
+			"RESTRICOES": [
+				{
+					"TIPO": "RACA",
+					"VALOR": "ELFO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -447,7 +631,13 @@
 	"QUANTO": 5,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 800,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 5
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -462,7 +652,19 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3,
+			"RESTRICOES": [
+				{
+					"TIPO": "RACA",
+					"VALOR": "HUMANO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -477,7 +679,13 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -492,7 +700,19 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 1,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "MAGO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -507,7 +727,13 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 1
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -522,7 +748,19 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 1,
+			"RESTRICOES": [
+				{
+					"TIPO": "RACA",
+					"VALOR": "ANAO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -537,7 +775,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 5,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "MAGO",
+					"INVERSO": true
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -552,7 +803,13 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FUGA",
+			"VALOR": 2
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -567,7 +824,18 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FUGA",
+			"VALOR": 3
+		},
+		{
+			"TIPO":"COMPRAR_CARTA",
+			"VALOR": 1,
+			"TRIGGER": "FUGA"
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -582,7 +850,19 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3,
+			"RESTRICOES": [
+				{
+					"TIPO": "RACA",
+					"VALOR": "ANAO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -597,7 +877,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "GUERREIRO",
+					"INVERSO": true
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -612,7 +905,19 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"RESTRICOES": [
+				{
+					"TIPO": "CLASSE",
+					"VALOR": "CLERIGO"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -627,7 +932,13 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -642,7 +953,13 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 4
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -657,7 +974,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"TRIGGER": "DESCARTE",
+			"RESTRICOES": [
+				{
+					"TIPO": "FASE",
+					"VALOR": "COMBATE_QUALQUER"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -672,7 +1002,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 5,
+			"TRIGGER": "DESCARTE",
+			"RESTRICOES": [
+				{
+					"TIPO": "FASE",
+					"VALOR": "COMBATE_QUALQUER"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -702,7 +1045,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"TRIGGER": "DESCARTE",
+			"RESTRICOES": [
+				{
+					"TIPO": "FASE",
+					"VALOR": "COMBATE_QUALQUER"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -717,7 +1073,19 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ESCAPE",
+			"TRIGGER": "DESCARTE",
+			"RESTRICOES": [
+				{
+					"TIPO": "FASE",
+					"VALOR": "COMBATE"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -747,7 +1115,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 2,
+			"TRIGGER": "DESCARTE",
+			"RESTRICOES": [
+				{
+					"TIPO": "FASE",
+					"VALOR": "COMBATE_QUALQUER"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",
@@ -777,7 +1158,20 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"TAMANHO": ""
+	"TAMANHO": "",
+	"EFEITOS": [
+		{
+			"TIPO":"ALT_FORCA",
+			"VALOR": 3,
+			"TRIGGER": "DESCARTE",
+			"RESTRICOES": [
+				{
+					"TIPO": "FASE",
+					"VALOR": "COMBATE_QUALQUER"
+				}
+			]
+		}
+	]
   },
   {
 	"DECK": "TESOURO",

@@ -20,7 +20,8 @@ var pos_inicial_mao
 
 func _ready() -> void:
 	#todas as cartas devem ser filhas de Mão ou vai dar erro
-	get_parent().connect_card_signals(self)
+	#get_parent().connect_card_signals(self)
+	pass
 
 # função "publica" para ser acessada por outros componentes/scripts
 func setSprite(sprite: Texture2D):

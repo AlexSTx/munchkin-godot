@@ -1,20 +1,22 @@
-extends "res://components/Fase/Fase.gd"
+class_name FaseBatalha extends Fase
 
-signal FimDaBatalha
+@onready var container = get_node("VSplitContainer")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	connect("FimDaBatalha", Callable(Partida.get_turno(), "passar_fase"))
+	container.visible = false
+
+func enter(previous_fase_path: String, data := {}) -> void:
+	container.visible = true
+	print("entered BATALHA")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+func exit() -> void: 
+	container.visible = false
 
 func FimBatalha() -> void:
-	emit_signal("FimDaBatalha")
+	finished.emit("Final", {})
 	
+
 func set_fase() -> void:
 	print("setou batalha")
 	pass

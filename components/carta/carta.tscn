@@ -10,7 +10,7 @@ size = Vector2(180, 263)
 position = Vector2(151, 674)
 script = ExtResource("1_31pn7")
 
-[node name="Imagem" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -3)
 texture = ExtResource("1_n7qbv")
 

@@ -9,28 +9,48 @@ const template : PackedScene = preload("res://components/carta/carta.tscn")
 func _ready() -> void:
 	criar_todas_as_cartas()
 
+static func int_if_not_empty(value, default : int = 0) -> int:
+	return value as int if value is not String else default
+
 static func criar_carta(dados : Dictionary) -> Carta:
 	var nova_carta : Node = template.instantiate()
 	
 	match dados['TIPO']:
 		"CLASSE":
 			nova_carta.set_script(Classe)
-			assert(nova_carta is Classe)
 			#TODO: Match para as diferentes classes quando as classes estiverem prontas
 		"EQUIPAMENTO":
 			nova_carta.set_script(Equipamento)
 			#TODO: Criar match quando o json tiver o subtipo separado
+			match dados['SUBTIPO']:
+				"CAPACETE":
+					nova_carta.set_script(Capacete)
+				"ARMADURA":
+					nova_carta.set_script(Armadura)
+				"BOTA":
+					nova_carta.set_script(Botas)
+				"ARMA1M":
+					nova_carta.set_script(EquipamentoMao)
+					(nova_carta as EquipamentoMao)._qtd_maos = 1
+				"ARMA2M":
+					nova_carta.set_script(EquipamentoMao)
+					(nova_carta as EquipamentoMao)._qtd_maos = 2
+
+			(nova_carta as Equipamento).valor = int_if_not_empty(dados['VALOR_MOEDA'])
 		"ITEM":
 			nova_carta.set_script(Item)
 			match dados['SUBTIPO']:
 				"POÇÃO":
 					nova_carta.set_script(Pocao)
 			
-			(nova_carta as Item).valor = dados['VALOR_MOEDA'] if dados['VALOR_MOEDA'] is not String else 0
+			(nova_carta as Item).valor = int_if_not_empty(dados['VALOR_MOEDA'])
 		"MALDIÇÃO":
+			#TODO: Implementar maldição
 			nova_carta.set_script(Maldicao)
 		"MONSTRO":
 			nova_carta.set_script(Monstro)
+			(nova_carta as Monstro).zumbi = dados['SUBTIPO'] == "MORTO VIVO"
+			(nova_carta as Monstro).tesouro = int_if_not_empty(dados['TESOUROS'], 1)
 		"RAÇA":
 			nova_carta.set_script(Raca)
 			#TODO: Match para as diferentes raças quando as classes estiverem prontas

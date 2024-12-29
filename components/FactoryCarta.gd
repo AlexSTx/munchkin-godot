@@ -5,10 +5,17 @@ class_name FactoryCarta
 static var arquivo_cartas := preload("res://assets/cartas_munchkin.json")
 const template : PackedScene = preload("res://components/carta/carta.tscn")
 
+# Existe somente para debug
+@export var cartas : Array[Dictionary]= []
 
 func _ready() -> void:
-	criar_todas_as_cartas()
-	criar_cartas_da_pilha("TESOURO")
+	var r_cartas = criar_todas_as_cartas()
+	for carta in r_cartas:
+		cartas.append({
+			"Carta": carta,
+			"ListaEfeitos": carta.get_node("ListaEfeitos")
+		})
+	# criar_cartas_da_pilha("TESOURO")
 
 static func int_if_not_empty(value, default : int = 0) -> int:
 	return value as int if value is not String else default
@@ -61,7 +68,67 @@ static func criar_carta(dados : Dictionary) -> Carta:
 	nova_carta.descricao = dados['TEXTO']
 	nova_carta.nivel = dados["NIVEL"] if dados['NIVEL'] is not String else 0
 	
+	# Lidando com efeitos
+
+	if "EFEITOS" in dados:
+		var efeitos = criar_lista_efeitos(dados['EFEITOS'])
+		nova_carta.get_node("ListaEfeitos").efeitos = efeitos
+
 	return nova_carta 
+
+# Aqui esperamos um array de efeitos
+static func criar_lista_efeitos(efeitos) -> Array[Efeito]:
+	var ret : Array[Efeito] = []
+
+	for ef in efeitos:
+		var novo_efeito : Efeito
+		var restricoes : Array[Restricao] = []
+		if "RESTRICOES" in ef:
+			restricoes = criar_lista_restricoes(ef['RESTRICOES'])
+		
+		match ef['TIPO']:
+			"ALT_FORCA":
+				novo_efeito = EfeitoAlterarForca.new(restricoes, ef['VALOR'])
+			"ESCAPE":
+				novo_efeito = EfeitoEscaparCombate.new(restricoes)
+			"ALT_FUGA":
+				novo_efeito = EfeitoAlterarChanceFuga.new(restricoes, ef['VALOR'])
+			"COMPRAR_CARTA":
+				novo_efeito = EfeitoComprarCarta.new(restricoes, ef['VALOR'])
+			var outro:
+				print("Efeito " + outro +" ainda não foi implementado.")
+				continue
+
+
+		ret.push_back(novo_efeito)
+
+	return ret
+
+static func criar_lista_restricoes(restricoes):
+	var ret : Array[Restricao] = []
+
+	for rest in restricoes:
+		var nova_restricao : Restricao
+		
+		match rest['TIPO']:
+			"FASE":
+				print("Restrição de fase ainda devem ser implementadas")
+				continue
+			"CLASSE":
+				var inverso = true if rest.get("INVERSO") else false
+				nova_restricao = RestricaoClasse.new(rest['VALOR'], inverso)
+			"RACA":
+				var inverso = true if rest.get("INVERSO") else false
+				nova_restricao = RestricaoRaca.new(rest['VALOR'], inverso)
+			var outra :
+				print("Restrição " + outra +" ainda não foi implementado.")
+				continue
+				
+		
+		ret.push_back(nova_restricao)
+
+
+	return ret
 
 static func criar_todas_as_cartas() -> Array[Carta]:
 	var ret : Array[Carta] = []

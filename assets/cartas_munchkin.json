@@ -8,11 +8,10 @@
 	"NOME": "CLERIGO",
 	"TEXTO": "RESSUREIÇÃO: QUANDO VOCÊ FOR PEGAR UMA CARTA ABERTA, EM VEZ DISSO, VOCÊ PODE COMPRAR A CARTA DO TOPO DA PILHA DE DESCARTE APROPRIADA. DEPOIS, VOCÊ TEM QUE DESCARTAR UMA CARTA DA SUA MÃO. ESPANTAR: VOCÊ POD DESCARTAR ATÉ 3 CARTAS DURANTE UM COMBATE CONTRA UM MORTO-VIVO. CADA CARTA DESCARTADA TE DÁ +3 DE BÔNUS",
 	"COISA RUIM": "",
-	"O QUE DÁ": "BÔNUS",
-	"QUANTO": 1,
+	"O QUE DÁ": "",
+	"QUANTO": "",
 	"TESOUROS": "",
-	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "ARMADURA",
+	"VALOR_MOEDA": "",
 	"TAMANHO": ""
   },
   {
@@ -24,11 +23,10 @@
 	"NOME": "CLERIGO",
 	"TEXTO": "RESSUREIÇÃO: QUANDO VOCÊ FOR PEGAR UMA CARTA ABERTA, EM VEZ DISSO, VOCÊ PODE COMPRAR A CARTA DO TOPO DA PILHA DE DESCARTE APROPRIADA. DEPOIS, VOCÊ TEM QUE DESCARTAR UMA CARTA DA SUA MÃO. ESPANTAR: VOCÊ POD DESCARTAR ATÉ 3 CARTAS DURANTE UM COMBATE CONTRA UM MORTO-VIVO. CADA CARTA DESCARTADA TE DÁ +3 DE BÔNUS",
 	"COISA RUIM": "",
-	"O QUE DÁ": "BÔNUS",
-	"QUANTO": 2,
+	"O QUE DÁ": "",
+	"QUANTO": "",
 	"TESOUROS": "",
-	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "MÃO",
+	"VALOR_MOEDA": "",
 	"TAMANHO": ""
   },
   {
@@ -40,27 +38,10 @@
 	"NOME": "CLERIGO",
 	"TEXTO": "RESSUREIÇÃO: QUANDO VOCÊ FOR PEGAR UMA CARTA ABERTA, EM VEZ DISSO, VOCÊ PODE COMPRAR A CARTA DO TOPO DA PILHA DE DESCARTE APROPRIADA. DEPOIS, VOCÊ TEM QUE DESCARTAR UMA CARTA DA SUA MÃO. ESPANTAR: VOCÊ POD DESCARTAR ATÉ 3 CARTAS DURANTE UM COMBATE CONTRA UM MORTO-VIVO. CADA CARTA DESCARTADA TE DÁ +3 DE BÔNUS",
 	"COISA RUIM": "",
-	"O QUE DÁ": "BÔNUS",
-	"QUANTO": 2,
-	"TESOUROS": "",
-	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "",
-	"TAMANHO": ""
-  },
-  {
-	"DECK": "PORTA",
-	"COR": "BEGE",
-	"TIPO": "CLASSE",
-	"SUBTIPO": "GUERREIRO",
-	"NIVEL": "",
-	"NOME": "GUERREIRO",
-	"TEXTO": "FÚRIA BERSEKER: VOCÊ PODE DESCARTAR ATÉ 3 CARTAS DURANTE O COMBATE; CADA UMA TE DÁ UM BÔNUS DE +1. VOCÊ VENCE OS COMBATES MESMO NO EMPATE.",
-	"COISA RUIM": "",
-	"O QUE DÁ": "NÍVEL",
-	"QUANTO": 1,
+	"O QUE DÁ": "",
+	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -75,8 +56,7 @@
 	"O QUE DÁ": "",
 	"QUANTO": "",
 	"TESOUROS": "",
-	"VALOR_MOEDA": 300,
-	"EQUIPAMENTO": "",
+	"VALOR_MOEDA": "",
 	"TAMANHO": ""
   },
   {
@@ -91,8 +71,22 @@
 	"O QUE DÁ": "",
 	"QUANTO": "",
 	"TESOUROS": "",
-	"VALOR_MOEDA": 500,
-	"EQUIPAMENTO": "",
+	"VALOR_MOEDA": "",
+	"TAMANHO": ""
+  },
+  {
+	"DECK": "PORTA",
+	"COR": "BEGE",
+	"TIPO": "CLASSE",
+	"SUBTIPO": "GUERREIRO",
+	"NIVEL": "",
+	"NOME": "GUERREIRO",
+	"TEXTO": "FÚRIA BERSEKER: VOCÊ PODE DESCARTAR ATÉ 3 CARTAS DURANTE O COMBATE; CADA UMA TE DÁ UM BÔNUS DE +1. VOCÊ VENCE OS COMBATES MESMO NO EMPATE.",
+	"COISA RUIM": "",
+	"O QUE DÁ": "",
+	"QUANTO": "",
+	"TESOUROS": "",
+	"VALOR_MOEDA": "",
 	"TAMANHO": ""
   },
   {
@@ -108,7 +102,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -124,7 +117,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -140,7 +132,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -156,7 +147,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -172,7 +162,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -188,15 +177,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "CAPACETE",
+	"NIVEL": 3,
 	"NOME": "ELMO DA CORAGEM",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -204,12 +192,11 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "ARMADURA",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
 	"SUBTIPO": "",
 	"NIVEL": "",
@@ -220,15 +207,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "CALÇADO",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA2M",
+	"NIVEL": 4,
 	"NOME": "ESCADA DE MÃO",
 	"TEXTO": "SÓ PARA HALFLINGS",
 	"COISA RUIM": "",
@@ -236,15 +222,14 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "MÃO",
-	"TAMANHO": ""
+	"TAMANHO": "GRANDE"
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA1M",
+	"NIVEL": 1,
 	"NOME": "ESPA-DONA",
 	"TEXTO": "SÓ PARA JOGADORES DO SEXO FEMININO (OU RAPAZES QUE TENHAM MUDADO DE SEXO).",
 	"COISA RUIM": "",
@@ -252,15 +237,14 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "SEM VALOR",
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA2M",
+	"NIVEL": 4,
 	"NOME": "ESPADA BASTARDA TRAIÇOEIRA",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -268,15 +252,14 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA1M",
+	"NIVEL": 3,
 	"NOME": "ESPETINHO DE RATO",
 	"TEXTO": "DESCARTE ESTA CARTA PARA ESCAPAR AUTOMATICAMENTE DE QUALQUER MONSTRO DE NÍVEL 8 OU MENOS.",
 	"COISA RUIM": "",
@@ -284,15 +267,14 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA1M",
+	"NIVEL": 2,
 	"NOME": "FLORENTE DA INJUSTIÇA",
 	"TEXTO": "SÓ PARA ELFOS",
 	"COISA RUIM": "",
@@ -300,15 +282,14 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
 	"SUBTIPO": "",
-	"NIVEL": "",
+	"NIVEL": 5,
 	"NOME": "JOELHEIRA PONTIAGUDAS",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -316,15 +297,14 @@
 	"QUANTO": 5,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "SEM VALOR",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "CAPACETE",
+	"NIVEL": 1,
 	"NOME": "ELMO CHIFRUDO",
 	"TEXTO": "+ 1 BÔNUS (+3 PARA OS ELFOS)",
 	"COISA RUIM": "",
@@ -332,15 +312,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA1M",
+	"NIVEL": 2,
 	"NOME": "ESPADA QUE CANTA E DANÇA",
 	"TEXTO": "NÃO FUNCIONA COM LADRÕES",
 	"COISA RUIM": "",
@@ -348,15 +327,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 300,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
 	"SUBTIPO": "",
-	"NIVEL": "",
+	"NIVEL": 2,
 	"NOME": "JOELHEIRAS DA SEDUÇÃO",
 	"TEXTO": "NÃO PODEM SER USADAS POR CLÉRIGOS. SE VOCÊ PEDIR PARA ALGUÉM COM MAIOR NÍVEL QUE VOCÊ AJUDÁ-LO A COMBATER UM MONSTRO, ESTE ALGUÉM NÃO PODERÁ SE RECUSAR NEM PEDIR QUALQUER RECOMPENSA. VOCÊ NÃO SOBE NÍVEL NESSE COMBATE.",
 	"COISA RUIM": "",
@@ -364,15 +342,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA2M",
+	"NIVEL": 3,
 	"NOME": "LANÇA MUITO GRANDE",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -380,15 +357,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA1M",
+	"NIVEL": 3,
 	"NOME": "MAÇA AFIADA",
 	"TEXTO": "SÓ PARA CLÉRIGOS",
 	"COISA RUIM": "",
@@ -396,15 +372,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
-	"TAMANHO": ""
+	"TAMANHO": "GRANDE"
   },
   {
 	"DECK": "PORTA",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMADURA",
+	"NIVEL": 2,
 	"NOME": "MANTO DAS SOMBRAS",
 	"TEXTO": "SÓ PARA LADRÕES",
 	"COISA RUIM": "",
@@ -412,15 +387,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "BOTA",
+	"NIVEL": 4,
 	"NOME": "BOTAS DE CHUTAR A BUNDA",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -428,15 +402,14 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 800,
-	"EQUIPAMENTO": "2 MÃOS",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA2M",
+	"NIVEL": 2,
 	"NOME": "CAJADO DE NAPALM",
 	"TEXTO": "SÓ PARA MAGOS",
 	"COISA RUIM": "",
@@ -444,15 +417,14 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "CALÇADO",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA1M",
+	"NIVEL": 3,
 	"NOME": "ARCO DE FITINHAS",
 	"TEXTO": "SÓ PARA ELFOS",
 	"COISA RUIM": "",
@@ -460,15 +432,14 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMADURA",
+	"NIVEL": 5,
 	"NOME": "ARMADURA DE COURO",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -476,15 +447,14 @@
 	"QUANTO": 5,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 800,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "CAPACETE",
+	"NIVEL": 3,
 	"NOME": "BANDANA DE MACHÃO",
 	"TEXTO": "SÓ PARA HUMANOS",
 	"COISA RUIM": "",
@@ -492,15 +462,14 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMADURA",
+	"NIVEL": 3,
 	"NOME": "ARMADURA PEGAJOSA",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -508,15 +477,14 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "CAPACETE",
+	"NIVEL": 1,
 	"NOME": "CHAPÉU DE BRUXO DO PODER",
 	"TEXTO": "SÓ PARA MAGOS",
 	"COISA RUIM": "",
@@ -524,15 +492,14 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMADURA",
+	"NIVEL": 1,
 	"NOME": "ARMADURA FLAMEJANTE",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -540,15 +507,14 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMADURA",
+	"NIVEL": 1,
 	"NOME": "ARMADURA RECHONCHUDA",
 	"TEXTO": "SÓ PARA ANÕES",
 	"COISA RUIM": "",
@@ -556,15 +522,14 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMADURA",
+	"NIVEL": 5,
 	"NOME": "ARMADURA DE MITHRIL",
 	"TEXTO": "NÃO PODE SER USADA POR MAGOS",
 	"COISA RUIM": "",
@@ -572,14 +537,13 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
+	"SUBTIPO": "BOTA",
 	"NIVEL": "",
 	"NOME": "BOTAS PARA CORRER MUITO RÁPIDO",
 	"TEXTO": "VOCÊ RECEBE +2 PARA FUGIR",
@@ -588,12 +552,11 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
 	"SUBTIPO": "",
 	"NIVEL": "",
@@ -604,15 +567,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA2M",
+	"NIVEL": 3,
 	"NOME": "MARTELO DETONA JOELHO",
 	"TEXTO": "SO PARA ANÕES",
 	"COISA RUIM": "",
@@ -620,15 +582,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
 	"SUBTIPO": "",
-	"NIVEL": "",
+	"NIVEL": 3,
 	"NOME": "MEIA-CALÇA DA FORÇA DO GIGANTE",
 	"TEXTO": "NÃO É PARA GUERREIROS",
 	"COISA RUIM": "",
@@ -636,15 +597,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA1M",
+	"NIVEL": 2,
 	"NOME": "RALADOR DE QUEIJO DA PAZ",
 	"TEXTO": "SÓ PARA CLÉRIGOS",
 	"COISA RUIM": "",
@@ -652,15 +612,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "BOTA",
+	"NIVEL": 2,
 	"NOME": "SANDÁLIAS DA PROTEÇÃO",
 	"TEXTO": "AS CARTAS DE MALDIÇÃO QUE VOCÊ COMPRAR QUANDO ABRIR UMA PORTA NÃO TEM EFEITO. (AS MALDIÇÕES QUE OUTROS JOGADORES LANÇAREM SOBRE VOCÊ CONTINUARÃO FUNCIONANDO.)",
 	"COISA RUIM": "",
@@ -668,15 +627,14 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
 	"DECK": "TESOURO",
-	"COR": "ROXO +",
+	"COR": "ROXO",
 	"TIPO": "EQUIPAMENTO",
-	"SUBTIPO": "",
-	"NIVEL": "",
+	"SUBTIPO": "ARMA2M",
+	"NIVEL": 4,
 	"NOME": "SERRA ELÉTRICA DE MUTILAÇÃO SANGRENTA",
 	"TEXTO": "",
 	"COISA RUIM": "",
@@ -684,7 +642,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -700,7 +657,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -716,7 +672,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -732,7 +687,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -748,7 +702,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -764,7 +717,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -780,7 +732,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -796,7 +747,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -812,7 +762,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -828,7 +777,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -844,7 +792,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -860,7 +807,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 1300,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -876,7 +822,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -892,7 +837,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -908,7 +852,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -924,7 +867,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "CABEÇA",
 	"TAMANHO": ""
   },
   {
@@ -940,7 +882,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "CABEÇA",
 	"TAMANHO": ""
   },
   {
@@ -956,7 +897,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": ""
   },
   {
@@ -972,7 +912,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -988,7 +927,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1004,7 +942,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 700,
-	"EQUIPAMENTO": "CALÇADO",
 	"TAMANHO": ""
   },
   {
@@ -1020,7 +957,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1036,7 +972,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1052,7 +987,6 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": "GRANDE"
   },
   {
@@ -1068,7 +1002,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 300,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1084,7 +1017,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1100,7 +1032,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1116,7 +1047,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1132,7 +1062,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1148,7 +1077,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1164,7 +1092,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1180,7 +1107,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1196,7 +1122,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1212,7 +1137,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1228,7 +1152,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1244,7 +1167,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1260,7 +1182,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1276,7 +1197,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1292,7 +1212,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1308,7 +1227,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1324,7 +1242,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1340,7 +1257,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1356,7 +1272,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1372,7 +1287,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1388,7 +1302,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1404,7 +1317,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1420,7 +1332,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1436,7 +1347,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1452,7 +1362,6 @@
 	"QUANTO": 2,
 	"TESOUROS": 4,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1468,7 +1377,6 @@
 	"QUANTO": 2,
 	"TESOUROS": 4,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1484,7 +1392,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1500,7 +1407,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1516,7 +1422,6 @@
 	"QUANTO": 2,
 	"TESOUROS": 5,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1532,7 +1437,6 @@
 	"QUANTO": 2,
 	"TESOUROS": 5,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1548,7 +1452,6 @@
 	"QUANTO": 2,
 	"TESOUROS": 4,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1564,7 +1467,6 @@
 	"QUANTO": 2,
 	"TESOUROS": 4,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1580,7 +1482,6 @@
 	"QUANTO": "",
 	"TESOUROS": 3,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1596,7 +1497,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1612,7 +1512,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1628,7 +1527,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1644,7 +1542,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1660,7 +1557,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1676,7 +1572,6 @@
 	"QUANTO": "",
 	"TESOUROS": 3,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1692,7 +1587,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1708,7 +1602,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1724,7 +1617,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1740,7 +1632,6 @@
 	"QUANTO": "",
 	"TESOUROS": 4,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1756,7 +1647,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1772,7 +1662,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1788,7 +1677,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1804,7 +1692,6 @@
 	"QUANTO": "",
 	"TESOUROS": 4,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1820,7 +1707,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1836,7 +1722,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1852,7 +1737,6 @@
 	"QUANTO": "",
 	"TESOUROS": 3,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1868,7 +1752,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1884,7 +1767,6 @@
 	"QUANTO": "",
 	"TESOUROS": 2,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1900,7 +1782,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1916,7 +1797,6 @@
 	"QUANTO": "",
 	"TESOUROS": 3,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1932,7 +1812,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1948,7 +1827,6 @@
 	"QUANTO": "",
 	"TESOUROS": 3,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1964,7 +1842,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1980,7 +1857,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -1996,7 +1872,6 @@
 	"QUANTO": "",
 	"TESOUROS": 3,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2012,7 +1887,6 @@
 	"QUANTO": "",
 	"TESOUROS": 1,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2028,7 +1902,6 @@
 	"QUANTO": "",
 	"TESOUROS": 4,
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2044,7 +1917,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "ARMADURA",
 	"TAMANHO": "GRANDE"
   },
   {
@@ -2060,7 +1932,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "",
 	"TAMANHO": "GRANDE"
   },
   {
@@ -2076,7 +1947,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 1100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2092,7 +1962,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "ARMADURA",
 	"TAMANHO": ""
   },
   {
@@ -2108,7 +1977,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2124,7 +1992,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2140,7 +2007,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "2 MÃOS",
 	"TAMANHO": ""
   },
   {
@@ -2156,7 +2022,6 @@
 	"QUANTO": "1/3",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "CABEÇA",
 	"TAMANHO": ""
   },
   {
@@ -2172,7 +2037,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2188,7 +2052,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2204,7 +2067,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2220,7 +2082,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "2 MÃOS",
 	"TAMANHO": "GRANDE"
   },
   {
@@ -2236,7 +2097,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "2 MÃOS",
 	"TAMANHO": "GRANDE"
   },
   {
@@ -2252,7 +2112,6 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "ARMADURA",
 	"TAMANHO": ""
   },
   {
@@ -2268,7 +2127,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "CABEÇA",
 	"TAMANHO": ""
   },
   {
@@ -2284,7 +2142,6 @@
 	"QUANTO": 4,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": ""
   },
   {
@@ -2300,7 +2157,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "PERNAS",
 	"TAMANHO": ""
   },
   {
@@ -2316,7 +2172,6 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2332,7 +2187,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2348,7 +2202,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 600,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2364,7 +2217,6 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2380,7 +2232,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2396,7 +2247,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 200,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2412,7 +2262,6 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 100,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2428,7 +2277,6 @@
 	"QUANTO": 5,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 300,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2444,7 +2292,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2460,7 +2307,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2476,7 +2322,6 @@
 	"QUANTO": 1,
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2492,7 +2337,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 300,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2508,7 +2352,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 500,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2524,7 +2367,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2540,7 +2382,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2556,7 +2397,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2572,7 +2412,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2588,7 +2427,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2604,7 +2442,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2620,7 +2457,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2636,7 +2472,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2652,7 +2487,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2668,7 +2502,6 @@
 	"QUANTO": 3,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": ""
   },
   {
@@ -2684,7 +2517,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 300,
-	"EQUIPAMENTO": "MÃO",
 	"TAMANHO": "GRANDE"
   },
   {
@@ -2700,7 +2532,6 @@
 	"QUANTO": 2,
 	"TESOUROS": "",
 	"VALOR_MOEDA": 400,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2716,7 +2547,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": 500,
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2732,7 +2562,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2748,7 +2577,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2764,7 +2592,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   },
   {
@@ -2780,7 +2607,6 @@
 	"QUANTO": "",
 	"TESOUROS": "",
 	"VALOR_MOEDA": "",
-	"EQUIPAMENTO": "",
 	"TAMANHO": ""
   }
 ]

@@ -1,18 +1,30 @@
-extends "res://components/Fase/Fase.gd"
+class_name FaseFinal extends Fase
 
-signal FimDaFaseFinal
+@onready var prox = get_node("prox")
+@onready var label = get_node("Label")
 
-# Called when the node enters the scene tree for the first time.
+signal trocar_jogador
+
 func _ready() -> void:
-	connect("FimDaFaseFinal", Callable(Partida.get_turno(), "passar_fase"))
+	connect("trocar_jogador", Callable(Partida.get_turno(), "_trocar_jogador_atual"))
+	prox.visible = false
+	label.visible = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func enter(previous_fase_path: String, data := {}) -> void:
+	prox.visible = true
+	label.visible = true
+	print("entered FINAL")
+
+
+func exit() -> void: 
+	prox.visible = false
+	label.visible = false
+
 
 func _on_prox_button_up() -> void:
-	emit_signal("FimDaFaseFinal")
+	finished.emit("Preparo", {})
+
 
 func set_fase() -> void:
 	print("setou final")

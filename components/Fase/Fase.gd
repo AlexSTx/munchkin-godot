@@ -1,20 +1,21 @@
-extends Node
-
-class_name Fase
+class_name Fase extends Node
 
 var titulo: String
 var jogador_atual: Jogador
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+signal finished(next_fase_path: String, data: Dictionary)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func enter(previous_fase_path: String, data := {}) -> void:
 	pass
 
-func set_jogador_atual(jogador: Jogador) -> void:
-	jogador_atual = jogador
+func exit() -> void:
+	pass
+
+func handle_input(_event: InputEvent) -> void:
+	pass
+
+func update(_delta: float) -> void:
+	pass
 
 func set_fase() -> void:
 	pass

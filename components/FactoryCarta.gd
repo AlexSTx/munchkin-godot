@@ -8,6 +8,7 @@ const template : PackedScene = preload("res://components/carta/carta.tscn")
 
 func _ready() -> void:
 	criar_todas_as_cartas()
+	criar_cartas_da_pilha("TESOURO")
 
 static func int_if_not_empty(value, default : int = 0) -> int:
 	return value as int if value is not String else default
@@ -36,7 +37,7 @@ static func criar_carta(dados : Dictionary) -> Carta:
 					nova_carta.set_script(EquipamentoMao)
 					(nova_carta as EquipamentoMao)._qtd_maos = 2
 
-			(nova_carta as Equipamento).valor = int_if_not_empty(dados['VALOR_MOEDA'])
+			(nova_carta as Item).valor = int_if_not_empty(dados['VALOR_MOEDA'])
 		"ITEM":
 			nova_carta.set_script(Item)
 			match dados['SUBTIPO']:
@@ -66,6 +67,14 @@ static func criar_todas_as_cartas() -> Array[Carta]:
 	var ret : Array[Carta] = []
 	
 	for carta in arquivo_cartas.data:
+		ret.push_back(criar_carta(carta))
+	
+	return ret
+
+#TODO: Enum para representar as pilhas?
+static func criar_cartas_da_pilha(pilha : String):
+	var ret : Array[Carta] = []
+	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha):
 		ret.push_back(criar_carta(carta))
 	
 	return ret

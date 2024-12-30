@@ -10,7 +10,6 @@ func _init(p_restricoes : Array[Restricao] = [], p_num_cartas : int = 1) -> void
 	super(p_restricoes)
 	self.num_cartas = p_num_cartas
 
-# Nesse caso, o alvo é o monstro que queremos invocar no combate
 func aplicar( alvo : Object ) -> void:
 	super(alvo)
 	

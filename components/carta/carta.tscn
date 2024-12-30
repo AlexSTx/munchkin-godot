@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlf3e8yttubnk"]
+[gd_scene load_steps=5 format=3 uid="uid://dlf3e8yttubnk"]
 
 [ext_resource type="Script" path="res://components/carta/carta.gd" id="1_31pn7"]
 [ext_resource type="Texture2D" uid="uid://c03w5gnd23asw" path="res://assets/exodia.jpeg" id="1_n7qbv"]
+[ext_resource type="Script" path="res://components/Efeito/ListaEfeitos.gd" id="3_wck8a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbtmb"]
 size = Vector2(180, 263)
@@ -19,6 +20,9 @@ texture = ExtResource("1_n7qbv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_tbtmb")
+
+[node name="ListaEfeitos" type="Node" parent="."]
+script = ExtResource("3_wck8a")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

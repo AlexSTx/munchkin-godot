@@ -7,13 +7,12 @@ var fase_inicial : Fase
 
 var jogador_atual: int # indice do jogador atual na lista de jogadores em Partida
 
-
 func _ready() -> void:
+	print("qualquer pica aqui")
 	for fase_node: Fase in find_children("*", "Fase"):
 		fase_node.finished.connect(_trocar_de_fase)
 
 	fase_atual.enter("")
-
 
 func _trocar_de_fase(next_fase_path: String, data: Dictionary) -> void:
 	if not has_node(next_fase_path):

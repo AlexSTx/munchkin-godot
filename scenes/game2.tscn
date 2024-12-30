@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://wscrcaurmdqw"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_smrnv"]
-[ext_resource type="PackedScene" uid="uid://d33juvc5ivks0" path="res://components/jogador/jogador.tscn" id="2_rylny"]
+[ext_resource type="PackedScene" uid="uid://d33juvc5ivks0" path="res://scenes/jogador.tscn" id="2_rylny"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_smrnv")

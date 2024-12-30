@@ -1,6 +1,4 @@
-extends Node2D
-
-class_name Mesa
+class_name Mesa extends Node2D
 
 var _tesouro: PilhaTesouro
 var _porta: PilhaPorta

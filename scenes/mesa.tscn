@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmnltqm60q0sd"]
+[gd_scene load_steps=6 format=3 uid="uid://cmnltqm60q0sd"]
 
-[ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://components/mao/mao.tscn" id="1_efr61"]
-[ext_resource type="PackedScene" uid="uid://c155r4no5l5h4" path="res://equipamento_jogador.tscn" id="3_pkjp7"]
-[ext_resource type="Script" path="res://components/carta/equipamentoJogador.gd" id="4_ledax"]
-[ext_resource type="PackedScene" uid="uid://byd2jimgsln8t" path="res://pilha.tscn" id="4_tgc8t"]
+[ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://scenes/mao.tscn" id="1_efr61"]
+[ext_resource type="PackedScene" uid="uid://c155r4no5l5h4" path="res://scenes/equipamento_jogador.tscn" id="3_pkjp7"]
+[ext_resource type="PackedScene" uid="uid://byd2jimgsln8t" path="res://scenes/pilha.tscn" id="4_tgc8t"]
 [ext_resource type="Script" path="res://components/Pilha/Pilha.gd" id="5_d6v5y"]
 [ext_resource type="Script" path="res://scenes/gerenciador_input.gd" id="5_vfncv"]
 
@@ -11,11 +10,10 @@
 
 [node name="Mao" parent="." instance=ExtResource("1_efr61")]
 
-[node name="EquipamentoMao" parent="." instance=ExtResource("3_pkjp7")]
+[node name="EquipamentoJogador" parent="." instance=ExtResource("3_pkjp7")]
 light_mask = 2
 visibility_layer = 2
 position = Vector2(137, 166)
-script = ExtResource("4_ledax")
 
 [node name="Pilha" parent="." instance=ExtResource("4_tgc8t")]
 position = Vector2(151, 674)

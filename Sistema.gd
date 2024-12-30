@@ -1,10 +1,9 @@
 extends Node
 
-var _jogadores_cadastrados: Array
+var _jogadores_cadastrados: Array[String]
 
 func cadastra(nome: String):
 	_jogadores_cadastrados.append(nome)
-	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

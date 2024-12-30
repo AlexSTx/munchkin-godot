@@ -11,7 +11,13 @@ signal hovered_off(carta: Carta)
 var nivel: int
 var titulo: String
 var descricao: String
+
 var pos_inicial_mao: Vector2
+
+# função "publica" para ser acessada por outros componentes/scripts
+func setSprite(sprite: Texture2D):
+	_sprite = sprite
+
 
 func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "") -> void:
 	nivel = _nivel

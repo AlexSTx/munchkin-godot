@@ -46,6 +46,7 @@ offset_right = -53430.6
 offset_bottom = -16383.6
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.998492, 0.998492)
 theme_override_styles/panel = SubResource("StyleBoxTexture_fsq4c")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

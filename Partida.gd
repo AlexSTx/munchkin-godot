@@ -7,10 +7,9 @@ var _mesa: Mesa
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func set_Partida() -> void:
@@ -20,9 +19,9 @@ func set_Partida() -> void:
 	if Sistema._jogadores_cadastrados.size() > 0:
 		_jogadores[0].set_nome(Sistema._jogadores_cadastrados[0])
 		
-	_turno = Turno.new()
+	_turno = preload("res://scenes/turno.tscn").instantiate()
 	add_child(_turno)
-	_turno.set_turno()
+
 
 func get_mesa() -> Mesa:
 	return _mesa

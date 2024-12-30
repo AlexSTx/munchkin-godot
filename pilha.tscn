@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://byd2jimgsln8t"]
+[gd_scene load_steps=4 format=3 uid="uid://chdna302g0hxp"]
 
 [ext_resource type="Texture2D" uid="uid://sd27mcs36gno" path="res://assets/porta.png" id="1_ifg7r"]
+[ext_resource type="Script" path="res://components/Pilha/PilhaPorta.gd" id="1_ofy2i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08v0s"]
 size = Vector2(177, 258)
 
 [node name="Pilha" type="Node2D"]
 position = Vector2(1023, 585)
+script = ExtResource("1_ofy2i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.99994, -7)

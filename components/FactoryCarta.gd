@@ -74,6 +74,8 @@ static func criar_carta(dados : Dictionary) -> Carta:
 		var efeitos = criar_lista_efeitos(dados['EFEITOS'])
 		nova_carta.get_node("ListaEfeitos").efeitos = efeitos
 
+	nova_carta.visible = false
+
 	return nova_carta 
 
 # Aqui esperamos um array de efeitos

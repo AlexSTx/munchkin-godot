@@ -13,7 +13,7 @@ var titulo: String
 var descricao: String
 
 var pos_inicial_mao: Vector2
-
+var _sprite : Texture2D
 # função "publica" para ser acessada por outros componentes/scripts
 func setSprite(sprite: Texture2D):
 	_sprite = sprite

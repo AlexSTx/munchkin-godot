@@ -71,7 +71,7 @@ static func criar_carta(dados : Dictionary) -> Carta:
 	# Lidando com efeitos
 
 	if "EFEITOS" in dados:
-		var efeitos = criar_lista_efeitos(dados['EFEITOS'])
+		var efeitos = criar_lista_efeitos(dados['EFEITOS'], nova_carta)
 		nova_carta.get_node("ListaEfeitos").efeitos = efeitos
 
 	nova_carta.visible = false
@@ -79,7 +79,7 @@ static func criar_carta(dados : Dictionary) -> Carta:
 	return nova_carta 
 
 # Aqui esperamos um array de efeitos
-static func criar_lista_efeitos(efeitos) -> Array[Efeito]:
+static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 	var ret : Array[Efeito] = []
 
 	for ef in efeitos:
@@ -101,6 +101,12 @@ static func criar_lista_efeitos(efeitos) -> Array[Efeito]:
 				print("Efeito " + outro +" ainda não foi implementado.")
 				continue
 
+		if "TRIGGER" in ef:
+			match ef['TRIGGER']:
+				"DESCARTE":
+					carta.carta_morreu.connect(novo_efeito.aplicar)
+				var outro:
+					print("O trigger + " + outro + "não foi implementado")
 
 		ret.push_back(novo_efeito)
 

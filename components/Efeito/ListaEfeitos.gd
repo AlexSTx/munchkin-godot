@@ -1,5 +1,7 @@
 extends Node
 
+class_name ListaEfeitos
+
 @export var efeitos : Array[Efeito] = []
 
 func _ready() -> void:

@@ -2,11 +2,5 @@ extends "res://components/Pilha/Pilha.gd"
 
 class_name PilhaTesouro
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func criar_pilha_inicial() -> void:
+	self.cartas_na_pilha = FactoryCarta.criar_cartas_da_pilha("TESOURO")

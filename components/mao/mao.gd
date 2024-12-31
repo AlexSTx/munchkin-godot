@@ -15,7 +15,7 @@ var is_hovering_on_card: bool = false
 
 func _ready() -> void:
 	tela_centro_x = get_viewport().size.x / 2
-	#$"../GerenciadorInput".connect("mouse_esq_solto", mouse_esq_solto)
+	$"../GerenciadorInput".connect("mouse_esq_solto", mouse_esq_solto)
 	tela_tam = get_viewport_rect().size
 
 func add_carta_para_mao(carta: Carta) -> void:

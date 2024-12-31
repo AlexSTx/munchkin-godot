@@ -10,13 +10,15 @@ signal carta_puxada(carta: Carta)
 var mao_ref: Mao
 
 func _ready() -> void:
-	mao_ref = get_node("../Mao")
-	criar_pilha_inicial()
+	pass
 
 # Override em cada subclasse de pilha
 func criar_pilha_inicial() -> void:
 	pass
 
+func set_pilha() -> void:
+	mao_ref = Partida.get_jogadores()[0].get_mao()
+	criar_pilha_inicial()
 
 func puxar_carta() -> void:
 	if cartas_na_pilha.size() > 0:

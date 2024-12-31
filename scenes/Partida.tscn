@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpyrv7xfsgoc3"]
+[gd_scene load_steps=5 format=3 uid="uid://dpyrv7xfsgoc3"]
 
 [ext_resource type="Script" path="res://Partida.gd" id="1_o6aqx"]
+[ext_resource type="Script" path="res://scenes/gerenciador_input.gd" id="2_eu17y"]
 [ext_resource type="Texture2D" uid="uid://d2cippvvdm4i0" path="res://assets/fundo_partida.jpg" id="2_vyatn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlq0k"]
@@ -8,6 +9,9 @@ texture = ExtResource("2_vyatn")
 
 [node name="Partida" type="Node2D"]
 script = ExtResource("1_o6aqx")
+
+[node name="GerenciadorInput" type="Node2D" parent="."]
+script = ExtResource("2_eu17y")
 
 [node name="Panel" type="Panel" parent="."]
 z_index = -1

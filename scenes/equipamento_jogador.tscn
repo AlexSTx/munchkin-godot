@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c155r4no5l5h4"]
+[gd_scene load_steps=5 format=3 uid="uid://c155r4no5l5h4"]
 
 [ext_resource type="Texture2D" uid="uid://q80x3eosoeny" path="res://assets/CardSlot.png" id="1_52xt4"]
 [ext_resource type="Script" path="res://components/carta/equipamentoJogador.gd" id="1_u6jwc"]
+[ext_resource type="Script" path="res://scenes/gerenciador_input.gd" id="5_gi7m6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cl3p8"]
 size = Vector2(182, 264)
@@ -10,15 +11,19 @@ size = Vector2(182, 264)
 position = Vector2(101, 144)
 script = ExtResource("1_u6jwc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Capacete" type="Area2D" parent="."]
+position = Vector2(23, 21.5)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Capacete"]
 light_mask = 2
 visibility_layer = 2
 texture = ExtResource("1_52xt4")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Capacete"]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_cl3p8")
+
+[node name="GerenciadorInput" type="Node2D" parent="."]
+script = ExtResource("5_gi7m6")

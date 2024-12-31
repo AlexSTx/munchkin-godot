@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmnltqm60q0sd"]
+
+[ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://scenes/mao.tscn" id="1_0rlad"]
+[ext_resource type="PackedScene" uid="uid://c155r4no5l5h4" path="res://scenes/equipamento_jogador.tscn" id="2_x3hao"]
+[ext_resource type="PackedScene" uid="uid://byd2jimgsln8t" path="res://scenes/PilhaTesouro.tscn" id="3_ncqnc"]
+[ext_resource type="Script" path="res://scenes/gerenciador_input.gd" id="5_tj7ir"]
+
+[node name="Mesa" type="Node2D"]
+
+[node name="Mao" parent="." instance=ExtResource("1_0rlad")]
+
+[node name="EquipamentoJogador" parent="." instance=ExtResource("2_x3hao")]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(137, 166)
+
+[node name="Pilha" parent="." instance=ExtResource("3_ncqnc")]
+position = Vector2(151, 674)
+
+[node name="GerenciadorInput" type="Node2D" parent="."]
+script = ExtResource("5_tj7ir")

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cwwt5fs4tgaas" path="res://assets/inventario.png" id="5_r3xgi"]
 
 [node name="Jogador Oponente" type="Node2D"]
-scale = Vector2(0.755307, 0.755307)
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_d7jn3")
 
 [node name="player_img_sombra" type="Sprite2D" parent="."]

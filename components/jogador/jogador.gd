@@ -5,7 +5,6 @@ class_name Jogador
 var _nome : String
 var _mao : Mao
 var _equipamentos : EquipamentosJogador
-var _inventario : Inventario
 var _nivel : int
 var _poder : int
 var _sexo : String
@@ -22,7 +21,6 @@ func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 	_sexo = sexo
 	_mao = cena_mao
 	_equipamentos = cena_equip
-	#_inventario = Inventario.new()
 	_nivel = 0
 	_poder = 0
 	_ouro = 0
@@ -55,9 +53,6 @@ func get_mao() -> Mao:
 	
 func get_equip() -> EquipamentosJogador:
 	return _equipamentos
-
-func get_inventario() -> Inventario:
-	return _inventario
 
 func get_nivel() -> int:
 	return _nivel

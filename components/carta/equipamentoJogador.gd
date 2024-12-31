@@ -20,13 +20,7 @@ func _ready():
 func _process(delta: float) -> void:
 	pass
 
-
-func is_humano() -> bool:
-	if _racas.size() == 0:
-		return true
-	return false
-
-func is_mao_cheia() -> bool:
+func _is_mao_cheia() -> bool:
 	if _equipamentoMao.size() == 2 or _equipamentoMao[0].get_qtd_maos() == 2:
 		return true
 	return false

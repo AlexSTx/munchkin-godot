@@ -2,7 +2,7 @@ extends Node
 
 var _jogadores: Array[Jogador]
 var _turno: Turno
-#var _mesa: Mesa
+var _mesa: Mesa
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,14 +14,15 @@ func _process(_delta: float) -> void:
 
 func set_Partida(nomes_jogadores: Array[String]) -> void:
 	_turno = load("res://scenes/turno.tscn").instantiate()
-	#_mesa = load("res://scenes/mesa.tscn").instantiate()
-	#add_child(_mesa)
+	_mesa = load("res://scenes/mesa.tscn").instantiate()
+	add_child(_mesa)
 	_instancia_jogadores(nomes_jogadores)
 	_adiciona_e_seta_jogadores()
+	_mesa.set_mesa()
 	add_child(_turno)
 
-#func get_mesa() -> Mesa:
-	#return _mesa
+func get_mesa() -> Mesa:
+	return _mesa
 
 func get_jogadores() -> Array:
 	return _jogadores

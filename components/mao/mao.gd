@@ -5,17 +5,16 @@ const MASK_COLLISION = 1
 const MASK_COLLISION_SLOT = 2
 const MASK_COLLISION_PILHA = 4
 const CARTA_LARGURA = 200
-const MAO_POS_Y = 900
+const MAO_POS_Y = 1050
 
-var tela_centro_x: float
+var tela_x: float
 var cartas_mao: Array[Carta] = []
 var carta_sendo_arrastada: Carta
 var tela_tam: Vector2
 var is_hovering_on_card: bool = false
 
 func _ready() -> void:
-	tela_centro_x = get_viewport().size.x / 2
-	$"../GerenciadorInput".connect("mouse_esq_solto", mouse_esq_solto)
+	tela_x = get_viewport().size.x
 	tela_tam = get_viewport_rect().size
 
 func add_carta_para_mao(carta: Carta) -> void:
@@ -44,7 +43,7 @@ func atualizar_pos_mao() -> void:
 
 func calcular_pos_carta(index: int) -> float:
 	var largura_total = (cartas_mao.size() - 1) * CARTA_LARGURA
-	return tela_centro_x + index * CARTA_LARGURA - largura_total
+	return tela_x + index * CARTA_LARGURA - largura_total
 	
 func animar_carta_para_pos(carta: Carta, nova_pos: Vector2) -> void:
 	var tween = get_tree().create_tween()

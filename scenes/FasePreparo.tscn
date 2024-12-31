@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://uu8k41awueia"]
 
 [ext_resource type="Script" path="res://components/Fase/FasePreparo.gd" id="1_8uq7w"]
-[ext_resource type="PackedScene" path="res://scenes/confusao_popup.tscn" id="2_fhna0"]
+[ext_resource type="PackedScene" uid="uid://bd7hfpffqtxro" path="res://scenes/confusao_popup.tscn" id="2_fhna0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kjks"]
 bg_color = Color(0.797793, 0.302178, 0.27835, 1)

@@ -11,8 +11,9 @@ var mao_ref: Mao
 var pilha_ref: Pilha
 
 func _ready() -> void:
-	mao_ref = $"../Mao"
-	pilha_ref = $"../Pilha"
+	mao_ref = Partida.get_jogadores()[0].get_mao()
+	pilha_ref = Partida.get_mesa().get_porta()
+	connect("mouse_esq_solto", Callable(Partida.get_jogadores()[0].get_mao(), "mouse_esq_solto"))
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:

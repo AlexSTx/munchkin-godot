@@ -1,6 +1,6 @@
 extends Jogador
 
-class_name JogadorHost
+class_name JogadorOponente
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +13,5 @@ func _process(_delta: float) -> void:
 	$"Status/Ouro".text = str(_ouro)
 	$"Status/Poder".text = str(_poder)
 
-func set_jogador_host() -> void:
+func set_jogador_oponente() -> void:
 	$"Status/Nome".text = _nome
-	add_child(_mao)
-	add_child(_equipamentos)

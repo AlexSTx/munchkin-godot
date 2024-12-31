@@ -12,26 +12,12 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func set_Partida(jogadores: Array[String]) -> void:
-	var cena_jogador_host = preload("res://scenes/jogador_host.tscn")
-	var cena_jogador = preload("res://scenes/jogador.tscn")
-	#cria o jogado host e os outros players
-	for n in jogadores.size():
-		if n == 0:
-			_jogadores.append(cena_jogador_host.instantiate())
-			_jogadores[0].set_jogador(jogadores[0])
-		else:
-			_jogadores.append(cena_jogador.instantiate())
-			_jogadores[n].set_jogador(jogadores[n])
-	
-	_turno = preload("res://scenes/turno.tscn").instantiate()
-	#_mesa = preload("res://scenes/mesa.tscn").instantiate()
-	
+func set_Partida(nomes_jogadores: Array[String]) -> void:
+	_turno = load("res://scenes/turno.tscn").instantiate()
+	#_mesa = load("res://scenes/mesa.tscn").instantiate()
 	#add_child(_mesa)
-	for jogador: Jogador in _jogadores:
-		add_child(jogador)
-		
-	_jogadores[0].set_jogador_host()
+	_instancia_jogadores(nomes_jogadores)
+	_adiciona_e_seta_jogadores()
 	add_child(_turno)
 
 #func get_mesa() -> Mesa:
@@ -42,3 +28,25 @@ func get_jogadores() -> Array:
 
 func get_turno() -> Turno:
 	return _turno
+
+func _instancia_jogadores(nomes: Array[String]) -> void:
+	var cena_jogador_host = preload("res://scenes/jogador_host.tscn")
+	var cena_jogador_oponente = preload("res://scenes/jogador_oponente.tscn")
+	
+	for n in nomes.size():
+		if n == 0:
+			_jogadores.append(cena_jogador_host.instantiate())
+		else:
+			_jogadores.append(cena_jogador_oponente.instantiate())
+		_jogadores[n].set_jogador(nomes[n])
+
+func _adiciona_e_seta_jogadores() -> void:
+	var pos = 0.0
+	for n in _jogadores.size():
+		add_child(_jogadores[n])
+		if n == 0:
+			_jogadores[n].set_jogador_host()
+		else:
+			_jogadores[n].set_jogador_oponente()
+			_jogadores[n].position.x = pos
+			pos += 400.0

@@ -16,24 +16,18 @@ shadow_offset = Vector2(0, 2)
 [node name="Preparo" type="Node"]
 script = ExtResource("1_8uq7w")
 
-[node name="Panel" type="Panel" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -196.0
-offset_right = 196.0
-offset_bottom = 165.0
-grow_horizontal = 2
-
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -138.0
-offset_top = 22.0
+offset_top = 308.0
 offset_right = 138.0
-offset_bottom = 91.0
+offset_bottom = 377.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
 theme_override_font_sizes/font_size = 50
 text = "Preparação"
 
@@ -42,10 +36,13 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -138.0
-offset_top = 107.0
+offset_top = 390.0
 offset_right = 138.0
-offset_bottom = 145.0
+offset_bottom = 428.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
 theme_override_font_sizes/font_size = 25
 text = "Vez de: Fulano"
 horizontal_alignment = 1
@@ -81,6 +78,7 @@ text = "Buscar confusão"
 [node name="Timer" type="Timer" parent="."]
 
 [node name="confusao_popup" parent="." instance=ExtResource("2_fhna0")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

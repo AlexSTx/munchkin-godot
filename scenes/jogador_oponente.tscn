@@ -1,43 +1,42 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4q7tohkk52jv"]
+[gd_scene load_steps=6 format=3 uid="uid://bktrl5p34ftpd"]
 
-[ext_resource type="Script" path="res://components/jogador/jogador_host.gd" id="1_563dp"]
-[ext_resource type="FontFile" uid="uid://caxypl3l1o65u" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_kyhlf"]
-[ext_resource type="Texture2D" uid="uid://d4i45cecc8qu" path="res://assets/player_img.png" id="2_re55y"]
-[ext_resource type="Texture2D" uid="uid://bpq5mer2v7hi6" path="res://assets/status_oponente.png" id="3_5ukq0"]
-[ext_resource type="Texture2D" uid="uid://cwwt5fs4tgaas" path="res://assets/inventario.png" id="5_rkhj3"]
+[ext_resource type="Script" path="res://components/jogador/jogador_oponente.gd" id="1_d7jn3"]
+[ext_resource type="FontFile" uid="uid://caxypl3l1o65u" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_0o1sj"]
+[ext_resource type="Texture2D" uid="uid://bpq5mer2v7hi6" path="res://assets/status_oponente.png" id="2_acg08"]
+[ext_resource type="Texture2D" uid="uid://d4i45cecc8qu" path="res://assets/player_img.png" id="2_teruc"]
+[ext_resource type="Texture2D" uid="uid://cwwt5fs4tgaas" path="res://assets/inventario.png" id="5_r3xgi"]
 
-[node name="Jogador Host" type="Node2D"]
-position = Vector2(19, -27)
-scale = Vector2(1.20101, 1.20101)
-script = ExtResource("1_563dp")
+[node name="Jogador Oponente" type="Node2D"]
+scale = Vector2(0.755307, 0.755307)
+script = ExtResource("1_d7jn3")
 
 [node name="player_img_sombra" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(207.943, 707.37)
+position = Vector2(217.511, 211.092)
 scale = Vector2(0.844262, 0.844262)
-texture = ExtResource("2_re55y")
+texture = ExtResource("2_teruc")
 
 [node name="player_img" type="Sprite2D" parent="."]
-position = Vector2(202.947, 699.043)
+position = Vector2(210.891, 200.5)
 scale = Vector2(0.844262, 0.844262)
-texture = ExtResource("2_re55y")
-
-[node name="Inventario_sombra" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(416.622, 810.807)
-scale = Vector2(0.580779, 0.580779)
-texture = ExtResource("5_rkhj3")
+texture = ExtResource("2_teruc")
 
 [node name="Status_sombra" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(229.943, 822.807)
+position = Vector2(239.511, 326.529)
 scale = Vector2(0.736842, 0.736842)
-texture = ExtResource("3_5ukq0")
+texture = ExtResource("2_acg08")
+
+[node name="Inventario_sombra" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(426.19, 314.529)
+scale = Vector2(0.580779, 0.580779)
+texture = ExtResource("5_r3xgi")
 
 [node name="Status" type="Sprite2D" parent="."]
-position = Vector2(224.947, 814.481)
+position = Vector2(232.891, 315.938)
 scale = Vector2(0.736842, 0.736842)
-texture = ExtResource("3_5ukq0")
+texture = ExtResource("2_acg08")
 
 [node name="Nome" type="Label" parent="Status"]
 anchors_preset = -1
@@ -49,7 +48,7 @@ offset_right = -141.133
 offset_bottom = -16.058
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_kyhlf")
+theme_override_fonts/font = ExtResource("2_0o1sj")
 theme_override_font_sizes/font_size = 40
 metadata/_edit_use_anchors_ = true
 
@@ -58,7 +57,7 @@ offset_left = -238.286
 offset_top = -58.3571
 offset_right = -135.286
 offset_bottom = 61.6429
-theme_override_fonts/font = ExtResource("2_kyhlf")
+theme_override_fonts/font = ExtResource("2_0o1sj")
 theme_override_font_sizes/font_size = 90
 text = "10"
 horizontal_alignment = 1
@@ -75,7 +74,7 @@ offset_left = -326.772
 offset_top = -108.48
 offset_right = -212.772
 offset_bottom = -59.4798
-theme_override_fonts/font = ExtResource("2_kyhlf")
+theme_override_fonts/font = ExtResource("2_0o1sj")
 theme_override_font_sizes/font_size = 40
 text = "1000"
 horizontal_alignment = 1
@@ -92,7 +91,7 @@ offset_left = -293.906
 offset_top = -112.567
 offset_right = -245.906
 offset_bottom = -55.5672
-theme_override_fonts/font = ExtResource("2_kyhlf")
+theme_override_fonts/font = ExtResource("2_0o1sj")
 theme_override_font_sizes/font_size = 40
 text = "20"
 horizontal_alignment = 1
@@ -100,6 +99,6 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Inventario" type="Sprite2D" parent="."]
-position = Vector2(411.626, 802.481)
+position = Vector2(419.57, 303.938)
 scale = Vector2(0.580779, 0.580779)
-texture = ExtResource("5_rkhj3")
+texture = ExtResource("5_r3xgi")

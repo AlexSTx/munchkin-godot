@@ -17,6 +17,8 @@ func _on_voltar_pressed() -> void:
 
 func _on_enter_pressed() -> void:
 	Sistema.cadastra(nome_jogador)
+	Sistema.cadastra("Bot 1")
+	Sistema.cadastra("Bot 2")
 	get_tree().change_scene_to_file("res://scenes/Partida.tscn")
 	Partida.set_Partida(Sistema._jogadores_cadastrados)
 

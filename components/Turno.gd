@@ -8,7 +8,6 @@ var fase_inicial : Fase
 var jogador_atual: int # indice do jogador atual na lista de jogadores em Partida
 
 func _ready() -> void:
-	print("qualquer pica aqui")
 	for fase_node: Fase in find_children("*", "Fase"):
 		fase_node.finished.connect(_trocar_de_fase)
 

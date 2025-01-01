@@ -1,6 +1,6 @@
 extends Node
 
-class_name EquipamentosJogador
+class_name Inventario
 
 var _classes : Array[Classe]
 var _racas : Array[Raca]
@@ -11,6 +11,7 @@ var _equipamentoMao : Array[EquipamentoMao]
 var _modificadores : Array
 
 var carta_no_slot = false
+@onready var cena_inventario = preload("res://scenes/inventario.tscn").instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,3 +25,6 @@ func _is_mao_cheia() -> bool:
 	if _equipamentoMao.size() == 2 or _equipamentoMao[0].get_qtd_maos() == 2:
 		return true
 	return false
+
+func _SairClicado() -> void:
+	$"/root/Partida/Jogador Host/Inventario".visible = false

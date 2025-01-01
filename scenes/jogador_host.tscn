@@ -6,35 +6,41 @@
 [ext_resource type="Texture2D" uid="uid://bpq5mer2v7hi6" path="res://assets/status_oponente.png" id="3_5ukq0"]
 [ext_resource type="Texture2D" uid="uid://cwwt5fs4tgaas" path="res://assets/inventario.png" id="5_rkhj3"]
 
-[node name="Jogador Host" type="Node2D"]
-scale = Vector2(0.82892, 0.82892)
+[node name="Jogador Host" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.003, 1)
 script = ExtResource("1_563dp")
 
 [node name="player_img_sombra" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(224.832, 1103.81)
+position = Vector2(224.832, 879.758)
 scale = Vector2(0.844262, 0.844262)
 texture = ExtResource("2_re55y")
 
 [node name="player_img" type="Sprite2D" parent="."]
-position = Vector2(219.836, 1095.48)
+position = Vector2(219.836, 871.428)
 scale = Vector2(0.844262, 0.844262)
 texture = ExtResource("2_re55y")
 
 [node name="Inventario_sombra" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(433.511, 1207.25)
+position = Vector2(433.511, 983.198)
 scale = Vector2(0.580779, 0.580779)
 texture = ExtResource("5_rkhj3")
 
 [node name="Status_sombra" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(246.832, 1219.25)
+position = Vector2(246.832, 995.198)
 scale = Vector2(0.736842, 0.736842)
 texture = ExtResource("3_5ukq0")
 
 [node name="Status" type="Sprite2D" parent="."]
-position = Vector2(241.836, 1210.92)
+position = Vector2(241.836, 986.868)
 scale = Vector2(0.736842, 0.736842)
 texture = ExtResource("3_5ukq0")
 
@@ -98,7 +104,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Inventario" type="Sprite2D" parent="."]
-position = Vector2(428.516, 1198.92)
-scale = Vector2(0.580779, 0.580779)
-texture = ExtResource("5_rkhj3")
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 362.0
+offset_top = 913.948
+offset_right = 590.0
+offset_bottom = 1131.95
+scale = Vector2(0.581, 0.581)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_rkhj3")
+
+[connection signal="button_up" from="TextureButton" to="." method="_InventarioClicado"]

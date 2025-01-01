@@ -15,4 +15,11 @@ func _process(_delta: float) -> void:
 
 func set_jogador_host() -> void:
 	$"Status/Nome".text = _nome
+	add_child(_inventario)
 	add_child(_mao)
+	_inventario.visible = false
+
+
+func _InventarioClicado() -> void:
+	_inventario.visible = true
+	print_tree_pretty()

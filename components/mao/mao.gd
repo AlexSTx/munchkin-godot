@@ -5,13 +5,15 @@ const MASK_COLLISION = 1
 const MASK_COLLISION_SLOT = 2
 const MASK_COLLISION_PILHA = 4
 const CARTA_LARGURA = 200
-const MAO_POS_Y = 1050
+const MAO_POS_Y = 900
 
 var tela_x: float
 var cartas_mao: Array[Carta] = []
 var carta_sendo_arrastada: Carta
 var tela_tam: Vector2
 var is_hovering_on_card: bool = false
+
+@onready var limite_cartas = 5
 
 func _ready() -> void:
 	tela_x = get_viewport().size.x
@@ -42,7 +44,7 @@ func atualizar_pos_mao() -> void:
 		animar_carta_para_pos(carta, nova_pos)
 
 func calcular_pos_carta(index: int) -> float:
-	var largura_total = (cartas_mao.size() - 1) * CARTA_LARGURA
+	var largura_total = (cartas_mao.size()) * CARTA_LARGURA
 	return tela_x + index * CARTA_LARGURA - largura_total
 	
 func animar_carta_para_pos(carta: Carta, nova_pos: Vector2) -> void:
@@ -132,3 +134,8 @@ func get_carta_com_maior_z_index(cartas: Array) -> Carta:
 			carta_com_maior_z = carta_atual
 			maior_z_index = carta_atual.z_index
 	return carta_com_maior_z
+
+func mao_cheia() -> bool:
+	if cartas_mao.size() < limite_cartas:
+		return false
+	return true

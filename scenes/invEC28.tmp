@@ -16,14 +16,10 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 
-[node name="Inventario" type="Control"]
-z_index = 1
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Inventario" type="Node2D"]
+top_level = true
+z_index = 10
+z_as_relative = false
 script = ExtResource("1_0n110")
 
 [node name="Panel" type="Panel" parent="."]
@@ -45,7 +41,9 @@ texture = ExtResource("2_0dpbp")
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_cl3p8")
 
-[node name="Button" type="Button" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 1764.0
 offset_top = 40.0
 offset_right = 1883.0
@@ -54,4 +52,4 @@ theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxFlat_0ocq5")
 text = "X"
 
-[connection signal="button_up" from="Button" to="." method="_SairClicado"]
+[connection signal="button_up" from="CanvasLayer/Button" to="." method="_SairClicado"]

@@ -19,9 +19,8 @@ func set_mesa() -> void:
 	_tesouro.set_pilha()
 	_porta.set_pilha()
 	
-	
-	_tesouro.position = Vector2(147, 585)
-	_porta.position = Vector2(344, 585)
+	_tesouro.position = Vector2(147, 500)
+	_porta.position = Vector2(344, 500)
 
 func _process(delta: float) -> void:
 	pass

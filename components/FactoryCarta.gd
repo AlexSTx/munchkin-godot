@@ -106,7 +106,7 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 				"DESCARTE":
 					carta.carta_morreu.connect(novo_efeito.aplicar)
 				var outro:
-					print("O trigger + " + outro + "não foi implementado")
+					print("O trigger + " + outro + " não foi implementado")
 
 		ret.push_back(novo_efeito)
 

@@ -120,14 +120,15 @@ static func criar_lista_restricoes(restricoes):
 		
 		match rest['TIPO']:
 			"FASE":
-				print("Restrição de fase ainda devem ser implementadas")
-				continue
+				nova_restricao = RestricaoFase.new(rest.get('VALOR'), rest.get('QUALQUER'))
 			"CLASSE":
 				var inverso = true if rest.get("INVERSO") else false
 				nova_restricao = RestricaoClasse.new(rest['VALOR'], inverso)
 			"RACA":
 				var inverso = true if rest.get("INVERSO") else false
 				nova_restricao = RestricaoRaca.new(rest['VALOR'], inverso)
+			"SEXO":
+				nova_restricao = RestricaoSexo.new(rest['VALOR'])
 			var outra :
 				print("Restrição " + outra +" ainda não foi implementado.")
 				continue

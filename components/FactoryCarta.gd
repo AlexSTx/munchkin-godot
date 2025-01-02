@@ -18,7 +18,7 @@ func _ready() -> void:
 	# criar_cartas_da_pilha("TESOURO")
 
 static func int_if_not_empty(value, default : int = 0) -> int:
-	return value as int if value is not String else default
+	return value as int if value is int else default
 
 static func criar_carta(dados : Dictionary) -> Carta:
 	var nova_carta : Node = template.instantiate()
@@ -26,7 +26,6 @@ static func criar_carta(dados : Dictionary) -> Carta:
 	match dados['TIPO']:
 		"CLASSE":
 			nova_carta.set_script(Classe)
-			#TODO: Match para as diferentes classes quando as classes estiverem prontas
 		"EQUIPAMENTO":
 			nova_carta.set_script(Equipamento)
 			#TODO: Criar match quando o json tiver o subtipo separado
@@ -59,14 +58,18 @@ static func criar_carta(dados : Dictionary) -> Carta:
 			nova_carta.set_script(Monstro)
 			(nova_carta as Monstro).zumbi = dados['SUBTIPO'] == "MORTO VIVO"
 			(nova_carta as Monstro).tesouro = int_if_not_empty(dados['TESOUROS'], 1)
+			(nova_carta as Monstro).coisa_ruim.efeitos = criar_lista_efeitos(dados['COISA_RUIM'], nova_carta)
 		"RAÇA":
 			nova_carta.set_script(Raca)
-			#TODO: Match para as diferentes raças quando as classes estiverem prontas
+		_: 
+			# Como Carta deve ser uma classe abstrata, qualquer carta que não especifique seu tipo é tratada como uma hábilidade
+			print("Não foi possível detectar o tipo da carta " + dados['NOME'] +  ". Ela foi instanciada como Habilidade")
+			nova_carta.set_script(Habilidade)
 			
 	
 	nova_carta.titulo = dados['NOME']
 	nova_carta.descricao = dados['TEXTO']
-	nova_carta.nivel = dados["NIVEL"] if dados['NIVEL'] is not String else 0
+	nova_carta.nivel = dados["NIVEL"] if dados['NIVEL'] is int else 0
 	
 	# Lidando com efeitos
 

@@ -58,7 +58,8 @@ static func criar_carta(dados : Dictionary) -> Carta:
 			nova_carta.set_script(Monstro)
 			(nova_carta as Monstro).zumbi = dados['SUBTIPO'] == "MORTO VIVO"
 			(nova_carta as Monstro).tesouro = int_if_not_empty(dados['TESOUROS'], 1)
-			(nova_carta as Monstro).coisa_ruim.efeitos = criar_lista_efeitos(dados['COISA_RUIM'], nova_carta)
+			if 'COISA_RUIM' in dados:
+				(nova_carta as Monstro).coisa_ruim.efeitos = criar_lista_efeitos(dados['COISA_RUIM'], nova_carta)
 		"RAÇA":
 			nova_carta.set_script(Raca)
 		_: 
@@ -94,6 +95,8 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 		match ef['TIPO']:
 			"ALT_FORCA":
 				novo_efeito = EfeitoAlterarForca.new(restricoes, ef['VALOR'])
+			"ALT_NIVEL":
+				novo_efeito = EfeitoAlterarNivel.new(restricoes, ef['VALOR'])
 			"ESCAPE":
 				novo_efeito = EfeitoEscaparCombate.new(restricoes)
 			"ALT_FUGA":

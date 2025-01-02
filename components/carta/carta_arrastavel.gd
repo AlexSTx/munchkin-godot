@@ -101,33 +101,39 @@ func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: 
 	if not drag_enabled:
 		return
 		
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if event.pressed:
-				drag_start_pos = get_global_mouse_position()
-				mouse_offset = position - drag_start_pos
-				is_dragging = true
-				emit_signal("drag_started")
-				z_index = 1
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT :
+		if event.pressed:
+			drag_start_pos = get_global_mouse_position()
+			mouse_offset = position - drag_start_pos
+			is_dragging = true
+			emit_signal("drag_started")
+			z_index = 1
 
-				if hover_tween:
-					hover_tween.kill()
-				scale = Vector2.ONE
-			else:
-				is_dragging = false
-				emit_signal("drag_ended")
-				z_index = 0
-				
-				if return_to_start:
-					position = original_position
-				
-				if (drag_start_pos - get_global_mouse_position()).length() < drag_minimum_distance:
-					emit_signal("clicked")
+			if hover_tween:
+				hover_tween.kill()
+			scale = Vector2.ONE
+		else:
+			var was_click = (drag_start_pos - get_global_mouse_position()).length() < drag_minimum_distance
+			_end_drag()
+			if was_click:
+				emit_signal("clicked")
 
 
 func _process(_delta: float) -> void:
+	# Check if left mouse button is released even if we missed the event
+	if is_dragging and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		_end_drag()
+	
 	if is_dragging:
 		position = get_global_mouse_position() + mouse_offset
+
+func _end_drag() -> void:
+	is_dragging = false
+	emit_signal("drag_ended")
+	z_index = 0
+	
+	if return_to_start:
+		position = original_position
 
 
 func enable_drag() -> void:

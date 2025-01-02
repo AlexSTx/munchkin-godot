@@ -23,9 +23,9 @@ func set_jogador_host() -> void:
 	var height = window_size.y
 
 	_mao.set_hand_area(
-        Vector2(width - 1000, height - Carta.CARD_HEIGHT/2.0 - 10), 
+        Vector2(width - 1050, height - Carta.CARD_HEIGHT/2.0 - 20), 
         1000,                
-        Carta.CARD_HEIGHT             
+        20 + Carta.CARD_HEIGHT    
     )
 	_inventario.visible = false
 

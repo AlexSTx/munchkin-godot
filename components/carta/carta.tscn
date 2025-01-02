@@ -10,9 +10,6 @@ size = Vector2(180, 263)
 [node name="Carta" type="Node2D"]
 position = Vector2(151, 674)
 script = ExtResource("1_31pn7")
-drag_enabled = null
-return_to_start = null
-drag_minimum_distance = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -3)

@@ -21,8 +21,9 @@ var can_hover := true
 @export var return_to_start := false
 @export var drag_minimum_distance := 5.0
 
-@onready var click_area: Area2D = $ClickArea
-@onready var sprite: Sprite2D = $Sprite2D
+var click_area: Area2D 
+var sprite: Sprite2D 
+
 @export var texture: Texture2D
 
 func _ready() -> void:

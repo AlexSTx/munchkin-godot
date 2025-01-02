@@ -85,7 +85,6 @@ func setup_click_area() -> void:
 func puxar_carta() -> void:
 	print("Tentando puxar carta")
 	print("Número de cartas na pilha: ", cartas.size())
-
 	if cartas.size() > 0:
 		var carta = cartas.pop_back()
 		remove_child(carta)

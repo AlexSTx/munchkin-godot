@@ -22,7 +22,7 @@ func set_mesa() -> void:
 		
 	_tesouro.position = Vector2(147, 500)
 	_porta.position = Vector2(360, 500)
-
+	_porta.setup_highlight()
 
 func get_porta() -> PilhaPorta:
 	return _porta

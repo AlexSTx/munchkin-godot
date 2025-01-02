@@ -14,4 +14,3 @@ func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _img_
 	titulo = _titulo
 	descricao = _descricao
 	
-

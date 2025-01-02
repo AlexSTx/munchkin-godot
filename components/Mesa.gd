@@ -7,6 +7,9 @@ func set_mesa() -> void:
 	_tesouro = PilhaTesouro.new()
 	_porta = PilhaPorta.new()
 
+	_tesouro.name = "BaralhoTesouro"
+	_porta.name = "BaralhoPorta"
+
 	_tesouro.set_image(preload("res://assets/tesouro.png"))
 	_porta.set_image(preload("res://assets/porta.png"))
 

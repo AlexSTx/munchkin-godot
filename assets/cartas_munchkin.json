@@ -723,17 +723,18 @@
 		"NOME": "ARMADURA FLAMEJANTE",
 		"TEXTO": "",
 		"COISA RUIM": "",
-		"O QUE DÁ": "NÍVEL",
-		"QUANTO": 1,
+		"O QUE DÁ": "BÔNUS",
+		"QUANTO": 2,
 		"TESOUROS": "",
-		"VALOR_MOEDA": "",
+		"VALOR_MOEDA": 400,
 		"TAMANHO": "",
 		"EFEITOS": [
 			{
 				"TIPO": "ALT_FORCA",
-				"VALOR": 1
+				"VALOR": 2
 			}
-		]
+		],
+		"CAMINHO" : "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(1).PNG"
 	},
 	{
 		"DECK": "TESOURO",
@@ -1070,7 +1071,7 @@
 		"TEXTO": "DESCARTE ESTA CARTA QUANDO SUA TENTATIVA DE FUGIR FALHAR. VOCÊ ESCAPA AUTOMATICAMENTE, USO ÚNICO.",
 		"COISA RUIM": "",
 		"O QUE DÁ": "",
-		"QUANTO": "",
+		"QUANTO": 200,
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",

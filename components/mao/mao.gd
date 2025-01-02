@@ -11,7 +11,7 @@ var card_positions: Array[Vector2]
 var target_position: Vector2
 
 var is_holding_card := false
-var card_holded : Carta
+var card_held : Carta
 
 func _ready() -> void:
     cartas = []
@@ -73,6 +73,11 @@ func _on_child_exiting(node: Node) -> void:
 func _on_card_drag_started(carta: Carta) -> void:
     is_holding_card = true
 
+    for c in cartas:
+        c.disable_hover_animation()
+        if c != carta:
+            c.disable_drag()
+
     # Store original position for potential reordering
     target_position = carta.position
     # Bring dragged card to front
@@ -81,6 +86,10 @@ func _on_card_drag_started(carta: Carta) -> void:
 
 func _on_card_drag_ended(carta: Carta) -> void:
     is_holding_card = false
+
+    for c in cartas:
+        c.enable_hover_animation()
+        c.enable_drag()
 
     if not is_position_in_hand_area(carta.position):
         animate_cards()

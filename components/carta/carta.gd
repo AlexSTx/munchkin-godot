@@ -1,8 +1,5 @@
 class_name Carta extends CartaArrastavel
 
-static var CARD_WIDTH = 200
-static var CARD_HEIGHT = 300
-
 signal carta_morreu(carta: Carta)
 signal hovered(carta: Carta)
 signal hovered_off(carta: Carta)

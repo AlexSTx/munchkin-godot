@@ -10,7 +10,7 @@ var mouse_offset := Vector2.ZERO
 var original_position := Vector2.ZERO
 
 @export var drag_enabled := true
-@export var return_to_start := true
+@export var return_to_start := false
 @export var drag_minimum_distance := 5.0
 
 @onready var click_area: Area2D = $ClickArea

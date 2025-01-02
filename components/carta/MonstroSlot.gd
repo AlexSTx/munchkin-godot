@@ -1,6 +1,6 @@
 class_name MonstroSlot extends Node2D
 
-signal monstro_add(monstro: Carta)
+signal monstro_add(monstro: Carta) #Apos Monstro estiver pronto, mudar pra monstro: Monstro
 signal monstro_removed(monstro: Monstro)
 
 var _monstro_atual: Carta = null

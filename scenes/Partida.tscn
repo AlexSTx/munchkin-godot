@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpyrv7xfsgoc3"]
+[gd_scene load_steps=4 format=3 uid="uid://dpyrv7xfsgoc3"]
 
 [ext_resource type="Script" path="res://Partida.gd" id="1_o6aqx"]
+[ext_resource type="Texture2D" uid="uid://d2cippvvdm4i0" path="res://assets/fundo_partida.jpg" id="2_vyatn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlq0k"]
+texture = ExtResource("2_vyatn")
 
 [node name="Partida" type="Node2D"]
 script = ExtResource("1_o6aqx")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xlq0k")

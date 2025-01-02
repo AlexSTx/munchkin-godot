@@ -1,23 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmnltqm60q0sd"]
+[gd_scene load_steps=4 format=3 uid="uid://bd0eye27s65ay"]
 
-[ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://components/mao/mao.tscn" id="1_efr61"]
-[ext_resource type="PackedScene" path="res://equipamento_jogador.tscn" id="3_pkjp7"]
-[ext_resource type="Script" path="res://components/carta/equipamentoJogador.gd" id="4_ledax"]
-[ext_resource type="PackedScene" uid="uid://chdna302g0hxp" path="res://pilha.tscn" id="4_tgc8t"]
-[ext_resource type="Script" path="res://scenes/gerenciador_input.gd" id="5_vfncv"]
+[ext_resource type="Script" path="res://components/Mesa.gd" id="1_aqtq4"]
+[ext_resource type="PackedScene" uid="uid://byd2jimgsln8t" path="res://scenes/PilhaTesouro.tscn" id="1_m0fev"]
+[ext_resource type="PackedScene" uid="uid://c0p8p5o1indvj" path="res://scenes/PilhaPorta.tscn" id="3_pnixc"]
 
 [node name="Mesa" type="Node2D"]
+script = ExtResource("1_aqtq4")
 
-[node name="Mao" parent="." instance=ExtResource("1_efr61")]
+[node name="PilhaTesouro" parent="." instance=ExtResource("1_m0fev")]
+visible = false
+position = Vector2(147, 585)
 
-[node name="EquipamentoMao" parent="." instance=ExtResource("3_pkjp7")]
-light_mask = 2
-visibility_layer = 2
-position = Vector2(137, 166)
-script = ExtResource("4_ledax")
-
-[node name="Pilha" parent="." instance=ExtResource("4_tgc8t")]
-position = Vector2(151, 674)
-
-[node name="GerenciadorInput" type="Node2D" parent="."]
-script = ExtResource("5_vfncv")
+[node name="PilhaPorta" parent="." instance=ExtResource("3_pnixc")]
+visible = false
+position = Vector2(344, 585)

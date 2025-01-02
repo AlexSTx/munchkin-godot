@@ -1,6 +1,6 @@
 extends Jogador
 
-class_name JogadorHost
+class_name JogadorOponente
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,7 +9,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$"HSplitContainer/Nível".text = "Nível: "+ str(nivel)
-	$"Nome".text = nome
-	$"HSplitContainer/Ouro".text = "Ouro: " + str(ouro)
-	$"HSplitContainer/Poder".text = "Poder: " + str(poder)
+	$"Status/Nível".text = str(_nivel)
+	$"Status/Ouro".text = str(_ouro)
+	$"Status/Poder".text = str(_poder)
+
+func set_jogador_oponente() -> void:
+	$"Status/Nome".text = _nome

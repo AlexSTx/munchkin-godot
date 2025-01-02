@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://c155r4no5l5h4"]
+
+[ext_resource type="Script" path="res://components/Inventario.gd" id="1_0n110"]
+[ext_resource type="Texture2D" uid="uid://q80x3eosoeny" path="res://assets/CardSlot.png" id="2_0dpbp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4q32"]
+bg_color = Color(0.819608, 0.572549, 0.266667, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cl3p8"]
+size = Vector2(182, 264)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ocq5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+
+[node name="Inventario" type="Node2D"]
+top_level = true
+z_index = 10
+z_as_relative = false
+script = ExtResource("1_0n110")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4q32")
+
+[node name="Capacete" type="Area2D" parent="."]
+position = Vector2(140, 185)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Capacete"]
+light_mask = 2
+visibility_layer = 2
+texture = ExtResource("2_0dpbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Capacete"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_cl3p8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 1764.0
+offset_top = 40.0
+offset_right = 1883.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ocq5")
+text = "X"
+
+[connection signal="button_up" from="CanvasLayer/Button" to="." method="_SairClicado"]

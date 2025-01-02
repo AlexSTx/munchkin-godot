@@ -105,6 +105,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 362.0
 offset_top = 913.948
 offset_right = 590.0

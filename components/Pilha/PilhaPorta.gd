@@ -1,8 +1,4 @@
-extends "res://components/Pilha/Pilha.gd"
-
-class_name PilhaPorta
+class_name PilhaPorta extends Pilha
 
 func criar_pilha_inicial() -> void:
-	var cartas = FactoryCarta.criar_cartas_da_pilha("PORTA")
-	self.cartas_na_pilha = cartas
-	MASK_COLLISION_PILHA = 4
+	self.cartas = FactoryCarta.criar_cartas_da_pilha("PORTA")

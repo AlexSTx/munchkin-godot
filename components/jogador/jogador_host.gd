@@ -17,6 +17,7 @@ func set_jogador_host() -> void:
 	$"Status/Nome".text = _nome
 	add_child(_inventario)
 	add_child(_mao)
+	_mao.position = Vector2(700, 0)
 	_inventario.visible = false
 
 

@@ -3,7 +3,6 @@ class_name Mao extends Node2D
 # Constants for layout
 const MAX_CARDS := 6
 const CARD_SPACING := 0  # Horizontal space between cards
-const HAND_HEIGHT := 900
 const ANIMATION_DURATION := 0.2  # Seconds for card movement animations
 
 @export var cartas: Array[Carta]
@@ -13,12 +12,25 @@ var target_position: Vector2
 var is_holding_card := false
 var card_held : Carta
 
+# Hand area properties
+var hand_area_position: Vector2
+var hand_area_width: float
+var hand_area_height: float
+
+
 func _ready() -> void:
     cartas = []
     calculate_card_positions()
     
     child_entered_tree.connect(_on_child_entered)
     child_exiting_tree.connect(_on_child_exiting)
+
+
+func set_hand_area(pos: Vector2, width: float, height: float) -> void:
+    hand_area_position = pos
+    hand_area_width = width
+    hand_area_height = height
+    calculate_card_positions()
 
 
 func calculate_card_positions() -> void:
@@ -29,12 +41,17 @@ func calculate_card_positions() -> void:
         
     # Calculate total width of all cards with spacing
     var total_width : int = Carta.CARD_WIDTH * (cartas.size()) + (cartas.size() - 1) * CARD_SPACING
-    # Calculate starting X position to center the hand
-    var start_x := -total_width / 2.0
+    
+    # Calculate starting X position to center within hand area
+    var start_x := hand_area_position.x + hand_area_width - total_width
+    var cards_y : float = hand_area_position.y + (hand_area_height - Carta.CARD_HEIGHT) / 2
     
     # Calculate position for each card
     for i in range(cartas.size()):
-        var pos := Vector2(start_x + Carta.CARD_WIDTH * i + (i * CARD_SPACING), HAND_HEIGHT)
+        var pos := Vector2(
+            start_x + Carta.CARD_WIDTH * i + (i * CARD_SPACING),
+            cards_y
+        )
         card_positions.append(pos)
 
 
@@ -127,7 +144,7 @@ func animate_cards() -> void:
 
 func is_position_in_hand_area(pos: Vector2) -> bool:
     var hand_rect := Rect2(
-        Vector2(-get_viewport_rect().size.x/2, HAND_HEIGHT - 100),
-        Vector2(get_viewport_rect().size.x, 200)
+        hand_area_position,
+        Vector2(hand_area_width, hand_area_height)
     )
     return hand_rect.has_point(pos)

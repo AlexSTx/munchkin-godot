@@ -17,7 +17,16 @@ func set_jogador_host() -> void:
 	$"Status/Nome".text = _nome
 	add_child(_inventario)
 	add_child(_mao)
-	_mao.position = Vector2(700, 0)
+
+	var window_size = get_viewport().get_visible_rect().size
+	var width = window_size.x
+	var height = window_size.y
+
+	_mao.set_hand_area(
+        Vector2(width - 1000, height - Carta.CARD_HEIGHT/2.0 - 10), 
+        1000,                
+        Carta.CARD_HEIGHT             
+    )
 	_inventario.visible = false
 
 

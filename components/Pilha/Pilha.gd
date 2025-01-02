@@ -83,13 +83,19 @@ func setup_click_area() -> void:
 
 
 func puxar_carta() -> void:
+	Partida.get_mesa().get_porta().toggle_highlight(false)
 	print("Tentando puxar carta")
 	print("Número de cartas na pilha: ", cartas.size())
 	if cartas.size() > 0:
 		var carta = cartas.pop_back()
 		remove_child(carta)
 		carta.visible = true
-		mao.add_carta(carta)
+		if Partida.get_turno().fase_atual is FasePreparo:
+			var monstro_slot = Partida.get_mesa().get_monstro_slot()
+			monstro_slot.add_monstro(carta)
+		else:
+			mao.add_carta(carta)
+			
 		emit_signal("carta_puxada", carta)
 
 

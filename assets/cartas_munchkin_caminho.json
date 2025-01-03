@@ -225,12 +225,12 @@
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
-        "VALOR_MOEDA": 400,
+        "VALOR_MOEDA": 600,
         "TAMANHO": "",
         "EFEITOS": [
             {
                 "TIPO": "ALT_FORCA",
-                "VALOR": 2,
+                "VALOR": 4,
                 "RESTRICOES": [
                     {
                         "TIPO": "CLASSE",
@@ -239,7 +239,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -251,14 +251,14 @@
         "TEXTO": "SÓ PARA HALFLINGS",
         "COISA RUIM": "",
         "O QUE DÁ": "BÔNUS",
-        "QUANTO": 4,
+        "QUANTO": 3,
         "TESOUROS": "",
-        "VALOR_MOEDA": 600,
+        "VALOR_MOEDA": 400,
         "TAMANHO": "GRANDE",
         "EFEITOS": [
             {
                 "TIPO": "ALT_FORCA",
-                "VALOR": 4,
+                "VALOR": 3,
                 "RESTRICOES": [
                     {
                         "TIPO": "RACA",
@@ -267,7 +267,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(19).PNG"
     },
     {
         "DECK": "PORTA",
@@ -411,17 +411,17 @@
         "TEXTO": "",
         "COISA RUIM": "",
         "O QUE DÁ": "BÔNUS",
-        "QUANTO": 5,
+        "QUANTO": 1,
         "TESOUROS": "",
-        "VALOR_MOEDA": "SEM VALOR",
+        "VALOR_MOEDA": 200,
         "TAMANHO": "",
         "EFEITOS": [
             {
                 "TIPO": "ALT_FORCA",
-                "VALOR": 5
+                "VALOR": 1
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(3).PNG"
     },
     {
         "DECK": "PORTA",
@@ -435,12 +435,12 @@
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
-        "VALOR_MOEDA": 200,
+        "VALOR_MOEDA": 600,
         "TAMANHO": "",
         "EFEITOS": [
             {
                 "TIPO": "ALT_FORCA",
-                "VALOR": 2,
+                "VALOR": 3,
                 "RESTRICOES": [
                     {
                         "TIPO": "RACA",
@@ -453,7 +453,7 @@
                 "VALOR": 1
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444.PNG"
     },
     {
         "DECK": "PORTA",
@@ -552,7 +552,7 @@
         "EFEITOS": [
             {
                 "TIPO": "ALT_FORCA",
-                "VALOR": 3,
+                "VALOR": 4,
                 "RESTRICOES": [
                     {
                         "TIPO": "CLASSE",
@@ -561,7 +561,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(23).PNG"
     },
     {
         "DECK": "PORTA",
@@ -575,12 +575,12 @@
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
-        "VALOR_MOEDA": "",
+        "VALOR_MOEDA": 600,
         "TAMANHO": "",
         "EFEITOS": [
             {
                 "TIPO": "ALT_FORCA",
-                "VALOR": 2,
+                "VALOR": 4,
                 "RESTRICOES": [
                     {
                         "TIPO": "CLASSE",
@@ -589,7 +589,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(22).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -679,17 +679,17 @@
         "TEXTO": "",
         "COISA RUIM": "",
         "O QUE DÁ": "BÔNUS",
-        "QUANTO": 5,
+        "QUANTO": 1,
         "TESOUROS": "",
-        "VALOR_MOEDA": 800,
+        "VALOR_MOEDA": 200,
         "TAMANHO": "",
         "EFEITOS": [
             {
                 "TIPO": "ALT_FORCA",
-                "VALOR": 5
+                "VALOR": 1
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(16).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -831,7 +831,7 @@
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
-        "VALOR_MOEDA": 100,
+        "VALOR_MOEDA": 600,
         "TAMANHO": "",
         "EFEITOS": [
             {
@@ -846,7 +846,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(21).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -909,7 +909,7 @@
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
-        "VALOR_MOEDA": "",
+        "VALOR_MOEDA":600,
         "TAMANHO": "",
         "EFEITOS": [
             {
@@ -923,7 +923,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(9).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1038,7 +1038,7 @@
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
-        "VALOR_MOEDA": "",
+        "VALOR_MOEDA": 100,
         "TAMANHO": "",
         "EFEITOS": [
             {
@@ -1053,7 +1053,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(20).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1082,7 +1082,7 @@
                 ]
             }
         ],
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(8).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1290,7 +1290,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 1300,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(6).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1352,9 +1352,9 @@
         "O QUE DÁ": "BÔNUS",
         "QUANTO": 3,
         "TESOUROS": "",
-        "VALOR_MOEDA": 400,
+        "VALOR_MOEDA": 300,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(17).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1384,9 +1384,9 @@
         "O QUE DÁ": "BÔNUS",
         "QUANTO": 3,
         "TESOUROS": "",
-        "VALOR_MOEDA": 400,
+        "VALOR_MOEDA": 300,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(7).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1498,7 +1498,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(1).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2784,12 +2784,12 @@ Race(s).",
         "NOME": "1000 PEÇAS DE OURO",
         "TEXTO": "",
         "COISA RUIM": "",
-        "O QUE DÁ": "BÔNUS",
-        "QUANTO": 2,
+        "O QUE DÁ": "NÍVEL",
+        "QUANTO": 1,
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(10).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2832,12 +2832,12 @@ Race(s).",
         "NOME": "ERRO DE SOMA CONVENIENTE",
         "TEXTO": "",
         "COISA RUIM": "",
-        "O QUE DÁ": "BÔNUS",
-        "QUANTO": 2,
+        "O QUE DÁ": "NÍVEL",
+        "QUANTO": 1,
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(25).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2960,12 +2960,12 @@ Race(s).",
         "NOME": "HAMBURGUER DE CADÁVERES COM ANCHOVAS",
         "TEXTO": "SO PARA HALFLINGS",
         "COISA RUIM": "",
-        "O QUE DÁ": "",
-        "QUANTO": "",
+        "O QUE DÁ": "BÔNUS",
+        "QUANTO": 3,
         "TESOUROS": "",
-        "VALOR_MOEDA": 300,
+        "VALOR_MOEDA": 400,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(24).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2997,7 +2997,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3077,7 +3077,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3155,9 +3155,9 @@ Race(s).",
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
-        "VALOR_MOEDA": 300,
+        "VALOR_MOEDA": 400,
         "TAMANHO": "GRANDE",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(15).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3189,7 +3189,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 500,
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(12).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3205,7 +3205,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(13).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3232,12 +3232,12 @@ Race(s).",
         "NOME": "MULTILAR OS CADÁVERES",
         "TEXTO": "ESTA CARTA SÓ PODE SER USADA DEPOIS DO COMBATE, MAS NÃO NECESSARIAMENTE DO SEU COMBATE.",
         "COISA RUIM": "",
-        "O QUE DÁ": "",
-        "QUANTO": "",
+        "O QUE DÁ": "NÍVEL",
+        "QUANTO": 1,
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": ""
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(4).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3477,5 +3477,55 @@ Footgear.",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
         "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(3).PNG"
+    },
+    {
+        "DECK": "PORTA",
+        "COR": "ROXO",
+        "TIPO": "EQUIPAMENTO",
+        "SUBTIPO": "ARMA1M",
+        "NIVEL": 2,
+        "NOME": "SHOT WIDE ARMOR",
+        "TEXTO": "SÓ PARA ANÕES",
+        "COISA RUIM": "",
+        "O QUE DÁ": "BÔNUS",
+        "QUANTO": 3,
+        "TESOUROS": "",
+        "VALOR_MOEDA": 600,
+        "TAMANHO": "",
+        "EFEITOS": [
+            {
+                "TIPO": "ALT_FORCA",
+                "VALOR": 3,
+                "RESTRICOES": [
+                    {
+                        "TIPO": "RACA",
+                        "VALOR": "ANAO"
+                    }
+                ]
+            }
+        ],
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(2).PNG"
+    },
+    {
+        "DECK": "PORTA",
+        "COR": "ROXO",
+        "TIPO": "EQUIPAMENTO",
+        "SUBTIPO": "ARMA2M",
+        "NIVEL": 3,
+        "NOME": "HUGE ROCK",
+        "TEXTO": "",
+        "COISA RUIM": "",
+        "O QUE DÁ": "",
+        "QUANTO": "",
+        "TESOUROS": "",
+        "VALOR_MOEDA": 200,
+        "TAMANHO": "GRANDE",
+        "EFEITOS": [
+            {
+                "TIPO": "ALT_FORCA",
+                "VALOR": 3
+            }
+        ],
+        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(26).PNG"
     },
 ]

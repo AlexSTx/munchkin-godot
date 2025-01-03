@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Caminho da pasta com as imagens
-folder_path = r'C:\Users\dwsol\OneDrive\Documentos\munchkin\munchkin-godot\components\cartasimg\Fundo-20241229T182258Z-001\Fundo'
+folder_path = r'C:\Users\dwsol\OneDrive\Documentos\munchkin\munchkin-godot\components\cartasimg\Slots-20250103T142627Z-001'
 # Define o novo tamanho para as imagens
 new_size = (170, 250)
 
@@ -14,7 +14,7 @@ else:
 
     # Itera sobre todos os arquivos .png na pasta
     for filename in os.listdir(folder_path):
-        if filename.endswith('.PNG'):
+        if filename.endswith('.TIF'):
             img_path = os.path.join(folder_path, filename)
             print(f"Processando a imagem {filename}...")
             try:

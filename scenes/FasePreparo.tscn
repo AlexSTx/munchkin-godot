@@ -1,17 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://uu8k41awueia"]
+[gd_scene load_steps=3 format=3 uid="uid://uu8k41awueia"]
 
 [ext_resource type="Script" path="res://components/Fase/FasePreparo.gd" id="1_8uq7w"]
-[ext_resource type="PackedScene" uid="uid://bd7hfpffqtxro" path="res://scenes/confusao_popup.tscn" id="2_fhna0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kjks"]
-bg_color = Color(0.797793, 0.302178, 0.27835, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ckka"]
+bg_color = Color(0.852731, 0.177681, 0.211886, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.352941)
-shadow_size = 5
-shadow_offset = Vector2(0, 2)
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+shadow_color = Color(0, 0, 0, 0.368627)
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
 
 [node name="Preparo" type="Node"]
 script = ExtResource("1_8uq7w")
@@ -21,9 +24,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -138.0
-offset_top = 308.0
+offset_top = 34.0
 offset_right = 138.0
-offset_bottom = 377.0
+offset_bottom = 103.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
 theme_override_constants/shadow_offset_x = 3
@@ -36,9 +39,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -138.0
-offset_top = 390.0
+offset_top = 116.0
 offset_right = 138.0
-offset_bottom = 428.0
+offset_bottom = 154.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
 theme_override_constants/shadow_offset_x = 3
@@ -47,48 +50,24 @@ theme_override_font_sizes/font_size = 25
 text = "Vez de: Fulano"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -325.0
-offset_top = -41.0
-offset_right = 325.0
-offset_bottom = 41.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 50
-
-[node name="BaterNaPorta" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_3kjks")
-text = "Bater na porta"
-
-[node name="ChamarMonstro" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_3kjks")
-text = "Buscar confusão"
-
 [node name="Timer" type="Timer" parent="."]
 
-[node name="confusao_popup" parent="." instance=ExtResource("2_fhna0")]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.683
+anchor_top = 0.451
+anchor_right = 0.683
+anchor_bottom = 0.451
+offset_left = -161.36
+offset_top = -25.08
+offset_right = 62.6399
+offset_bottom = 24.92
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_6ckka")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ckka")
+text = "Finalizar turno"
 
-[connection signal="button_up" from="HBoxContainer/BaterNaPorta" to="." method="BaterNaPorta"]
-[connection signal="pressed" from="HBoxContainer/ChamarMonstro" to="." method="_on_chamar_monstro_pressed"]
-[connection signal="button_up" from="confusao_popup/Panel/Confirmar" to="." method="ConfirmarConfusao"]
-
-[editable path="confusao_popup"]
+[connection signal="button_up" from="Button" to="." method="_finalizar_turno_clicado"]

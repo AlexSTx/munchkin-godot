@@ -19,12 +19,14 @@ func _trocar_de_fase(next_fase_path: String, data: Dictionary) -> void:
 		return 
 
 	var previous_fase_path := fase_atual.name
-	fase_atual.exit()	
+	fase_atual.exit()
+	if(next_fase_path == "Preparo"):
+		_troca_jogador_atual()
 	fase_atual = get_node(next_fase_path)
 	fase_atual.enter(previous_fase_path, data)
 
 
-func _trocar_jogador_atual() -> void:
+func _troca_jogador_atual() -> void:
 	if jogador_atual < len(Partida.get_jogadores())-1:
 		jogador_atual += 1
 	else:

@@ -1,12 +1,27 @@
-extends "res://components/Pilha/Pilha.gd"
+class_name DescarteSlot extends Slot
 
-class_name PilhaDescarte
+signal carta_descartada
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var _ultimo_descarte: Carta = null
 
+func has_descarte() -> bool:
+	return _ultimo_descarte != null
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func get_ultimo_descarte() -> Carta:
+	return _ultimo_descarte
+
+func add_descarte(carta: Carta) -> void:
+	if _ultimo_descarte:
+		remove_descarte_antigo()
+	_ultimo_descarte = carta
+	carta.position = Vector2.ZERO
+	add_child(carta)
+	carta.visible = true
+	emit_signal("carta_descartada")
+	carta.disable_drag()
+
+func remove_descarte_antigo() -> void:
+	if _ultimo_descarte:
+		var descarte = _ultimo_descarte
+		remove_child(descarte)
+		_ultimo_descarte = null

@@ -2,31 +2,52 @@ class_name Mesa extends Node2D
 
 var _tesouro: PilhaTesouro
 var _porta: PilhaPorta
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var _monstro_slot: MonstroSlot
+var _descarte_slot: DescarteSlot
 
 func set_mesa() -> void:
-	var cena_pilha_tesouro = preload("res://scenes/PilhaTesouro.tscn").instantiate()
-	var cena_pilha_porta = preload("res://scenes/PilhaPorta.tscn").instantiate()
-	_tesouro = cena_pilha_tesouro
-	_porta = cena_pilha_porta
+	var img_slot_vazio = preload("res://scenes/CardSlot.png")
+	_tesouro = PilhaTesouro.new()
+	_porta = PilhaPorta.new()
+
+	_tesouro.name = "BaralhoTesouro"
+	_porta.name = "BaralhoPorta"
+
+	_monstro_slot = MonstroSlot.new()
+	_monstro_slot.set_image(img_slot_vazio)
 	
+	_descarte_slot = DescarteSlot.new()
+	_descarte_slot.set_image(img_slot_vazio)	
+	
+	_tesouro.set_image(load("res://assets/tesouro.png"))
+	_porta.set_image(load("res://assets/porta.png"))
+
+	_tesouro.set_size(Vector2(200, 300))
+	_porta.set_size(Vector2(200, 300))
+	_monstro_slot.position = Vector2(960, 500)
+	_descarte_slot.position = Vector2(1770, 500)
+
 	add_child(_tesouro)
 	add_child(_porta)
+	add_child(_monstro_slot)
+	add_child(_descarte_slot)
 	
 	_tesouro.set_pilha()
 	_porta.set_pilha()
-	
-	_tesouro.position = Vector2(147, 500)
-	_porta.position = Vector2(344, 500)
-
-func _process(delta: float) -> void:
-	pass
+		
+	_tesouro.position = Vector2(150, 500)
+	_porta.position = Vector2(380, 500)
+	_porta.setup_highlight()
 
 func get_porta() -> PilhaPorta:
 	return _porta
 	
 func get_tesouro() -> PilhaTesouro:
 	return _tesouro
+
+
+func get_monstro_slot() -> MonstroSlot:
+	return _monstro_slot
+
+func get_descarte_slot() -> DescarteSlot:
+	return _descarte_slot

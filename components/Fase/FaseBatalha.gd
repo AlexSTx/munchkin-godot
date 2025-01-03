@@ -1,17 +1,14 @@
 class_name FaseBatalha extends Fase
 
-@onready var container = get_node("VSplitContainer")
-
 func _ready() -> void:
-	container.visible = false
+	pass
 
 func enter(previous_fase_path: String, data := {}) -> void:
-	container.visible = true
-	print("entered BATALHA")
+	pass
 
 
 func exit() -> void: 
-	container.visible = false
+	pass
 
 func FimBatalha() -> void:
 	finished.emit("Final", {})

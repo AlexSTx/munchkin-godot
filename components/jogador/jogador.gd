@@ -65,3 +65,11 @@ func get_ouro() -> int:
 
 func get_fuga() -> int:
 	return _fuga
+
+func set_nivel(valor : int) -> void:
+	self._nivel = valor if valor > 0 else 1
+
+func add_nivel(valor : int) -> void:
+	self._nivel += valor
+	if self._nivel < 1:
+		self._nivel = 1

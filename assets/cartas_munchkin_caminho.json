@@ -13,7 +13,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(1).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(1).PNG"
     },
     {
         "DECK": "PORTA",
@@ -29,7 +29,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(20).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(20).PNG"
     },
     {
         "DECK": "PORTA",
@@ -45,7 +45,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(14).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -61,7 +61,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "munchkin-godot\components\cartasimg\PortaAjustada\IMG_4438(9).PNG"
+        "CAMINHO": "munchkin-godot/components/cartasimg/PortaAjustada/IMG_4438(9).PNG"
     },
     {
         "DECK": "PORTA",
@@ -77,7 +77,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(8).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(8).PNG"
     },
     {
         "DECK": "PORTA",
@@ -93,7 +93,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(9).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(9).PNG"
     },
     {
         "DECK": "PORTA",
@@ -109,7 +109,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(5).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -125,7 +125,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(6).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(6).PNG"
     },
     {
         "DECK": "PORTA",
@@ -141,7 +141,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(18).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(18).PNG"
     },
     {
         "DECK": "PORTA",
@@ -157,7 +157,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(7).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(7).PNG"
     },
     {
         "DECK": "PORTA",
@@ -173,7 +173,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(5).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -189,7 +189,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(15).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(15).PNG"
     },
     {
         "DECK": "PORTA",
@@ -211,7 +211,7 @@
                 "VALOR": 1
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(5).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -239,7 +239,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(5).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -267,7 +267,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(19).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(19).PNG"
     },
     {
         "DECK": "PORTA",
@@ -317,14 +317,14 @@
                     "VALOR": 2
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(7).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(7).PNG"
     },
     {
         "DECK": "PORTA",
         "COR": "ROXO",
         "TIPO": "EQUIPAMENTO",
         "SUBTIPO": "ARMA1M",
-        "NIVEL": ,
+        "NIVEL": 3,
         "NOME": "PUNHAL DA TRAIÇÃO",
         "TEXTO": "SÓ PARA LADRÕES",
         "COISA RUIM": "",
@@ -339,7 +339,7 @@
                 "VALOR": 3
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(18).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(18).PNG"
     },
     {
         "DECK": "PORTA",
@@ -371,7 +371,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(15).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(15).PNG"
     },
     {
         "DECK": "PORTA",
@@ -399,7 +399,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(15).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(15).PNG"
     },
     {
         "DECK": "PORTA",
@@ -421,7 +421,7 @@
                 "VALOR": 1
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(3).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(3).PNG"
     },
     {
         "DECK": "PORTA",
@@ -453,7 +453,7 @@
                 "VALOR": 1
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444.PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444.PNG"
     },
     {
         "DECK": "PORTA",
@@ -482,7 +482,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(5).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -511,7 +511,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(10).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(10).PNG"
     },
     {
         "DECK": "PORTA",
@@ -561,7 +561,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(23).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(23).PNG"
     },
     {
         "DECK": "PORTA",
@@ -589,7 +589,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(22).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(22).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -611,7 +611,7 @@
                 "VALOR": 2
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(13).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(13).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -639,7 +639,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(3).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(3).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -667,7 +667,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(13).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(13).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -689,7 +689,7 @@
                 "VALOR": 1
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(16).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(16).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -717,7 +717,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(4).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(4).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -739,7 +739,7 @@
                 "VALOR": 1
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(21).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(21).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -767,7 +767,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(6).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(6).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -789,7 +789,7 @@
                 "VALOR": 2
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(1).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(1).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -846,7 +846,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(21).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(21).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -868,7 +868,7 @@
                 "VALOR": 2
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(22).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(22).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -895,7 +895,7 @@
                 "TRIGGER": "FUGA"
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(12).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(12).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -923,7 +923,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(9).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(9).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -952,7 +952,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(9).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(9).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -980,7 +980,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(3).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(3).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1002,7 +1002,7 @@
                 "VALOR": 2
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(2).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(2).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1024,7 +1024,7 @@
                 "VALOR": 3
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(6).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(6).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1053,7 +1053,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(20).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(20).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1082,7 +1082,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(8).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(8).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1098,7 +1098,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(17).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(17).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1155,7 +1155,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(9).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(9).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1171,7 +1171,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 300,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(8).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(8).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1200,7 +1200,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(16).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(16).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1245,7 +1245,7 @@
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442.PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442.PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1273,7 +1273,7 @@
                     }
                 ]
             }
-        ]
+        ],
         "CAMINHO": ""
     },
     {
@@ -1290,7 +1290,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 1300,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(6).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(6).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1306,7 +1306,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 500,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(11).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1322,7 +1322,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(14).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1338,7 +1338,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 500,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(21).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(21).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1354,7 +1354,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 300,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(17).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(17).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1370,7 +1370,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 300,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(14).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(14).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1386,7 +1386,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 300,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(7).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(7).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1418,7 +1418,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(11).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1450,7 +1450,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(19).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(19).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1466,7 +1466,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440.PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440.PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1482,7 +1482,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "GRANDE",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(19).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(19).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -1498,7 +1498,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(1).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(1).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1562,7 +1562,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(3).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(3).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1578,7 +1578,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(3).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(3).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1594,7 +1594,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(21).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(21).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1610,7 +1610,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(22).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(22).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1642,7 +1642,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(10).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(10).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1658,7 +1658,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(7).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(7).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1674,7 +1674,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(5).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1690,7 +1690,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(15).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(15).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1706,7 +1706,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(2).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(2).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1722,7 +1722,7 @@
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(8).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(8).PNG"
     },{
         "DECK": "PORTA",
         "COR": "VERDE",
@@ -1730,25 +1730,14 @@
         "SUBTIPO": "",
         "NIVEL": "",
         "NOME": "MALDIÇÃO! MUDE SUA RAÇA",
-        "TEXTO": "If you have no Race now, this curse
-has no effect. Otherwise, go back
-through the discard pile, starting with
-the top discard. The first Race card you
-come to replaces your current Racels).
-If you go through the
-discards without
-finding a Race
-card, you
-just lose
-your own
-Race(s).",
+        "TEXTO": "If you have no Race now, this curse has no effect. Otherwise, go back through the discard pile, starting with the top discard. The first Race card you come to replaces your current Racels). If you go through the discards without finding a Race card, you just lose your own Race(s).",
         "COISA RUIM": "",
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(19).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(19).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1764,7 +1753,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(8).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(8).PNG"
     },
     
     {
@@ -1781,7 +1770,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(19).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(19).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1813,7 +1802,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(11).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1829,7 +1818,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(4).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(4).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1845,7 +1834,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(19).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(19).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1861,7 +1850,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(5).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(5).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1877,7 +1866,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(14).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1893,7 +1882,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(10).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(10).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1909,7 +1898,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(14).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1925,7 +1914,7 @@ Race(s).",
         "TESOUROS": 4,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(17).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(17).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1957,7 +1946,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(6).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(6).PNG"
     },
     {
         "DECK": "PORTA",
@@ -1973,7 +1962,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441.PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441.PNG"
     },
     {
         "DECK": "PORTA",
@@ -1989,7 +1978,7 @@ Race(s).",
         "TESOUROS": 5,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(1).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(1).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2005,7 +1994,7 @@ Race(s).",
         "TESOUROS": 5,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(21).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(21).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2021,7 +2010,7 @@ Race(s).",
         "TESOUROS": 4,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(13).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(13).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2037,7 +2026,7 @@ Race(s).",
         "TESOUROS": 4,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(2).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(2).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2053,7 +2042,7 @@ Race(s).",
         "TESOUROS": 3,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(12).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(12).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2069,7 +2058,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(13).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(13).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2085,7 +2074,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(22).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(22).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2101,7 +2090,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(16).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(16).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2117,7 +2106,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(13).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(13).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2133,7 +2122,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(14).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2149,7 +2138,7 @@ Race(s).",
         "TESOUROS": 3,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(23).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(23).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2181,7 +2170,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(9).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(9).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2197,7 +2186,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(18).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(18).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2213,7 +2202,7 @@ Race(s).",
         "TESOUROS": 4,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(17).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(17).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2261,7 +2250,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(16).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(16).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2277,7 +2266,7 @@ Race(s).",
         "TESOUROS": 4,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(11).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2293,7 +2282,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(10).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(10).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2309,7 +2298,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(2).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(2).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2325,7 +2314,7 @@ Race(s).",
         "TESOUROS": 3,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439.PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439.PNG"
     },
     {
         "DECK": "PORTA",
@@ -2341,7 +2330,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(22).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(22).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2357,7 +2346,7 @@ Race(s).",
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(20).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(20).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2373,7 +2362,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(17).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(17).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2389,7 +2378,7 @@ Race(s).",
         "TESOUROS": 3,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(25).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(25).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2405,7 +2394,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(2).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(2).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2421,7 +2410,7 @@ Race(s).",
         "TESOUROS": 3,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(24).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(24).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2437,7 +2426,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(22).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(22).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2453,7 +2442,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(1).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(1).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2469,7 +2458,7 @@ Race(s).",
         "TESOUROS": 3,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(7).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(7).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2485,7 +2474,7 @@ Race(s).",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(18).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(18).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2501,7 +2490,7 @@ Race(s).",
         "TESOUROS": 4,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(3).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(3).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2517,7 +2506,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "GRANDE",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(4).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(4).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2533,7 +2522,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 400,
         "TAMANHO": "GRANDE",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(6).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(6).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2549,7 +2538,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 1100,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(10).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(10).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2565,7 +2554,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(14).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2581,7 +2570,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(1).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(1).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2597,7 +2586,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(12).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(12).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2613,7 +2602,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(8).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(8).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2629,7 +2618,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(16).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(16).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2645,7 +2634,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(17).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(17).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2661,7 +2650,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(13).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(13).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2677,7 +2666,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(18).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(18).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2693,7 +2682,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "GRANDE",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(14).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2709,7 +2698,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "GRANDE",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(6).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(6).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2741,7 +2730,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(7).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(7).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2757,7 +2746,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(7).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(7).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2789,7 +2778,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(10).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(10).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2805,7 +2794,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(21).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(21).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2821,7 +2810,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(12).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(12).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2837,7 +2826,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(25).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(25).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2869,7 +2858,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(11).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2885,7 +2874,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 100,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(20).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(20).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2901,7 +2890,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 300,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(12).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(12).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2917,7 +2906,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(9).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(9).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2965,7 +2954,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 400,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(24).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(24).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2981,7 +2970,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 500,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4441(15).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4441(15).PNG"
     },
     {
         "DECK": "PORTA",
@@ -2997,7 +2986,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(14).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(14).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3029,7 +3018,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(11).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3045,7 +3034,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(21).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(21).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3061,7 +3050,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4443(8).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4443(8).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3077,7 +3066,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(11).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(11).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3093,7 +3082,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(4).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(4).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3109,7 +3098,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(19).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(19).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3141,7 +3130,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 400,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(22).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(22).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3157,7 +3146,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 400,
         "TAMANHO": "GRANDE",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(15).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(15).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3189,7 +3178,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": 500,
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(12).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(12).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3205,7 +3194,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(13).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(13).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3221,7 +3210,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(10).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(10).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3237,7 +3226,7 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(4).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(4).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3253,14 +3242,14 @@ Race(s).",
         "TESOUROS": "",
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(12).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(12).PNG"
     },
     {
         "DECK": "TESOURO",
         "COR": "ROXO",
         "TIPO": "EQUIPAMENTO",
         "SUBTIPO": "MÃO",
-        "NIVEL": ,
+        "NIVEL": 2,
         "NOME": "BUCKLER OF SWASHING",
         "TEXTO": "",
         "COISA RUIM": "",
@@ -3275,7 +3264,7 @@ Race(s).",
                 "VALOR": 2
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(2).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(2).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3287,7 +3276,7 @@ Race(s).",
         "TEXTO": "",
         "COISA RUIM": "",
         "O QUE DÁ": "",
-        "QUANTO": ,
+        "QUANTO": 0,
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "",
@@ -3297,7 +3286,7 @@ Race(s).",
                 "VALOR": 2
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(20).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(20).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3306,14 +3295,10 @@ Race(s).",
         "SUBTIPO": "",
         "NIVEL": "",
         "NOME": "HIRELING",
-        "TEXTO": " Allows you to carry and use one extra
-item, even if you could not otherwise. If
-you lose your Hireling, the item goes, too.
-You may discard your Hireling for an
-automatic escape from any monster.",
+        "TEXTO": " Allows you to carry and use one extra item, even if you could not otherwise. If you lose your Hireling, the item goes, too. You may discard your Hireling for an automatic escape from any monster.",
         "COISA RUIM": "",
         "O QUE DÁ": "",
-        "QUANTO": ,
+        "QUANTO": 0,
         "TESOUROS": "",
         "VALOR_MOEDA": 600,
         "TAMANHO": "",
@@ -3323,7 +3308,7 @@ automatic escape from any monster.",
                 "VALOR": 1
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(1).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(1).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3352,7 +3337,7 @@ automatic escape from any monster.",
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(4).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(4).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3369,7 +3354,7 @@ automatic escape from any monster.",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
         
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(8).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(8).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3378,10 +3363,7 @@ automatic escape from any monster.",
         "SUBTIPO": "POÇÃO",
         "NIVEL": "",
         "NOME": "KILL THE HIRELING",
-        "TEXTO": " You can use this card only if a
-Hireling is in play (no matter who owns
-him). Discard the Hireling. 
-GO UP ONE LEVEL",
+        "TEXTO": " You can use this card only if a Hireling is in play (no matter who owns him). Discard the Hireling. GO UP ONE LEVEL",
         "COISA RUIM": "",
         "O QUE DÁ": "NÍVEL",
         "QUANTO": 1,
@@ -3389,7 +3371,7 @@ GO UP ONE LEVEL",
         "VALOR_MOEDA": 200,
         "TAMANHO": "",
         
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(9).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(9).PNG"
     },
     {
         "DECK": "TESOURO",
@@ -3418,7 +3400,7 @@ GO UP ONE LEVEL",
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4442(4).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(4).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3427,16 +3409,14 @@ GO UP ONE LEVEL",
         "SUBTIPO": "MORTO VIVO",
         "NIVEL": 6,
         "NOME": "PUKACHU",
-        "TEXTO": "Gain an extra level if you defcat it
-without using help or bonuses.",
-        "COISA RUIM": "Projectile vomiting attack!
-Discard your whole hand",
+        "TEXTO": "Gain an extra level if you defeat it without using help or bonuses.",
+        "COISA RUIM": "Projectile vomiting attack. Discard your whole hand",
         "O QUE DÁ": "NÍVEL",
         "QUANTO": 2,
         "TESOUROS": 2,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438.PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438.PNG"
     },
     {
         "DECK": "PORTA",
@@ -3445,17 +3425,14 @@ Discard your whole hand",
         "SUBTIPO": "MORTO VIVO",
         "NIVEL": 16,
         "NOME": "WIGHT BROTHERS",
-        "TEXTO": "Will not pursuc anyone of Level 3 or
-below, Higher-Level characters lose
-2 levels, even if they escape.
-",
+        "TEXTO": "Will not pursuc anyone of Level 3 or below, Higher-Level characters lose 2 levels, even if they escape.",
         "COISA RUIM": "You are reduced to Level 1",
         "O QUE DÁ": "NÍVEL",
         "QUANTO": 2,
         "TESOUROS": 4,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4438(4).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4438(4).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3463,20 +3440,15 @@ below, Higher-Level characters lose
         "TIPO": "MONSTRO",
         "SUBTIPO": "",
         "NIVEL": 14,
-        "NOME": "
-DROOLING SLIME
-",
-        "TEXTO": "Yucky slime! +4 against Elves.
-Bad Stuff ",
-        "COISA RUIM": "Discard the Footgear you
-are wearing. Lose a level if you have no
-Footgear.",
+        "NOME": "DROOLING SLIME",
+        "TEXTO": "Yucky slime! +4 against Elves. Bad Stuff ",
+        "COISA RUIM": "Discard the Footgear you are wearing. Lose a level if you have no Footgear.",
         "O QUE DÁ": "",
         "QUANTO": "",
         "TESOUROS": 1,
         "VALOR_MOEDA": "",
         "TAMANHO": "",
-        "CAMINHO": "cartasimg\PortaAjustada\IMG_4439(3).PNG"
+        "CAMINHO": "cartasimg/PortaAjustada/IMG_4439(3).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3504,7 +3476,7 @@ Footgear.",
                 ]
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(2).PNG"
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(2).PNG"
     },
     {
         "DECK": "PORTA",
@@ -3526,6 +3498,6 @@ Footgear.",
                 "VALOR": 3
             }
         ],
-        "CAMINHO": "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4444(26).PNG"
-    },
+        "CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(26).PNG"
+    }
 ]

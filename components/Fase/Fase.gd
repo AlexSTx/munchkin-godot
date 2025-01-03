@@ -1,6 +1,5 @@
 class_name Fase extends Node
 
-var titulo: String
 var jogador_atual: Jogador
 
 signal finished(next_fase_path: String, data: Dictionary)

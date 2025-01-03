@@ -159,7 +159,8 @@ static func criar_todas_as_cartas() -> Array[Carta]:
 #TODO: Enum para representar as pilhas?
 static func criar_cartas_da_pilha(pilha : String):
 	var ret : Array[Carta] = []
-	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha and dado['TIPO'] == "MALDIÇÃO" and dado['CAMINHO'] != ""):
+	# Ignoramos cartas sem imagem associada
+	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha and dado['CAMINHO'] != ""):
 		ret.push_back(criar_carta(carta))
 	
 	return ret

@@ -7,7 +7,7 @@ class_name RestricaoFase
 
 func _init(p_fase : String = "BATALHA", p_qualquer = false) -> void:
 	self.fase = p_fase
-	self.qualquer_jogador = p_qualquer
+	self.qualquer_jogador = p_qualquer if p_qualquer != null else false
 
 # Aqui o alvo deve ser o jogador jogando a carta
 

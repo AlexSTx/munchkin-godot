@@ -275,7 +275,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "SEXO",
-						"VALOR": "FEM"
+						"VALOR": "Feminino"
 					}
 				]
 			}
@@ -984,7 +984,8 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
-						"VALOR": "COMBATE_QUALQUER"
+						"VALOR": "BATALHA",
+						"QUALQUER": true
 					}
 				]
 			}
@@ -1012,7 +1013,8 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
-						"VALOR": "COMBATE_QUALQUER"
+						"VALOR": "BATALHA",
+						"QUALQUER": true
 					}
 				]
 			}
@@ -1055,7 +1057,8 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
-						"VALOR": "COMBATE_QUALQUER"
+						"VALOR": "BATALHA",
+						"QUALQUER": true
 					}
 				]
 			}
@@ -1082,7 +1085,8 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
-						"VALOR": "COMBATE"
+						"VALOR": "BATALHA",
+						"QUALQUER": false
 					}
 				]
 			}
@@ -1125,7 +1129,8 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
-						"VALOR": "COMBATE_QUALQUER"
+						"VALOR": "BATALHA",
+						"QUALQUER": true
 					}
 				]
 			}
@@ -1168,7 +1173,8 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
-						"VALOR": "COMBATE_QUALQUER"
+						"VALOR": "BATALHA",
+						"QUALQUER": true
 					}
 				]
 			}

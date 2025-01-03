@@ -4,30 +4,3 @@
 
 [node name="Batalha" type="Node"]
 script = ExtResource("1_gindh")
-
-[node name="VSplitContainer" type="VSplitContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -135.0
-offset_top = -72.5
-offset_right = 135.0
-offset_bottom = 72.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="VSplitContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "BATALHA"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="prox" type="Button" parent="VSplitContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Trocar de Fase"
-
-[connection signal="button_up" from="VSplitContainer/prox" to="." method="FimBatalha"]

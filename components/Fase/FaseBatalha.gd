@@ -7,6 +7,8 @@ func _ready() -> void:
 
 func enter(previous_fase_path: String, data := {}) -> void:
 	container.visible = true
+	print("Monstro:")
+	print(data)
 	print("entered BATALHA")
 
 

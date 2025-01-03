@@ -22,17 +22,15 @@ func set_pilha() -> void:
 	criar_pilha_inicial()
 
 
-func _ready() -> void:
-	if not click_area:
-		setup_click_area()
-		
+func _ready() -> void:	
 	if not sprite:
 		setup_sprite()
 
 	if texture:
 		apply_texture(texture)
 
-	click_area.input_event.connect(_on_click_area_input_event)
+	if click_area:
+		click_area.input_event.connect(_on_click_area_input_event)
 
 
 func setup_sprite() -> void:
@@ -80,7 +78,11 @@ func setup_click_area() -> void:
 	
 	add_child(click_area)
 	click_area.add_child(collision)
+	click_area.input_event.connect(_on_click_area_input_event)
 
+func disable_click_area() -> void:
+	remove_child(click_area)
+	click_area = null
 
 func puxar_carta() -> void:
 	#Partida.get_mesa().get_porta().toggle_highlight(false)
@@ -90,14 +92,21 @@ func puxar_carta() -> void:
 		var carta = cartas.pop_back()
 		remove_child(carta)
 		carta.visible = true
-		#if carta is Monstro and Partida.get_turno().fase_atual is FasePreparo:
-		if Partida.get_turno().fase_atual is FasePreparo:
-			var monstro_slot = Partida.get_mesa().get_monstro_slot()
-			monstro_slot.add_monstro(carta)
-		else:
-			mao.add_carta(carta)
-			
+		
+		#if Partida.get_turno().fase_atual is FasePreparo:
+			#if carta is Monstro:
+				#var monstro_slot = Partida.get_mesa().get_monstro_slot()
+				#monstro_slot.add_monstro(carta)
+			#elif carta is Maldicao:
+				#aplicar efeito
+				#mostrar na tela efeito aplicado
+				#var descarte_slot = Partida.get_mesa().get_descarte_slot()
+				#descarte_slot.add_descarte(carta)
+		#else:
+			#mao.add_carta(carta)
+		mao.add_carta(carta)
 		emit_signal("carta_puxada", carta)
+		disable_click_area()
 
 
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:

@@ -108,32 +108,44 @@ func _on_card_drag_ended(carta: Carta) -> void:
 		c.enable_hover_animation()
 		c.enable_drag()
 
-	if not is_position_in_hand_area(carta.position):
-		animate_cards()
-		return 
-
-	var carta_idx := cartas.find(carta)
-	if carta_idx == -1:
-		return
+	if is_position_in_hand_area(carta.position):
+		var carta_idx := cartas.find(carta)
+		if carta_idx == -1:
+			return
+			
+		# Find nearest position in hand
+		var min_dist := INF
+		var target_idx := carta_idx
 		
-	# Find nearest position in hand
-	var min_dist := INF
-	var target_idx := carta_idx
+		for i in range(card_positions.size()):
+			var dist := carta.position.distance_to(card_positions[i])
+			if dist < min_dist:
+				min_dist = dist
+				target_idx = i
+		
+		# Reorder if position changed
+		if target_idx != carta_idx:
+			cartas.remove_at(carta_idx)
+			cartas.insert(target_idx, carta)
+			calculate_card_positions()
 	
-	for i in range(card_positions.size()):
-		var dist := carta.position.distance_to(card_positions[i])
-		if dist < min_dist:
-			min_dist = dist
-			target_idx = i
-	
-	# Reorder if position changed
-	if target_idx != carta_idx:
-		cartas.remove_at(carta_idx)
-		cartas.insert(target_idx, carta)
-		calculate_card_positions()
-	
-	animate_cards()
+		animate_cards()
+		return
 
+	var monstro_slot = Partida.get_mesa().get_monstro_slot()
+	if monstro_slot and _is_carta_in_slot(monstro_slot, carta):
+		remove_child(carta)
+		monstro_slot.add_monstro(carta)
+		return
+	
+	var descarte_slot = Partida.get_mesa().get_descarte_slot()
+	if descarte_slot and _is_carta_in_slot(descarte_slot, carta):
+		remove_child(carta)
+		descarte_slot.add_descarte(carta)
+		return
+
+	animate_cards()
+	return 
 
 func animate_cards() -> void:
 	for i in range(cartas.size()):
@@ -148,3 +160,12 @@ func is_position_in_hand_area(pos: Vector2) -> bool:
 		Vector2(hand_area_width, hand_area_height)
 	)
 	return hand_rect.has_point(pos)
+
+func _is_carta_in_slot(slot: Slot, carta: Carta) -> bool:
+	var carta_rect = Rect2(
+		carta.global_position,
+		Vector2(Carta.CARD_WIDTH, Carta.CARD_HEIGHT))
+	var slot_rect := Rect2(
+		slot.position,
+		Vector2(Carta.CARD_WIDTH, Carta.CARD_HEIGHT))
+	return carta_rect.intersects(slot_rect)

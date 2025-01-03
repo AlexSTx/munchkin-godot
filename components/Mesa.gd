@@ -3,7 +3,10 @@ class_name Mesa extends Node2D
 var _tesouro: PilhaTesouro
 var _porta: PilhaPorta
 var _monstro_slot: MonstroSlot
+var _descarte_slot: DescarteSlot
+
 func set_mesa() -> void:
+	var img_slot_vazio = preload("res://scenes/CardSlot.png")
 	_tesouro = PilhaTesouro.new()
 	_porta = PilhaPorta.new()
 
@@ -11,24 +14,29 @@ func set_mesa() -> void:
 	_porta.name = "BaralhoPorta"
 
 	_monstro_slot = MonstroSlot.new()
-	_monstro_slot.set_image(preload("res://scenes/CardSlot.png"))  # Aqui é onde você coloca o caminho da sua imagem
+	_monstro_slot.set_image(img_slot_vazio)
 	
+	_descarte_slot = DescarteSlot.new()
+	_descarte_slot.set_image(img_slot_vazio)	
 	
-	_tesouro.set_image(preload("res://assets/tesouro.png"))
-	_porta.set_image(preload("res://assets/porta.png"))
+	_tesouro.set_image(load("res://assets/tesouro.png"))
+	_porta.set_image(load("res://assets/porta.png"))
 
 	_tesouro.set_size(Vector2(200, 300))
 	_porta.set_size(Vector2(200, 300))
-	_monstro_slot.position = Vector2(1000, 500)  # Posição central da mesa
+	_monstro_slot.position = Vector2(960, 500)
+	_descarte_slot.position = Vector2(1770, 500)
 
 	add_child(_tesouro)
 	add_child(_porta)
 	add_child(_monstro_slot)
+	add_child(_descarte_slot)
+	
 	_tesouro.set_pilha()
 	_porta.set_pilha()
 		
-	_tesouro.position = Vector2(147, 500)
-	_porta.position = Vector2(360, 500)
+	_tesouro.position = Vector2(150, 500)
+	_porta.position = Vector2(380, 500)
 	_porta.setup_highlight()
 
 func get_porta() -> PilhaPorta:
@@ -40,3 +48,6 @@ func get_tesouro() -> PilhaTesouro:
 
 func get_monstro_slot() -> MonstroSlot:
 	return _monstro_slot
+
+func get_descarte_slot() -> DescarteSlot:
+	return _descarte_slot

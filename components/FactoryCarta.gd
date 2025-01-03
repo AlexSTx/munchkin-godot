@@ -2,7 +2,7 @@ extends Node
 
 class_name FactoryCarta
 
-static var arquivo_cartas := preload("res://assets/cartas_munchkin.json")
+static var arquivo_cartas := preload("res://assets/cartas_munchkin_caminho.json")
 const template : PackedScene = preload("res://components/carta/carta.tscn")
 
 # Existe somente para debug
@@ -18,7 +18,7 @@ func _ready() -> void:
 	# criar_cartas_da_pilha("TESOURO")
 
 static func int_if_not_empty(value, default : int = 0) -> int:
-	return value as int if value is not String else default
+	return value as int if value is int else default
 
 static func criar_carta(dados : Dictionary) -> Carta:
 	var nova_carta : Node = template.instantiate()
@@ -26,7 +26,6 @@ static func criar_carta(dados : Dictionary) -> Carta:
 	match dados['TIPO']:
 		"CLASSE":
 			nova_carta.set_script(Classe)
-			#TODO: Match para as diferentes classes quando as classes estiverem prontas
 		"EQUIPAMENTO":
 			nova_carta.set_script(Equipamento)
 			#TODO: Criar match quando o json tiver o subtipo separado
@@ -59,15 +58,23 @@ static func criar_carta(dados : Dictionary) -> Carta:
 			nova_carta.set_script(Monstro)
 			(nova_carta as Monstro).zumbi = dados['SUBTIPO'] == "MORTO VIVO"
 			(nova_carta as Monstro).tesouro = int_if_not_empty(dados['TESOUROS'], 1)
+			if 'COISA_RUIM' in dados:
+				(nova_carta as Monstro).coisa_ruim.efeitos = criar_lista_efeitos(dados['COISA_RUIM'], nova_carta)
 		"RAÇA":
 			nova_carta.set_script(Raca)
-			#TODO: Match para as diferentes raças quando as classes estiverem prontas
+		_: 
+			# Como Carta deve ser uma classe abstrata, qualquer carta que não especifique seu tipo é tratada como uma hábilidade
+			print("Não foi possível detectar o tipo da carta " + dados['NOME'] +  ". Ela foi instanciada como Habilidade")
+			nova_carta.set_script(Habilidade)
 			
+	
+	var img = load("res://components/" + dados['CAMINHO'])
+	
 	
 	nova_carta.titulo = dados['NOME']
 	nova_carta.descricao = dados['TEXTO']
-	nova_carta.nivel = dados["NIVEL"] if dados['NIVEL'] is not String else 0
-	
+	nova_carta.nivel = dados["NIVEL"] if dados['NIVEL'] is int else 0
+	(nova_carta.find_child("Sprite2D") as Sprite2D).texture = img
 	# Lidando com efeitos
 
 	if "EFEITOS" in dados:
@@ -91,6 +98,8 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 		match ef['TIPO']:
 			"ALT_FORCA":
 				novo_efeito = EfeitoAlterarForca.new(restricoes, ef['VALOR'])
+			"ALT_NIVEL":
+				novo_efeito = EfeitoAlterarNivel.new(restricoes, ef['VALOR'])
 			"ESCAPE":
 				novo_efeito = EfeitoEscaparCombate.new(restricoes)
 			"ALT_FUGA":
@@ -106,7 +115,7 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 				"DESCARTE":
 					carta.carta_morreu.connect(novo_efeito.aplicar)
 				var outro:
-					print("O trigger + " + outro + "não foi implementado")
+					print("O trigger + " + outro + " não foi implementado")
 
 		ret.push_back(novo_efeito)
 
@@ -120,14 +129,15 @@ static func criar_lista_restricoes(restricoes):
 		
 		match rest['TIPO']:
 			"FASE":
-				print("Restrição de fase ainda devem ser implementadas")
-				continue
+				nova_restricao = RestricaoFase.new(rest.get('VALOR'), rest.get('QUALQUER'))
 			"CLASSE":
 				var inverso = true if rest.get("INVERSO") else false
 				nova_restricao = RestricaoClasse.new(rest['VALOR'], inverso)
 			"RACA":
 				var inverso = true if rest.get("INVERSO") else false
 				nova_restricao = RestricaoRaca.new(rest['VALOR'], inverso)
+			"SEXO":
+				nova_restricao = RestricaoSexo.new(rest['VALOR'])
 			var outra :
 				print("Restrição " + outra +" ainda não foi implementado.")
 				continue
@@ -149,7 +159,8 @@ static func criar_todas_as_cartas() -> Array[Carta]:
 #TODO: Enum para representar as pilhas?
 static func criar_cartas_da_pilha(pilha : String):
 	var ret : Array[Carta] = []
-	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha):
+	# Ignoramos cartas sem imagem associada
+	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha and dado['CAMINHO'] != ""):
 		ret.push_back(criar_carta(carta))
 	
 	return ret

@@ -93,17 +93,17 @@ func puxar_carta() -> void:
 		remove_child(carta)
 		carta.visible = true
 		
-		#if Partida.get_turno().fase_atual is FasePreparo:
-			#if carta is Monstro:
-				#var monstro_slot = Partida.get_mesa().get_monstro_slot()
-				#monstro_slot.add_monstro(carta)
-			#elif carta is Maldicao:
-				#aplicar efeito
+		if Partida.get_turno().fase_atual is FasePreparo:
+			if carta is Monstro:
+				var monstro_slot = Partida.get_mesa().get_monstro_slot()
+				monstro_slot.add_monstro(carta)
+			elif carta is Maldicao:
+				carta.aplicar_todos_efeitos(Partida.get_jogadores()[0])
 				#mostrar na tela efeito aplicado
-				#var descarte_slot = Partida.get_mesa().get_descarte_slot()
-				#descarte_slot.add_descarte(carta)
-		#else:
-			#mao.add_carta(carta)
+				var descarte_slot = Partida.get_mesa().get_descarte_slot()
+				descarte_slot.add_descarte(carta)
+		else:
+			mao.add_carta(carta)
 		mao.add_carta(carta)
 		emit_signal("carta_puxada", carta)
 		disable_click_area()

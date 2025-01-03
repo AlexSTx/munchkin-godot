@@ -13,4 +13,6 @@ func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _img_
 	nivel = _nivel
 	titulo = _titulo
 	descricao = _descricao
-	
+
+func aplicar_todos_efeitos(alvo : Object):
+	$ListaEfeitos.aplicar_efeitos(alvo)

@@ -91,6 +91,8 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 		match ef['TIPO']:
 			"ALT_FORCA":
 				novo_efeito = EfeitoAlterarForca.new(restricoes, ef['VALOR'])
+			"ALT_NIVEL":
+				novo_efeito = EfeitoAlterarNivel.new(restricoes, ef['VALOR'])
 			"ESCAPE":
 				novo_efeito = EfeitoEscaparCombate.new(restricoes)
 			"ALT_FUGA":
@@ -149,7 +151,7 @@ static func criar_todas_as_cartas() -> Array[Carta]:
 #TODO: Enum para representar as pilhas?
 static func criar_cartas_da_pilha(pilha : String):
 	var ret : Array[Carta] = []
-	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha):
+	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha and dado['TIPO'] == "MALDIÇÃO"):
 		ret.push_back(criar_carta(carta))
 	
 	return ret

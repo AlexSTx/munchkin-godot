@@ -2,7 +2,7 @@ extends Node
 
 class_name FactoryCarta
 
-static var arquivo_cartas := preload("res://assets/cartas_munchkin.json")
+static var arquivo_cartas := preload("res://assets/cartas_munchkin_caminho.json")
 const template : PackedScene = preload("res://components/carta/carta.tscn")
 
 # Existe somente para debug
@@ -68,10 +68,13 @@ static func criar_carta(dados : Dictionary) -> Carta:
 			nova_carta.set_script(Habilidade)
 			
 	
+	var img = load("res://components/" + dados['CAMINHO'])
+	
+	
 	nova_carta.titulo = dados['NOME']
 	nova_carta.descricao = dados['TEXTO']
 	nova_carta.nivel = dados["NIVEL"] if dados['NIVEL'] is int else 0
-	
+	(nova_carta.find_child("Sprite2D") as Sprite2D).texture = img
 	# Lidando com efeitos
 
 	if "EFEITOS" in dados:
@@ -156,7 +159,8 @@ static func criar_todas_as_cartas() -> Array[Carta]:
 #TODO: Enum para representar as pilhas?
 static func criar_cartas_da_pilha(pilha : String):
 	var ret : Array[Carta] = []
-	for carta in arquivo_cartas.data.filter(func(dado : Dictionary) : return dado['DECK'] == pilha):
+	for carta in arquivo_cartas.data.filter(
+		func(dado : Dictionary) : return dado['DECK'] == pilha and dado['CAMINHO'] != ""):
 		ret.push_back(criar_carta(carta))
 	
 	return ret

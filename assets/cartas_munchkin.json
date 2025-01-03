@@ -734,7 +734,7 @@
 				"VALOR": 2
 			}
 		],
-		"CAMINHO" : "cartasimg\Tesouro-20241228T234428Z-001\Tesouro\IMG_4440(1).PNG"
+		"CAMINHO" : "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4440(1).PNG"
 	},
 	{
 		"DECK": "TESOURO",
@@ -1433,7 +1433,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -2
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1448,7 +1454,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "ARMADURA"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1463,7 +1475,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1478,7 +1496,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "BOTAS"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1538,7 +1562,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -2
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1598,7 +1628,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "DESCARTAR",
+				"VALOR": 2
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1613,7 +1649,12 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "REMOVER_RACA"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1628,7 +1669,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1643,7 +1690,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "CAPACETE"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1658,7 +1711,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "CAPACETE"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1673,7 +1732,13 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "ARMADURAS"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -1703,7 +1768,12 @@
 		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": "",
-		"TAMANHO": ""
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "REMOVER_CLASSE"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",

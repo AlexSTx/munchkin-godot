@@ -6,14 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bpq5mer2v7hi6" path="res://assets/status_oponente.png" id="3_5ukq0"]
 [ext_resource type="Texture2D" uid="uid://cwwt5fs4tgaas" path="res://assets/inventario.png" id="5_rkhj3"]
 
-[node name="Jogador Host" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.003, 1)
+[node name="Jogador Host" type="Node"]
 script = ExtResource("1_563dp")
 
 [node name="player_img_sombra" type="Sprite2D" parent="."]

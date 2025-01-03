@@ -8,6 +8,38 @@
 [node name="Turno" type="Node"]
 script = ExtResource("1_27k3b")
 
+[node name="Etapa" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.0
+offset_top = 34.0
+offset_right = 138.0
+offset_bottom = 103.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 50
+text = "Batalha"
+horizontal_alignment = 1
+
+[node name="Jogador_atual" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.0
+offset_top = 116.0
+offset_right = 138.0
+offset_bottom = 154.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 25
+text = "Vez de: Fulano"
+horizontal_alignment = 1
+
 [node name="Preparo" parent="." instance=ExtResource("2_kq1ht")]
 
 [node name="Batalha" parent="." instance=ExtResource("3_fpa2p")]

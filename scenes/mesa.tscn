@@ -1,16 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd0eye27s65ay"]
+[gd_scene load_steps=2 format=3 uid="uid://bd0eye27s65ay"]
 
 [ext_resource type="Script" path="res://components/Mesa.gd" id="1_aqtq4"]
-[ext_resource type="PackedScene" uid="uid://byd2jimgsln8t" path="res://scenes/PilhaTesouro.tscn" id="1_m0fev"]
-[ext_resource type="PackedScene" uid="uid://c0p8p5o1indvj" path="res://scenes/PilhaPorta.tscn" id="3_pnixc"]
 
 [node name="Mesa" type="Node2D"]
 script = ExtResource("1_aqtq4")
-
-[node name="PilhaTesouro" parent="." instance=ExtResource("1_m0fev")]
-visible = false
-position = Vector2(147, 585)
-
-[node name="PilhaPorta" parent="." instance=ExtResource("3_pnixc")]
-visible = false
-position = Vector2(344, 585)

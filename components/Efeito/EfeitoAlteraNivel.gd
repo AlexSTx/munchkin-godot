@@ -10,9 +10,6 @@ func _init(p_restricoes : Array[Restricao] = [], p_valor : int = 1) -> void:
 
 func aplicar( alvo : Object ) -> void:
 	super(alvo)
-	var p = alvo as Jogador
-	#TODO: Colocar essa função dentro de jogador
-	p.nivel += valor
-	if p.nivel < 1:
-		p.nivel = 1
+	var p : Jogador = alvo
+	p.add_nivel(self.valor)
 	

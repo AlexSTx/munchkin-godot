@@ -121,6 +121,8 @@ func _arrastar_carta_finalizado(carta: Carta) -> void:
 
 	if _carta_no_host(carta):
 		print("Carta no host")
+		if handle_carta_no_host(carta, descarte_slot) == OK:
+			return
 
 	_anima_cartas()
 	return
@@ -156,3 +158,62 @@ func _carta_no_host( carta : Carta ) -> bool:
 	var host_rect = (Partida.get_node("Jogador Host") as Area2D).get_viewport_rect()
 	
 	return carta_rect.intersects(host_rect)
+
+func handle_carta_no_host(carta : Carta, descarte_slot : DescarteSlot):
+	var host : JogadorHost = Partida.get_node("Jogador Host") as JogadorHost
+	if not carta.satisfaz_alguma_restricao(host) :
+		print("Jogador não satisfaz as condições da carta " + carta.titulo)
+	else:
+		match carta.get_script():
+			[Pocao, Habilidade]:
+					remove_child(carta)
+					descarte_slot.add_carta_no_slot(carta)
+					print("Carta " + carta.titulo + " pode ser usada. Aplicando efeitos")
+					carta.aplicar_todos_efeitos(host)
+					print("Efeitos Aplicados")
+					return OK
+			# Os proximos são temporarios enquanto uma interface de inventario não é implementada
+			EquipamentoMao:
+				if host.get_inventario()._equipamentoMao.is_empty():
+					host.get_inventario()._equipamentoMao.push_back(carta)
+					remove_child(carta)
+					print("Jogador equipou a arma " + carta.titulo)
+					return OK
+				else : print("Jogador já possui uma arma")
+			Capacete:
+				if host.get_inventario()._capacete == null:
+					host.get_inventario()._capacete = carta
+					remove_child(carta)
+					print("Jogador equipou o capacete " + carta.titulo)
+					return OK
+				else : print("Jogador já possui um capacete")
+			Armadura:
+				if host.get_inventario()._armadura == null:
+					host.get_inventario()._armadura = carta
+					remove_child(carta)
+					print("Jogador equipou a armadura " + carta.titulo)
+					return OK
+				else : print("Jogador já possui uma armadura")
+			Botas:
+				if host.get_inventario()._botas == null:
+					host.get_inventario()._botas = carta
+					remove_child(carta)
+					print("Jogador equipou a bota " + carta.titulo)
+					return OK
+				else : print("Jogador já possui uma bota")
+			Raca:
+				if host.get_inventario()._racas.is_empty():
+					host.get_inventario()._racas.push_back(carta)
+					remove_child(carta)
+					print("Jogador agora é da raça: " + carta.titulo)
+					return OK
+				else : print("Jogador já possui uma raça")
+			Classe:
+				if host.get_inventario()._classes.is_empty():
+					host.get_inventario()._classes.push_back(carta)
+					remove_child(carta)
+					print("Jogador agora é da classe: " + carta.titulo)
+					return OK
+				else : print("Jogador já possui uma classe")
+			_:
+				print("Carta não aplicável")

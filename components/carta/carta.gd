@@ -17,3 +17,9 @@ func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _img_
 
 func aplicar_todos_efeitos(alvo : Object):
 	$ListaEfeitos.aplicar_efeitos(alvo)
+
+func satisfaz_todas_restricoes( alvo : Object ) -> bool:
+	return $ListaEfeitos.satisfaz_todas_condicoes(alvo)
+
+func satisfaz_alguma_restricao( alvo : Object ) -> bool:
+	return $ListaEfeitos.satisfaz_alguma_condicao(alvo)

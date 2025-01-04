@@ -24,3 +24,21 @@ func adicionar_efeito(efeito : Efeito) -> void:
 func remover_efeito(index : int):
 	self.efeitos.remove_at(index)
 	lista_alterada.emit()
+
+func satisfaz_alguma_condicao(alvo : Object) -> bool:
+	for ef in self.efeitos:
+		if ef.restricoes.is_empty():
+			return true
+		for rest in ef.restricoes:
+			if rest.satisfaz_restricao(alvo): return true
+	
+	return false
+
+func satisfaz_todas_condicoes(alvo : Object) -> bool:
+	for ef in self.efeitos:
+		if ef.restricoes.is_empty():
+			return true
+		for rest in ef.restricoes:
+			if rest.satisfaz_restricao(alvo): return false
+	
+	return true

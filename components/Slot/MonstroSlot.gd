@@ -7,6 +7,7 @@ var _monstro: Monstro = null
 
 func add_carta_no_slot(carta: Carta) -> void:
 	_monstro = carta as Monstro
+	print("print do monstro", _monstro.nivel)
 	if _carta_no_slot:
 		remove_carta_do_slot()
 	_carta_no_slot = _monstro
@@ -19,6 +20,20 @@ func add_carta_no_slot(carta: Carta) -> void:
 
 	# Aplica os efeitos do monstro ao jogador atual
 	_monstro.aplicar_todos_efeitos(Partida.get_turno().get_jogador_atual() )
+
+func add_monstro(monstro: Monstro) -> void:
+	if _monstro:
+		remove_carta_do_slot()
+	_monstro = monstro
+	monstro.position = Vector2.ZERO
+	add_child(monstro)
+	monstro.visible = true
+	emit_signal("monstro_added", monstro)
+	monstro.disable_drag()
+	emit_signal("card_added", monstro)
+
+	# Aplica os efeitos do monstro ao jogador atual
+	monstro.aplicar_todos_efeitos( Partida.get_turno().get_jogador_atual() )
 
 func remove_carta_do_slot() -> void:
 	if _carta_no_slot:

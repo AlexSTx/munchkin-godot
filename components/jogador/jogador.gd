@@ -68,8 +68,9 @@ func get_fuga() -> int:
 
 func set_nivel(valor : int) -> void:
 	self._nivel = valor if valor > 0 else 1
-
+	 #colocar logica de poder aqui
 func add_nivel(valor : int) -> void:
 	self._nivel += valor
+	self._poder+=valor
 	if self._nivel < 1:
 		self._nivel = 1

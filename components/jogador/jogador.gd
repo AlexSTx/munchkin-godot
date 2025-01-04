@@ -10,6 +10,9 @@ var _poder : int
 var _sexo : String
 var _ouro : int
 var _fuga : int
+var status : StatusEfetivo
+
+signal mudou_nivel(novo_nivel : int)
 
 # Called when the node enters the scene tree for the first time.
 
@@ -21,11 +24,12 @@ func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 	_sexo = sexo
 	_mao = cena_mao
 	_inventario = cena_inventario
-	_nivel = 0
+	_nivel = 1
 	_poder = 0
 	_ouro = 0
 	_fuga = 0
-
+	status = StatusEfetivo.new(_nivel, _fuga)
+	mudou_nivel.connect(status.alterar_nivel_base)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -68,8 +72,11 @@ func get_fuga() -> int:
 
 func set_nivel(valor : int) -> void:
 	self._nivel = valor if valor > 0 else 1
+	mudou_nivel.emit(self._nivel)
 
 func add_nivel(valor : int) -> void:
 	self._nivel += valor
 	if self._nivel < 1:
 		self._nivel = 1
+	
+	mudou_nivel.emit(self._nivel)

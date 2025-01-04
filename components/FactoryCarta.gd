@@ -58,8 +58,8 @@ static func criar_carta(dados : Dictionary) -> Carta:
 			nova_carta.set_script(Monstro)
 			(nova_carta as Monstro).zumbi = dados['SUBTIPO'] == "MORTO VIVO"
 			(nova_carta as Monstro).tesouro = int_if_not_empty(dados['TESOUROS'], 1)
-			if 'COISA_RUIM' in dados:
-				(nova_carta as Monstro).coisa_ruim.efeitos = criar_lista_efeitos(dados['COISA_RUIM'], nova_carta)
+			if 'EFEITOS_COISA_RUIM' in dados:
+				(nova_carta as Monstro).coisa_ruim.efeitos = criar_lista_efeitos(dados['EFEITOS_COISA_RUIM'], nova_carta)
 		"RAÇA":
 			nova_carta.set_script(Raca)
 		_: 
@@ -123,7 +123,7 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 		if "TRIGGER" in ef:
 			match ef['TRIGGER']:
 				"DESCARTE":
-					carta.carta_morreu.connect(novo_efeito.aplicar)
+					carta.descartada_por.connect(novo_efeito.aplicar)
 				var outro:
 					print("O trigger + " + outro + " não foi implementado")
 

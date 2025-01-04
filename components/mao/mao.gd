@@ -116,6 +116,7 @@ func _arrastar_carta_finalizado(carta: Carta) -> void:
 	if descarte_slot and _carta_no_slot(descarte_slot, carta):
 		remove_child(carta)
 		descarte_slot.add_carta_no_slot(carta)
+		carta.descartada_por.emit(self.get_parent())
 		return
 
 	_anima_cartas()

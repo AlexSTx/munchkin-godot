@@ -10,12 +10,15 @@ class_name StatusEfetivo
 @export var fuga_efetiva : int
 var efeitos_ativos : ListaEfeitos
 
+var _nivel_base : int
+
 func _init(
-	p_dono : Carta,
 	p_nivel : int = 1,
 	p_fuga : int = 0) -> void:
-		self.dono = p_dono
-		self.nivel_efetivo = p_nivel if p_nivel >= 1 else 1
+
+		self._nivel_base = p_nivel if p_nivel >= 1 else 1
+
+		self.nivel_efetivo = self._nivel_base
 		self.fuga_efetiva = p_fuga
 		self.efeitos_ativos = ListaEfeitos.new()
 
@@ -25,10 +28,13 @@ func alterar_nivel_efetivo(valor : int):
 		self.nivel_efetivo = 1
 		
 func recalcular():
-	self.nivel_efetivo = self.dono.nivel
-	self.fuga_efetiva = self.dono.fuga
+	self.nivel_efetivo = self._nivel_base
+	self.fuga_efetiva = 0
 	self.efeitos_ativos.aplicar_efeitos(self.dono)
 
+func alterar_nivel_base(novo_nivel : int):
+	self._nivel_base = novo_nivel
+	self.recalcular()
 
 func alterar_fuga_efetiva(valor : int):
 	self.fuga_efetiva += valor

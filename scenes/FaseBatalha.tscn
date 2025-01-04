@@ -1,6 +1,53 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfvbhxfmih73u"]
+[gd_scene load_steps=7 format=3 uid="uid://dfvbhxfmih73u"]
 
 [ext_resource type="Script" path="res://components/Fase/FaseBatalha.gd" id="1_gindh"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8htr"]
+bg_color = Color(0.85098, 0.176471, 0.211765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bs0fx"]
+bg_color = Color(0.85098, 0.176471, 0.211765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5g56v"]
+bg_color = Color(0.85098, 0.176471, 0.211765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5jx8"]
+bg_color = Color(0.85098, 0.176471, 0.211765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsreq"]
+bg_color = Color(0.85098, 0.176471, 0.211765, 1)
+
 [node name="Batalha" type="Node"]
 script = ExtResource("1_gindh")
+
+[node name="MensagemLabel" type="Label" parent="."]
+offset_left = 1143.0
+offset_top = 395.0
+offset_right = 1343.0
+offset_bottom = 434.0
+
+[node name="BotoesContainer" type="GridContainer" parent="."]
+offset_left = 1166.0
+offset_top = 442.0
+offset_right = 1264.0
+offset_bottom = 543.0
+
+[node name="EnfrentarButton" type="Button" parent="BotoesContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s8htr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bs0fx")
+text = "Enfrentar"
+
+[node name="FugirButton" type="Button" parent="BotoesContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5g56v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f5jx8")
+text = "Fugir"
+
+[node name="AjudaButton" type="Button" parent="BotoesContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jsreq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsreq")
+text = "Pedir Ajuda"
+
+[connection signal="pressed" from="BotoesContainer/FugirButton" to="." method="_on_fugir_button_pressed"]

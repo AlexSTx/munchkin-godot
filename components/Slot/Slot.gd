@@ -1,4 +1,4 @@
-class_name Slot extends Node2D
+class_name Slot extends CardContainer
 
 var _carta_no_slot: Carta = null
 var _sprite: Sprite2D
@@ -46,7 +46,7 @@ func setup_click_area() -> void:
 	
 	add_child(_click_area)
 	_click_area.add_child(collision)
-	_click_area.input_event.connect(_on_click_area_input_event)
+
 
 func disable_click_area() -> void:
 	remove_child(_click_area)
@@ -55,8 +55,6 @@ func disable_click_area() -> void:
 func set_size(new_size: Vector2) -> void:
 	_size = new_size
 
-func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	pass
 
 func has_carta_no_slot() -> bool:
 	return _carta_no_slot != null

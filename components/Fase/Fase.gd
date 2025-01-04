@@ -1,6 +1,6 @@
 class_name Fase extends Node
 
-var jogador_atual: Jogador
+var _jogador_atual: Jogador
 
 signal finished(next_fase_path: String, data: Dictionary)
 
@@ -10,11 +10,8 @@ func enter(previous_fase_path: String, data := {}) -> void:
 func exit() -> void:
 	pass
 
-func handle_input(_event: InputEvent) -> void:
-	pass
-
-func update(_delta: float) -> void:
-	pass
-
 func set_fase() -> void:
 	pass
+
+func get_jogador_atual() -> Jogador:
+	return _jogador_atual

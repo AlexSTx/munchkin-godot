@@ -21,11 +21,15 @@ func set_mesa() -> void:
 	
 	_tesouro.set_image(load("res://assets/tesouro.png"))
 	_porta.set_image(load("res://assets/porta.png"))
-
+	
 	_tesouro.set_size(Vector2(200, 300))
 	_porta.set_size(Vector2(200, 300))
+
 	_monstro_slot.position = Vector2(960, 500)
 	_descarte_slot.position = Vector2(1770, 500)
+	
+	_monstro_slot.set_size(Vector2(200, 300))
+	_descarte_slot.set_size(Vector2(200, 300))
 
 	add_child(_tesouro)
 	add_child(_porta)
@@ -44,7 +48,6 @@ func get_porta() -> PilhaPorta:
 	
 func get_tesouro() -> PilhaTesouro:
 	return _tesouro
-
 
 func get_monstro_slot() -> MonstroSlot:
 	return _monstro_slot

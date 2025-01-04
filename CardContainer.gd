@@ -1,4 +1,4 @@
-class_name CardContainer extends Node
+class_name CardContainer extends Node2D
 
 signal holding_card(carta: Carta, container: CardContainer)
 signal carta_left(carta: Carta, container: CardContainer)
@@ -31,5 +31,5 @@ func _ready() -> void:
 	area.area_exited.connect(_on_area_exited)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

@@ -42,11 +42,4 @@ script = ExtResource("2_c0m12")
 [node name="Sprite2D" type="Sprite2D" parent="Slot"]
 texture = ExtResource("3_eh4b2")
 
-[node name="Slot2" type="Node2D" parent="."]
-position = Vector2(-537, -295)
-script = ExtResource("2_c0m12")
-
-[node name="Sprite2D" type="Sprite2D" parent="Slot2"]
-texture = ExtResource("3_eh4b2")
-
 [connection signal="pressed" from="BotaoFecharInventario" to="." method="_on_botao_fechar_inventario_pressed"]

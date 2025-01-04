@@ -2,6 +2,8 @@ extends Node
 
 class_name ListaEfeitos
 
+signal lista_alterada
+
 @export var efeitos : Array[Efeito] = []
 
 func _ready() -> void:
@@ -17,3 +19,8 @@ func adicionar_restricao(rest : Restricao) -> void:
 
 func adicionar_efeito(efeito : Efeito) -> void:
 	self.efeitos.push_back(efeito)
+	lista_alterada.emit()
+
+func remover_efeito(index : int):
+	self.efeitos.remove_at(index)
+	lista_alterada.emit()

@@ -1,8 +1,8 @@
 class_name CartaArrastavel extends Node2D
 
-signal inicia_arrasto
-signal fim_do_arrasto
-signal carta_clicada
+signal inicia_arrasto(carta: Carta)
+signal fim_do_arrasto(carta: Carta)
+signal carta_clicada(carta: Carta)
 
 var pos_inicial_arrasto = Vector2.ZERO
 var mouse_offset = Vector2.ZERO 
@@ -92,7 +92,7 @@ func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: 
 			pos_inicial_arrasto = get_global_mouse_position()
 			mouse_offset = position - pos_inicial_arrasto
 			arrastando = true
-			emit_signal("inicia_arrasto")
+			inicia_arrasto.emit(self)
 			z_index = 1
 
 			if animacao_hover:
@@ -102,7 +102,7 @@ func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: 
 			var was_click = (pos_inicial_arrasto - get_global_mouse_position()).length() < 5.0
 			_finaliza_arrastar()
 			if was_click:
-				emit_signal("carta_clicada")
+				carta_clicada.emit(self)
 
 
 func _process(_delta: float) -> void:
@@ -114,7 +114,7 @@ func _process(_delta: float) -> void:
 
 func _finaliza_arrastar() -> void:
 	arrastando = false
-	emit_signal("fim_do_arrasto")
+	fim_do_arrasto.emit(self)
 	z_index = 0
 	
 	if cancela_arrasto:

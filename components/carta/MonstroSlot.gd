@@ -22,6 +22,9 @@ func add_monstro(monstro: Carta) -> void:
 	monstro.disable_drag()
 	emit_signal("card_added", monstro)
 
+	# Aplica os efeitos do monstro ao jogador atual
+	monstro.aplicar_todos_efeitos( Partida.get_turno().get_jogador_atual() )
+
 func remove_monstro() -> void:
 	if _monstro_atual:
 		var monstro = _monstro_atual

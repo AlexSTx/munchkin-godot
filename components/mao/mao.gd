@@ -142,6 +142,7 @@ func _on_card_drag_ended(carta: Carta) -> void:
 	if descarte_slot and _is_carta_in_slot(descarte_slot, carta):
 		remove_child(carta)
 		descarte_slot.add_descarte(carta)
+		carta.descartada_por.emit(self.get_parent())
 		return
 
 	animate_cards()

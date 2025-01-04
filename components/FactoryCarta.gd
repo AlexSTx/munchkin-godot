@@ -123,7 +123,7 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 		if "TRIGGER" in ef:
 			match ef['TRIGGER']:
 				"DESCARTE":
-					carta.carta_morreu.connect(novo_efeito.aplicar)
+					carta.descartada_por.connect(novo_efeito.aplicar)
 				var outro:
 					print("O trigger + " + outro + " não foi implementado")
 

@@ -6,6 +6,7 @@ class_name FaseBatalha extends Fase
 @onready var fugir_button: Button = $BotoesContainer/FugirButton
 
 
+var monstro_atual : Monstro
 
 func _ready() -> void:
 	# Esconder elementos inicialmente
@@ -13,7 +14,8 @@ func _ready() -> void:
 	mensagem_label.hide()
 
 func enter(previous_fase_path: String, data := {}) -> void:
-
+	monstro_atual = Partida.get_mesa().get_monstro_slot().get_current_monstro()
+	print(monstro_atual)
 	botoes_container.show()
 	mensagem_label.show()
 	mensagem_label.text = "O que você deseja fazer?"
@@ -24,8 +26,17 @@ func exit() -> void:
 	mensagem_label.text = ""
 
 func _on_enfrentar_button_pressed() -> void:
-	# Implementar lógica de combate aqui
-	pass
+	if Partida.get_turno().get_jogador_atual().get_nivel() + 5 >  monstro_atual.nivel: #tirar o +5 quando o inventario estiver funcionando
+		mensagem_label.text = "Você derrotou o monstro!"
+		await get_tree().create_timer(1.0).timeout
+		for i in range(monstro_atual.tesouro):
+			Partida.get_mesa().get_tesouro().puxar_carta()
+		Partida.get_mesa().get_monstro_slot().remove_carta_do_slot()
+		Partida.get_mesa().get_descarte_slot().add_carta_no_slot(monstro_atual)
+		finished.emit("Final", {})
+	else:
+		#colocar o "coisa ruim"
+		pass
 
 func _on_fugir_button_pressed() -> void:
 	# Gerar número aleatório entre 1 e 6
@@ -41,7 +52,11 @@ func _on_fugir_button_pressed() -> void:
 		fugir_button.disabled = true
 		# Esperar 2 segundos e mudar de fase
 		await get_tree().create_timer(2.0).timeout
-		finished.emit("Preparo", {})
+		enfrentar_button.disabled = false
+		fugir_button.disabled = false
+		Partida.get_mesa().get_monstro_slot().remove_carta_do_slot()
+		Partida.get_mesa().get_descarte_slot().add_carta_no_slot(monstro_atual)
+		finished.emit("Final", {})
 	else:
 		mensagem_label.text = "Você rolou %d! Não conseguiu fugir..." % dado
 

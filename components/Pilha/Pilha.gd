@@ -24,8 +24,7 @@ func puxar_carta() -> void:
 		
 		if Partida.get_turno().fase_atual is FasePreparo:
 			if carta is Monstro:
-				var monstro_slot = Partida.get_mesa().get_monstro_slot()
-				monstro_slot.add_carta_no_slot(carta)
+				Partida.get_mesa().get_monstro_slot().add_carta_no_slot(carta)
 			elif carta is Maldicao:
 				carta.aplicar_todos_efeitos(Partida.get_jogadores()[0])
 				#mostrar na tela efeito aplicado

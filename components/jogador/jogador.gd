@@ -21,8 +21,8 @@ func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 	_sexo = sexo
 	_mao = cena_mao
 	_inventario = cena_inventario
-	_nivel = 0
-	_poder = 0
+	_nivel = 1
+	_poder = 1
 	_ouro = 0
 	_fuga = 0
 

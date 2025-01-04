@@ -1,46 +1,35 @@
 class_name CartaArrastavel extends Node2D
 
-static var CARD_WIDTH = 200
-static var CARD_HEIGHT = 300
-static var HOVER_SCALE = 1.2 
-static var HOVER_DURATION = 0.1  
+signal inicia_arrasto
+signal fim_do_arrasto
+signal carta_clicada
 
-signal drag_started
-signal drag_ended
-signal clicked
+var pos_inicial_arrasto = Vector2.ZERO
+var mouse_offset = Vector2.ZERO 
+var posicao_original = Vector2.ZERO
+var arrastando = false
+var hover = true
+var animacao_hover: Tween
 
-var is_dragging := false
-var drag_start_pos := Vector2.ZERO
-var mouse_offset := Vector2.ZERO
-var original_position := Vector2.ZERO
-var hover_tween: Tween
-
-var can_hover := true
-
-@export var drag_enabled := true
-@export var return_to_start := false
-@export var drag_minimum_distance := 5.0
+@export var drag_enabled = true
+@export var cancela_arrasto = false
 
 var click_area: Area2D 
 var sprite: Sprite2D 
 
-@export var texture: Texture2D
+@export var textura: Texture2D
 
 func _ready() -> void:
-	original_position = position
-	
-	if not click_area:
-		setup_click_area()
-	
-	if not sprite:
-		setup_sprite()
+	posicao_original = position
+	setup_click_area()
+	setup_sprite()
 
-	if texture:
-		sprite.texture = texture
+	if textura:
+		sprite.textura = textura
 
 	click_area.input_event.connect(_on_click_area_input_event)
-	click_area.mouse_entered.connect(_on_mouse_entered)
-	click_area.mouse_exited.connect(_on_mouse_exited)
+	click_area.mouse_entered.connect(_mouse_na_carta)
+	click_area.mouse_exited.connect(_mouse_saiu_da_carta)
 
 
 func setup_sprite() -> void:
@@ -49,54 +38,50 @@ func setup_sprite() -> void:
 	add_child(sprite)
 
 
-func set_image(new_texture: Texture2D) -> void:
-	texture = new_texture
+func set_image(nova_textura: Texture2D) -> void:
+	textura = nova_textura
 	if sprite:
-		sprite.texture = texture
+		sprite.texture = textura
 
 	if click_area and click_area.get_child(0) is CollisionShape2D:
-		var collision = click_area.get_child(0) as CollisionShape2D
-		var shape = collision.shape as RectangleShape2D
-		if texture:
-			shape.size = texture.get_size()
+		var colisao = click_area.get_child(0) as CollisionShape2D
+		var area_colisao = colisao.shape as RectangleShape2D
+		if textura:
+			area_colisao.size = textura.get_size()
 
 
 func setup_click_area() -> void:
 	click_area = Area2D.new()
 	click_area.name = "ClickArea"
 	
-	var collision = CollisionShape2D.new()
-	var shape = RectangleShape2D.new()
-	shape.size = Vector2(CartaArrastavel.CARD_WIDTH, CartaArrastavel.CARD_HEIGHT)  
-	collision.shape = shape
+	var colisao = CollisionShape2D.new()
+	var area_colisao = RectangleShape2D.new()
+	area_colisao.size = Vector2(200, 300)  
+	colisao.shape = area_colisao
 	
 	add_child(click_area)
-	click_area.add_child(collision)
+	click_area.add_child(colisao)
 
 
-func _on_mouse_entered() -> void:
-	if is_dragging or not can_hover:
+func _mouse_na_carta() -> void:
+	if arrastando or not hover:
 		return
 		
-	# Kill previous tween if it exists
-	if hover_tween:
-		hover_tween.kill()
+	if animacao_hover:
+		animacao_hover.kill()
 	
-	# Create new tween for zooming in
-	hover_tween = create_tween()
-	hover_tween.tween_property(self, "scale", Vector2.ONE * HOVER_SCALE, HOVER_DURATION)
+	animacao_hover = create_tween()
+	animacao_hover.tween_property(self, "scale", Vector2.ONE * 1.2, 0.1)
 
-func _on_mouse_exited() -> void:
-	if is_dragging:
+func _mouse_saiu_da_carta() -> void:
+	if arrastando:
 		return
-		
-	# Kill previous tween if it exists
-	if hover_tween:
-		hover_tween.kill()
 	
-	# Create new tween for zooming out
-	hover_tween = create_tween()
-	hover_tween.tween_property(self, "scale", Vector2.ONE, HOVER_DURATION)
+	if animacao_hover:
+		animacao_hover.kill()
+	
+	animacao_hover = create_tween()
+	animacao_hover.tween_property(self, "scale", Vector2.ONE, 0.1  )
 
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if not drag_enabled:
@@ -104,37 +89,36 @@ func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: 
 		
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT :
 		if event.pressed:
-			drag_start_pos = get_global_mouse_position()
-			mouse_offset = position - drag_start_pos
-			is_dragging = true
-			emit_signal("drag_started")
+			pos_inicial_arrasto = get_global_mouse_position()
+			mouse_offset = position - pos_inicial_arrasto
+			arrastando = true
+			emit_signal("inicia_arrasto")
 			z_index = 1
 
-			if hover_tween:
-				hover_tween.kill()
+			if animacao_hover:
+				animacao_hover.kill()
 			scale = Vector2.ONE
 		else:
-			var was_click = (drag_start_pos - get_global_mouse_position()).length() < drag_minimum_distance
-			_end_drag()
+			var was_click = (pos_inicial_arrasto - get_global_mouse_position()).length() < 5.0
+			_finaliza_arrastar()
 			if was_click:
-				emit_signal("clicked")
+				emit_signal("carta_clicada")
 
 
 func _process(_delta: float) -> void:
-	# Check if left mouse button is released even if we missed the event
-	if is_dragging and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		_end_drag()
+	if arrastando and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		_finaliza_arrastar()
 	
-	if is_dragging:
+	if arrastando:
 		position = get_global_mouse_position() + mouse_offset
 
-func _end_drag() -> void:
-	is_dragging = false
-	emit_signal("drag_ended")
+func _finaliza_arrastar() -> void:
+	arrastando = false
+	emit_signal("fim_do_arrasto")
 	z_index = 0
 	
-	if return_to_start:
-		position = original_position
+	if cancela_arrasto:
+		position = posicao_original
 
 
 func enable_drag() -> void:
@@ -145,13 +129,13 @@ func disable_drag() -> void:
 	drag_enabled = false
 
 
-func enable_hover_animation() -> void:
-	can_hover = true
+func habilita_hover_anim() -> void:
+	hover = true
 
 
-func disable_hover_animation() -> void:
-	can_hover = false
+func desabilita_hover_anim() -> void:
+	hover = false
 
 
-func set_return_to_start(should_return: bool) -> void:
-	return_to_start = should_return
+func set_cancela_arrasto(cancelar: bool) -> void:
+	cancela_arrasto = cancelar

@@ -1,171 +1,147 @@
 class_name Mao extends Node2D
 
-# Constants for layout
-const MAX_CARDS := 6
-const CARD_SPACING := 0  # Horizontal space between cards
-const ANIMATION_DURATION := 0.2  # Seconds for card movement animations
-
 @export var cartas: Array[Carta]
-var card_positions: Array[Vector2]
-var target_position: Vector2
-
-var is_holding_card := false
-var card_held : Carta
-
-# Hand area properties
-var hand_area_position: Vector2
-var hand_area_width: float
-var hand_area_height: float
-
-
+var posicoes: Array[Vector2]
+var posicao_final: Vector2
+var carta_sendo_segurada := false
+var carta_segurada: Carta
+var posicao_mao: Vector2
+var largura_mao: float
+var altura_mao: float
+var limite_cartas: int
+	
 func _ready() -> void:
 	cartas = []
-	calculate_card_positions()
+	calcula_posicoes()
 	
-	child_entered_tree.connect(_on_child_entered)
-	child_exiting_tree.connect(_on_child_exiting)
+	child_entered_tree.connect(_entrou_carta)
+	child_exiting_tree.connect(_saiu_carta)
 
 
-func set_hand_area(pos: Vector2, width: float, height: float) -> void:
-	hand_area_position = pos
-	hand_area_width = width
-	hand_area_height = height
-	calculate_card_positions()
+func set_mao(pos: Vector2, width: float, height: float) -> void:
+	limite_cartas = 6
+	posicao_mao = pos
+	largura_mao = width
+	altura_mao = height
+	calcula_posicoes()
 
 
-func calculate_card_positions() -> void:
-	card_positions.clear()
+func calcula_posicoes() -> void:
+	posicoes.clear()
 	
 	if cartas.is_empty():
 		return
-		
-	# Calculate total width of all cards with spacing
-	var total_width : int = Carta.CARD_WIDTH * (cartas.size()) + (cartas.size() - 1) * CARD_SPACING
 	
-	# Calculate starting X position to center within hand area
-	var start_x := hand_area_position.x + hand_area_width - total_width
-	var cards_y : float = hand_area_position.y + (hand_area_height - Carta.CARD_HEIGHT) / 2
-	
-	# Calculate position for each card
+	var largura_total = 200 * (cartas.size())
+	var pos_inicial_x = posicao_mao.x + largura_mao - largura_total
+	var pos_carta_y = posicao_mao.y + (altura_mao - 300) / 2
+
 	for i in range(cartas.size()):
 		var pos := Vector2(
-			start_x + Carta.CARD_WIDTH * i + (i * CARD_SPACING),
-			cards_y
+			pos_inicial_x + 200 * i,
+			pos_carta_y
 		)
-		card_positions.append(pos)
+		posicoes.append(pos)
 
 
 func add_carta(carta: Carta) -> void:
-	if cartas.size() >= MAX_CARDS:
+	if cartas.size() >= limite_cartas:
 		return
-		
-	# Add card to beginning of array
+
 	cartas.push_front(carta)
 	
-	# Setup card
 	add_child(carta)
-	carta.drag_started.connect(_on_card_drag_started.bind(carta))
-	carta.drag_ended.connect(_on_card_drag_ended.bind(carta))
+	carta.inicia_arrasto.connect(_arrastar_carta_iniciado.bind(carta))
+	carta.fim_do_arrasto.connect(_arrastar_carta_finalizado.bind(carta))
 	
-	# Recalculate positions and animate all cards
-	calculate_card_positions()
-	animate_cards()
+	calcula_posicoes()
+	anima_cartas()
 
 
-func _on_child_entered(node: Node) -> void:
+func _entrou_carta(node: Node) -> void:
 	if node is Carta and not cartas.has(node):
 		add_carta(node as Carta)
 
 
-func _on_child_exiting(node: Node) -> void:
+func _saiu_carta(node: Node) -> void:
 	if node is Carta:
-		var carta := node as Carta
-		var idx := cartas.find(carta)
-		if idx != -1:
-			cartas.remove_at(idx)
-			calculate_card_positions()
-			animate_cards()
+		var carta = node as Carta
+		var i = cartas.find(carta)
+		cartas.remove_at(i)
+		calcula_posicoes()
+		anima_cartas()
 
 
-func _on_card_drag_started(carta: Carta) -> void:
-	is_holding_card = true
+func _arrastar_carta_iniciado(carta: Carta) -> void:
+	carta_sendo_segurada = true
 
 	for c in cartas:
-		c.disable_hover_animation()
+		c.desabilita_hover_anim()
 		if c != carta:
-			c.disable_drag()
-
-	# Store original position for potential reordering
-	target_position = carta.position
-	# Bring dragged card to front
+			c.desabilita_arrastar()
 	move_child(carta, -1)
 
 
-func _on_card_drag_ended(carta: Carta) -> void:
-	is_holding_card = false
+func _arrastar_carta_finalizado(carta: Carta) -> void:
+	carta_sendo_segurada = false
 
 	for c in cartas:
-		c.enable_hover_animation()
-		c.enable_drag()
+		c.habilita_hover_anim()
+		c.habilita_arrastar()
 
-	if is_position_in_hand_area(carta.position):
-		var carta_idx := cartas.find(carta)
-		if carta_idx == -1:
-			return
-			
-		# Find nearest position in hand
-		var min_dist := INF
-		var target_idx := carta_idx
+	if sobre_a_mao(carta.position):
+		var indice_carta = cartas.find(carta)
+		var pos_alvo = indice_carta
+		var dist_minima = INF
 		
-		for i in range(card_positions.size()):
-			var dist := carta.position.distance_to(card_positions[i])
-			if dist < min_dist:
-				min_dist = dist
-				target_idx = i
+		for i in range(posicoes.size()):
+			var dist = carta.position.distance_to(posicoes[i])
+			if dist < dist_minima:
+				dist_minima = dist
+				pos_alvo = i
 		
-		# Reorder if position changed
-		if target_idx != carta_idx:
-			cartas.remove_at(carta_idx)
-			cartas.insert(target_idx, carta)
-			calculate_card_positions()
+		if pos_alvo != indice_carta:
+			cartas.remove_at(indice_carta)
+			cartas.insert(pos_alvo, carta)
+			calcula_posicoes()
 	
-		animate_cards()
+		anima_cartas()
 		return
 
 	var monstro_slot = Partida.get_mesa().get_monstro_slot()
-	if monstro_slot and _is_carta_in_slot(monstro_slot, carta):
+	if monstro_slot and _carta_no_slot(monstro_slot, carta):
 		remove_child(carta)
 		monstro_slot.add_monstro(carta)
 		return
 	
 	var descarte_slot = Partida.get_mesa().get_descarte_slot()
-	if descarte_slot and _is_carta_in_slot(descarte_slot, carta):
+	if descarte_slot and _carta_no_slot(descarte_slot, carta):
 		remove_child(carta)
 		descarte_slot.add_descarte(carta)
 		return
 
-	animate_cards()
-	return 
+	anima_cartas()
+	return
 
-func animate_cards() -> void:
+func anima_cartas() -> void:
 	for i in range(cartas.size()):
-		var carta := cartas[i]
-		var tween := create_tween()
-		tween.tween_property(carta, "position", card_positions[i], ANIMATION_DURATION)
+		var carta = cartas[i]
+		var tween = create_tween()
+		tween.tween_property(carta, "position", posicoes[i], 0.2)
 
 
-func is_position_in_hand_area(pos: Vector2) -> bool:
-	var hand_rect := Rect2(
-		hand_area_position,
-		Vector2(hand_area_width, hand_area_height)
+func sobre_a_mao(pos: Vector2) -> bool:
+	var area_mao := Rect2(
+		posicao_mao,
+		Vector2(largura_mao, altura_mao)
 	)
-	return hand_rect.has_point(pos)
+	return area_mao.has_point(pos)
 
-func _is_carta_in_slot(slot: Slot, carta: Carta) -> bool:
+func _carta_no_slot(slot: Slot, carta: Carta) -> bool:
 	var carta_rect = Rect2(
 		carta.global_position,
-		Vector2(Carta.CARD_WIDTH, Carta.CARD_HEIGHT))
+		Vector2(200, 300))
 	var slot_rect := Rect2(
 		slot.position,
-		Vector2(Carta.CARD_WIDTH, Carta.CARD_HEIGHT))
+		Vector2(200, 300))
 	return carta_rect.intersects(slot_rect)

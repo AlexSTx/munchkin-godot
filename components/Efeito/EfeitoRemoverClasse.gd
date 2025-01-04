@@ -3,7 +3,7 @@ extends Efeito
 class_name EfeitoRemoverClasse
 
 func aplicar( alvo : Object ) -> void:
-	super(alvo)
+	if not _pode_invocar(alvo): return
 	
 	if alvo is not Jogador: 
 		return

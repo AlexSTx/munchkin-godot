@@ -54,13 +54,5 @@ func set_visibilidade_labels(estado: bool) -> void:
 		label_jogador_vez.visible = estado
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	fase_atual.handle_input(event)
-
-
-func _process(delta: float) -> void:
-	fase_atual.update(delta)
-
-
 func get_jogador_atual() -> Jogador:
 	return Partida.get_jogadores()[jogador_atual]

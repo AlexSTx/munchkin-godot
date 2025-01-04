@@ -16,7 +16,7 @@ func set_jogador_host() -> void:
 	var window_size = get_viewport().get_visible_rect().size
 	var width = window_size.x
 	var height = window_size.y
-
+	print(window_size)
 	_mao.set_mao(
 		Vector2(width - 1050, height - 130), 
 		1000,                

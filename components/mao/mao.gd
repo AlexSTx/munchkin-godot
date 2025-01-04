@@ -31,14 +31,15 @@ func calcula_posicoes() -> void:
 	
 	if cartas.is_empty():
 		return
-		
+	
+	print(cartas.size())
 	var largura_total = 200 * (cartas.size())
 	var pos_inicial_x = posicao_mao.x + largura_mao - largura_total
 	var pos_carta_y = posicao_mao.y + (altura_mao - 300) / 2
 
 	for i in range(cartas.size()):
 		var pos := Vector2(
-			pos_inicial_x + 300 * i,
+			pos_inicial_x + 200 * i,
 			pos_carta_y
 		)
 		posicoes.append(pos)
@@ -58,15 +59,18 @@ func add_carta(carta: Carta) -> void:
 	anima_cartas()
 
 
-func _entrou_carta(carta: Carta) -> void:
-	add_carta(carta)
+func _entrou_carta(node: Node) -> void:
+	if node is Carta and not cartas.has(node):
+		add_carta(node as Carta)
 
 
-func _saiu_carta(carta: Carta) -> void:
-	var i = cartas.find(carta)
-	cartas.remove_at(i)
-	calcula_posicoes()
-	anima_cartas()
+func _saiu_carta(node: Node) -> void:
+	if node is Carta:
+		var carta = node as Carta
+		var i = cartas.find(carta)
+		cartas.remove_at(i)
+		calcula_posicoes()
+		anima_cartas()
 
 
 func _arrastar_carta_iniciado(carta: Carta) -> void:

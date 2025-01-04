@@ -106,6 +106,14 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 				novo_efeito = EfeitoAlterarChanceFuga.new(restricoes, ef['VALOR'])
 			"COMPRAR_CARTA":
 				novo_efeito = EfeitoComprarCarta.new(restricoes, ef['VALOR'])
+			"DESCARTAR_CARTA":
+				novo_efeito = EfeitoDescartarCarta.new(restricoes, ef['VALOR'])
+			"REMOVER_RACA":
+				novo_efeito = EfeitoRemoverRaca.new(restricoes)
+			"REMOVER_CLASSE":
+				novo_efeito = EfeitoRemoverClasse.new(restricoes)
+			"REMOVER_ITEM":
+				novo_efeito = EfeitoRemoverItem.new(restricoes, ef['VALOR'])
 			var outro:
 				print("Efeito " + outro +" ainda não foi implementado.")
 				continue

@@ -102,9 +102,10 @@ func puxar_carta() -> void:
 				#mostrar na tela efeito aplicado
 				var descarte_slot = Partida.get_mesa().get_descarte_slot()
 				descarte_slot.add_descarte(carta)
+			else:
+				mao.add_carta(carta)
 		else:
 			mao.add_carta(carta)
-		mao.add_carta(carta)
 		emit_signal("carta_puxada", carta)
 		disable_click_area()
 

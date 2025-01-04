@@ -5,6 +5,7 @@ var _posicoes: Array[Vector2]
 var _limite_cartas: int
 	
 func _ready() -> void:
+	super()
 	_cartas = []
 	_limite_cartas = 6
 	_calcula_posicoes()
@@ -24,12 +25,11 @@ func _calcula_posicoes() -> void:
 	
 	var largura_total = 250 * (_cartas.size())
 	var pos_inicial_x = posicao_mao.x + dimensoes_mao.x - largura_total
-	var pos_carta_y = posicao_mao.y + (dimensoes_mao.y - 300) / 2
 
 	for i in range(_cartas.size()):
 		var pos := Vector2(
 			pos_inicial_x + 200 * i,
-			pos_carta_y
+			dimensoes_mao.y / 2
 		)
 		_posicoes.append(pos)
 
@@ -67,6 +67,7 @@ func _saiu_carta(node: Node) -> void:
 
 
 func on_card_grab_started(carta: Carta) -> void:
+	print("MAO : ON CARD GRAB STARTED")
 	super(carta)
 
 	for c in _cartas:
@@ -78,10 +79,12 @@ func on_card_grab_started(carta: Carta) -> void:
 
 
 func canceled_card_move(_carta: Carta) -> void:
+	print("MAO - canceled_card_move")
 	_anima_cartas()
 
 
 func received_own_card(_carta: Carta) -> void:
+	print("MAOP - received_own_card")
 	var indice_carta = _cartas.find(_carta)
 	var pos_alvo = indice_carta
 	var dist_minima = INF

@@ -10,6 +10,8 @@ var _size: Vector2
 func _ready() -> void:
 	setup_sprite()
 	setup_click_area()
+	area = _click_area
+	super()
 
 
 func setup_sprite() -> void:

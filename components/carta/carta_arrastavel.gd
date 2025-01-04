@@ -92,6 +92,7 @@ func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: 
 			pos_inicial_arrasto = get_global_mouse_position()
 			mouse_offset = position - pos_inicial_arrasto
 			arrastando = true
+			print("CARTA - emit inicia_arrasto")
 			inicia_arrasto.emit(self)
 			z_index = 1
 
@@ -112,8 +113,10 @@ func _process(_delta: float) -> void:
 	if arrastando:
 		position = get_global_mouse_position() + mouse_offset
 
+
 func _finaliza_arrastar() -> void:
 	arrastando = false
+	print("CARTA - emit fim_do_arrasto")
 	fim_do_arrasto.emit(self)
 	z_index = 0
 	

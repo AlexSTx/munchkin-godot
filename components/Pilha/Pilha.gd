@@ -32,10 +32,8 @@ func puxar_carta() -> void:
 				var descarte_slot = Partida.get_mesa().get_descarte_slot()
 				descarte_slot.add_carta_no_slot(carta)
 			else:
-				print("ROLA")
 				Partida.get_jogadores()[0].get_mao().add_carta(carta)
 		else:
-			print("PINTO")
 			Partida.get_jogadores()[0].get_mao().add_carta(carta)
 		emit_signal("carta_puxada", carta)
 		disable_click_area()

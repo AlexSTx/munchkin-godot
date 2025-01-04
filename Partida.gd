@@ -3,6 +3,7 @@ extends Node
 var _jogadores: Array[Jogador]
 var _turno: Turno
 var _mesa: Mesa
+var _card_manager: CardManager
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,7 +23,18 @@ func set_Partida(nomes_jogadores: Array[String]) -> void:
 	_adiciona_e_seta_jogadores()
 	_mesa.set_mesa()
 	add_child(_turno)
+	set_card_manager()
+	add_child(_card_manager)
 
+
+func set_card_manager() -> void:
+	_card_manager = CardManager.new()
+
+	_jogadores[0].get_mao().set_signals_to_manager(_card_manager)
+	# _jogadores[0].get_inventario().holding_card.connect(_card_manager.on_holding_card)
+	_mesa.get_descarte_slot().set_signals_to_manager(_card_manager)
+	_mesa.get_monstro_slot().set_signals_to_manager(_card_manager)
+	
 
 func get_mesa() -> Mesa:
 	return _mesa

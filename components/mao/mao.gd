@@ -6,15 +6,11 @@ var _limite_cartas: int
 	
 func _ready() -> void:
 	_cartas = []
+	_limite_cartas = 6
 	_calcula_posicoes()
 	
 	child_entered_tree.connect(_entrou_carta)
 	child_exiting_tree.connect(_saiu_carta)
-
-
-func set_mao() -> void:
-	_limite_cartas = 6
-	_calcula_posicoes()
 
 
 func _calcula_posicoes() -> void:
@@ -41,13 +37,17 @@ func _calcula_posicoes() -> void:
 func add_carta(carta: Carta) -> void:
 	if _cartas.size() >= _limite_cartas:
 		return
-
+	
 	super(carta)
 
 	_cartas.push_front(carta)
 	
 	add_child(carta)
 	
+	# DEBUG
+	print("POSICAO DA CARTAAM", carta.position)
+	print(_cartas)
+
 	_calcula_posicoes()
 	_anima_cartas()
 

@@ -1,6 +1,7 @@
 class_name Pilha extends Slot
 
 @export var _cartas: Array[Carta]
+signal sem_monstro
 
 func _criar_pilha_inicial() -> void:
 	pass
@@ -35,6 +36,7 @@ func puxar_carta() -> void:
 		else:
 			Partida.get_jogadores()[0].get_mao().add_carta(carta)
 		emit_signal("carta_puxada", carta)
+		emit_signal("sem_monstro")
 		disable_click_area()
 
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:

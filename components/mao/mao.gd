@@ -1,4 +1,5 @@
 class_name Mao extends Node2D
+
 @export var cartas: Array[Carta]
 var posicoes: Array[Vector2]
 var posicao_final: Vector2

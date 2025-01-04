@@ -33,10 +33,12 @@ func puxar_carta() -> void:
 				descarte_slot.add_carta_no_slot(carta)
 			else:
 				Partida.get_jogadores()[0].get_mao().add_carta(carta)
+				emit_signal("sem_monstro")
 		else:
 			Partida.get_jogadores()[0].get_mao().add_carta(carta)
+			
 		emit_signal("carta_puxada", carta)
-		emit_signal("sem_monstro")
+
 		disable_click_area()
 
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:

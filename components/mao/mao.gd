@@ -9,8 +9,7 @@ var posicao_mao: Vector2
 var largura_mao: float
 var altura_mao: float
 var limite_cartas: int
-
-
+	
 func _ready() -> void:
 	cartas = []
 	calcula_posicoes()
@@ -33,7 +32,6 @@ func calcula_posicoes() -> void:
 	if cartas.is_empty():
 		return
 	
-	print(cartas.size())
 	var largura_total = 200 * (cartas.size())
 	var pos_inicial_x = posicao_mao.x + largura_mao - largura_total
 	var pos_carta_y = posicao_mao.y + (altura_mao - 300) / 2

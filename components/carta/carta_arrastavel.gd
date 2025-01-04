@@ -41,7 +41,7 @@ func setup_sprite() -> void:
 func set_image(nova_textura: Texture2D) -> void:
 	textura = nova_textura
 	if sprite:
-		sprite.textura = textura
+		sprite.texture = textura
 
 	if click_area and click_area.get_child(0) is CollisionShape2D:
 		var colisao = click_area.get_child(0) as CollisionShape2D
@@ -71,7 +71,7 @@ func _mouse_na_carta() -> void:
 		animacao_hover.kill()
 	
 	animacao_hover = create_tween()
-	animacao_hover.tween_property(self, "scale", Vector2.ONE * 1.2, 0.1  )
+	animacao_hover.tween_property(self, "scale", Vector2.ONE * 1.2, 0.1)
 
 func _mouse_saiu_da_carta() -> void:
 	if arrastando:
@@ -83,12 +83,12 @@ func _mouse_saiu_da_carta() -> void:
 	animacao_hover = create_tween()
 	animacao_hover.tween_property(self, "scale", Vector2.ONE, 0.1  )
 
-func _on_click_area_input_event(evento: InputEvent) -> void:
+func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if not drag_enabled:
 		return
 		
-	if evento is InputEventMouseButton and evento.button_index == MOUSE_BUTTON_LEFT :
-		if evento.pressed:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT :
+		if event.pressed:
 			pos_inicial_arrasto = get_global_mouse_position()
 			mouse_offset = position - pos_inicial_arrasto
 			arrastando = true

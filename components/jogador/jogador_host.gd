@@ -1,6 +1,4 @@
-extends Jogador
-
-class_name JogadorHost
+class_name JogadorHost extends Jogador
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -18,8 +16,8 @@ func set_jogador_host() -> void:
 	var height = window_size.y
 	print(window_size)
 	_mao.set_mao(
-		Vector2(width - 1050, height - 130), 
+		Vector2(width - 1050, height - 170), 
 		1000,                
-		320 
+		320   
 	)
 	_inventario.visible = false

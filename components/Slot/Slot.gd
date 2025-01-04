@@ -11,6 +11,7 @@ func _ready() -> void:
 	setup_sprite()
 	setup_click_area()
 
+
 func setup_sprite() -> void:
 	_sprite = Sprite2D.new()
 	_sprite.name = "Sprite2D"
@@ -18,6 +19,7 @@ func setup_sprite() -> void:
 	
 	if _texture:
 		apply_texture(_texture)
+
 
 func apply_texture(new_texture: Texture2D) -> void:
 	if _sprite:
@@ -29,9 +31,11 @@ func apply_texture(new_texture: Texture2D) -> void:
 			_size.y / texture_size.y
 		)
 
+
 func set_image(new_texture: Texture2D) -> void:
 	_texture = new_texture
 	apply_texture(_texture)
+
 
 func setup_click_area() -> void:
 	_click_area = Area2D.new()
@@ -52,6 +56,7 @@ func disable_click_area() -> void:
 	remove_child(_click_area)
 	_click_area = null
 
+
 func set_size(new_size: Vector2) -> void:
 	_size = new_size
 
@@ -59,11 +64,14 @@ func set_size(new_size: Vector2) -> void:
 func has_carta_no_slot() -> bool:
 	return _carta_no_slot != null
 
+
 func get_carta_no_slot() -> Carta:
 	return _carta_no_slot
 
+
 func add_carta_no_slot(carta: Carta) -> void:
 	pass
+
 
 func remove_carta_do_slot() -> void:
 	pass

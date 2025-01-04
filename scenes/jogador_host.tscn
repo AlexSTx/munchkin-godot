@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4q7tohkk52jv"]
+[gd_scene load_steps=8 format=3 uid="uid://b4q7tohkk52jv"]
 
 [ext_resource type="Script" path="res://components/jogador/jogador_host.gd" id="1_563dp"]
 [ext_resource type="FontFile" uid="uid://caxypl3l1o65u" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_kyhlf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bpq5mer2v7hi6" path="res://assets/status_oponente.png" id="3_5ukq0"]
 [ext_resource type="Texture2D" uid="uid://cwwt5fs4tgaas" path="res://assets/inventario.png" id="5_rkhj3"]
 [ext_resource type="PackedScene" uid="uid://c155r4no5l5h4" path="res://scenes/inventario.tscn" id="6_rfw8w"]
+[ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://scenes/mao.tscn" id="7_vfy2m"]
 
 [node name="Jogador Host" type="Node"]
 script = ExtResource("1_563dp")
@@ -109,5 +110,8 @@ texture_normal = ExtResource("5_rkhj3")
 
 [node name="Inventario" parent="." instance=ExtResource("6_rfw8w")]
 visible = false
+
+[node name="Mao" parent="." instance=ExtResource("7_vfy2m")]
+position = Vector2(824, 735)
 
 [connection signal="pressed" from="BotaoInventarioHost" to="Inventario" method="_on_botao_inventario_host_pressed"]

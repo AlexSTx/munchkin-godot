@@ -2,9 +2,6 @@ class_name Mao extends CardContainer
 
 @export var _cartas: Array[Carta]
 var _posicoes: Array[Vector2]
-var _posicao_mao: Vector2
-var _largura_mao: float
-var _altura_mao: float
 var _limite_cartas: int
 	
 func _ready() -> void:
@@ -15,23 +12,23 @@ func _ready() -> void:
 	child_exiting_tree.connect(_saiu_carta)
 
 
-func set_mao(pos: Vector2, width: float, height: float) -> void:
+func set_mao() -> void:
 	_limite_cartas = 6
-	_posicao_mao = pos
-	_largura_mao = width
-	_altura_mao = height
 	_calcula_posicoes()
 
 
 func _calcula_posicoes() -> void:
+	var posicao_mao = area.position
+	var dimensoes_mao = area.find_child("CollisionShape2D").shape.size
+	
 	_posicoes.clear()
 	
 	if _cartas.is_empty():
 		return
 	
 	var largura_total = 250 * (_cartas.size())
-	var pos_inicial_x = _posicao_mao.x + _largura_mao - largura_total
-	var pos_carta_y = _posicao_mao.y + (_altura_mao - 300) / 2
+	var pos_inicial_x = posicao_mao.x + dimensoes_mao.x - largura_total
+	var pos_carta_y = posicao_mao.y + (dimensoes_mao.y - 300) / 2
 
 	for i in range(_cartas.size()):
 		var pos := Vector2(

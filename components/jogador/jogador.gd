@@ -13,11 +13,9 @@ var _fuga : int
 
 func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 	var cena_inventario = preload("res://scenes/inventario.tscn").instantiate()
-	var cena_mao = preload("res://scenes/mao.tscn").instantiate()
 	
 	_nome = nome
 	_sexo = sexo
-	_mao = cena_mao
 	_inventario = cena_inventario
 	_nivel = 0
 	_poder = 0

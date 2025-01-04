@@ -4,7 +4,7 @@ signal holding_card(carta: Carta, container: CardContainer)
 signal carta_left(carta: Carta, container: CardContainer)
 signal carta_over(carta: Carta, container: CardContainer)
 
-@onready var area = $Area2D
+@onready var area: Area2D = $Area2D
 
 var can_receive_cards := true
 

@@ -6,7 +6,6 @@ var _monstro_slot: MonstroSlot
 var _descarte_slot: DescarteSlot
 
 func set_mesa() -> void:
-	var img_slot_vazio = preload("res://scenes/CardSlot.png")
 	_tesouro = PilhaTesouro.new()
 	_porta = PilhaPorta.new()
 
@@ -14,10 +13,10 @@ func set_mesa() -> void:
 	_porta.name = "BaralhoPorta"
 
 	_monstro_slot = MonstroSlot.new()
-	_monstro_slot.set_image(img_slot_vazio)
+	_monstro_slot.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4652.png"))
 	
 	_descarte_slot = DescarteSlot.new()
-	_descarte_slot.set_image(img_slot_vazio)	
+	_descarte_slot.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4651.png"))	
 	
 	_tesouro.set_image(load("res://assets/tesouro.png"))
 	_porta.set_image(load("res://assets/porta.png"))

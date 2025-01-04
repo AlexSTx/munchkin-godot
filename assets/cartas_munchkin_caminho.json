@@ -2091,7 +2091,19 @@
 		"TESOUROS": 2,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(6).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(6).PNG",
+		"EFEITOS":[
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 5,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "ANAO"
+					}
+				]
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",

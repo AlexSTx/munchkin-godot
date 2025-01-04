@@ -4,7 +4,7 @@ var sprite: Sprite2D
 var click_area: Area2D
 
 @export var texture: Texture2D
-@export var slot_size: Vector2 = Vector2(CartaArrastavel.CARD_WIDTH, CartaArrastavel.CARD_HEIGHT)
+@export var slot_size: Vector2 = Vector2(200, 300)
 
 func _ready() -> void:
 	setup_sprite()

@@ -10,11 +10,5 @@ func enter(previous_fase_path: String, data := {}) -> void:
 func exit() -> void:
 	pass
 
-func handle_input(_event: InputEvent) -> void:
-	pass
-
-func update(_delta: float) -> void:
-	pass
-
 func set_fase() -> void:
 	pass

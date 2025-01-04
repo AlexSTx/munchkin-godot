@@ -1,6 +1,4 @@
-extends Node
-
-class_name Jogador
+class_name Jogador extends Node
 
 var _nome : String
 var _mao : Mao

@@ -1,6 +1,4 @@
-extends Node
-
-class_name Inventario
+class_name Inventario extends Node
 
 var _classes : Array[Classe]
 var _racas : Array[Raca]
@@ -10,21 +8,24 @@ var _botas : Botas
 var _equipamentoMao : Array[EquipamentoMao]
 var _modificadores : Array
 
-var carta_no_slot = false
-@onready var cena_inventario = preload("res://scenes/inventario.tscn").instantiate()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	self.visible = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	pass
+
 
 func _is_mao_cheia() -> bool:
 	if _equipamentoMao.size() == 2 or _equipamentoMao[0].get_qtd_maos() == 2:
 		return true
 	return false
 
-func _SairClicado() -> void:
-	$"/root/Partida/Jogador Host/Inventario".visible = false
+
+func _on_botao_fechar_inventario_pressed() -> void:
+	self.visible = false
+
+
+func _on_botao_inventario_host_pressed() -> void:
+	self.visible = true

@@ -50,6 +50,11 @@ func setup_click_area() -> void:
 	
 	add_child(_click_area)
 	_click_area.add_child(collision)
+	_click_area.input_event.connect(_on_click_area_input_event)
+
+
+func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	pass
 
 
 func disable_click_area() -> void:

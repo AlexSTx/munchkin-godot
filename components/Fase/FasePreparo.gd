@@ -10,8 +10,7 @@ func enter(previous_fase_path: String, data := {}) -> void:
 func exit() -> void:
 	Partida.get_mesa().get_porta().disable_click_area()
 
-	#mudar pro tipo Monstro
-func iniciar_batalha(monstro: Carta) -> void:
+func iniciar_batalha(monstro: Monstro) -> void:
 	finished.emit("Batalha", {"inimigo": monstro})
 
 

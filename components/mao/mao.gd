@@ -78,7 +78,7 @@ func _arrastar_carta_iniciado(carta: Carta) -> void:
 	for c in cartas:
 		c.desabilita_hover_anim()
 		if c != carta:
-			c.desabilita_arrastar()
+			c.disable_drag()
 	move_child(carta, -1)
 
 
@@ -87,7 +87,7 @@ func _arrastar_carta_finalizado(carta: Carta) -> void:
 
 	for c in cartas:
 		c.habilita_hover_anim()
-		c.habilita_arrastar()
+		c.enable_drag()
 
 	if sobre_a_mao(carta.position):
 		var indice_carta = cartas.find(carta)
@@ -109,7 +109,7 @@ func _arrastar_carta_finalizado(carta: Carta) -> void:
 		return
 
 	var monstro_slot = Partida.get_mesa().get_monstro_slot()
-	if monstro_slot and _carta_no_slot(monstro_slot, carta):
+	if monstro_slot and _carta_no_slot(monstro_slot, carta) and carta is Monstro:
 		remove_child(carta)
 		monstro_slot.add_monstro(carta)
 		return

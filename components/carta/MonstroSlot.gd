@@ -11,7 +11,7 @@ func has_monstro() -> bool:
 func get_current_monstro() -> Monstro:
 	return _monstro_atual
 
-func add_monstro(monstro: Carta) -> void:
+func add_monstro(monstro: Monstro) -> void:
 	if _monstro_atual:
 		remove_monstro()
 	_monstro_atual = monstro

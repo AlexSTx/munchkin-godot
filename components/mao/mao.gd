@@ -119,6 +119,9 @@ func _arrastar_carta_finalizado(carta: Carta) -> void:
 		carta.descartada_por.emit(self.get_parent())
 		return
 
+	if _carta_no_host(carta):
+		print("Carta no host")
+
 	_anima_cartas()
 	return
 
@@ -144,3 +147,12 @@ func _carta_no_slot(slot: Slot, carta: Carta) -> bool:
 		slot.position,
 		Vector2(200, 300))
 	return carta_rect.intersects(slot_rect)
+
+func _carta_no_host( carta : Carta ) -> bool:
+	var carta_rect = Rect2(
+		carta.global_position,
+		Vector2(200, 300))
+	
+	var host_rect = (Partida.get_node("Jogador Host") as Area2D).get_viewport_rect()
+	
+	return carta_rect.intersects(host_rect)

@@ -1,81 +1,79 @@
 class_name Mao extends Node2D
 
-@export var cartas: Array[Carta]
-var posicoes: Array[Vector2]
-var posicao_final: Vector2
-var carta_sendo_segurada := false
-var carta_segurada: Carta
-var posicao_mao: Vector2
-var largura_mao: float
-var altura_mao: float
-var limite_cartas: int
+@export var _cartas: Array[Carta]
+var _posicoes: Array[Vector2]
+var _carta_sendo_segurada := false
+var _posicao_mao: Vector2
+var _largura_mao: float
+var _altura_mao: float
+var _limite_cartas: int
 	
 func _ready() -> void:
-	cartas = []
-	calcula_posicoes()
+	_cartas = []
+	_calcula_posicoes()
 	
 	child_entered_tree.connect(_entrou_carta)
 	child_exiting_tree.connect(_saiu_carta)
 
 
 func set_mao(pos: Vector2, width: float, height: float) -> void:
-	limite_cartas = 6
-	posicao_mao = pos
-	largura_mao = width
-	altura_mao = height
-	calcula_posicoes()
+	_limite_cartas = 6
+	_posicao_mao = pos
+	_largura_mao = width
+	_altura_mao = height
+	_calcula_posicoes()
 
 
-func calcula_posicoes() -> void:
-	posicoes.clear()
+func _calcula_posicoes() -> void:
+	_posicoes.clear()
 	
-	if cartas.is_empty():
+	if _cartas.is_empty():
 		return
 	
-	var largura_total = 200 * (cartas.size())
-	var pos_inicial_x = posicao_mao.x + largura_mao - largura_total
-	var pos_carta_y = posicao_mao.y + (altura_mao - 300) / 2
+	var largura_total = 200 * (_cartas.size())
+	var pos_inicial_x = _posicao_mao.x + _largura_mao - largura_total
+	var pos_carta_y = _posicao_mao.y + (_altura_mao - 300) / 2
 
-	for i in range(cartas.size()):
+	for i in range(_cartas.size()):
 		var pos := Vector2(
 			pos_inicial_x + 200 * i,
 			pos_carta_y
 		)
-		posicoes.append(pos)
+		_posicoes.append(pos)
 
 
 func add_carta(carta: Carta) -> void:
-	if cartas.size() >= limite_cartas:
+	if _cartas.size() >= _limite_cartas:
 		return
 
-	cartas.push_front(carta)
+	_cartas.push_front(carta)
 	
 	add_child(carta)
 	carta.inicia_arrasto.connect(_arrastar_carta_iniciado.bind(carta))
 	carta.fim_do_arrasto.connect(_arrastar_carta_finalizado.bind(carta))
 	
-	calcula_posicoes()
-	anima_cartas()
+	_calcula_posicoes()
+	_anima_cartas()
 
 
 func _entrou_carta(node: Node) -> void:
-	if node is Carta and not cartas.has(node):
+	if node is Carta and not _cartas.has(node):
 		add_carta(node as Carta)
 
 
 func _saiu_carta(node: Node) -> void:
 	if node is Carta:
 		var carta = node as Carta
-		var i = cartas.find(carta)
-		cartas.remove_at(i)
-		calcula_posicoes()
-		anima_cartas()
+		var i = _cartas.find(carta)
+		_cartas.remove_at(i)
+		_calcula_posicoes()
+		_anima_cartas()
 
 
 func _arrastar_carta_iniciado(carta: Carta) -> void:
-	carta_sendo_segurada = true
+	_carta_sendo_segurada = true
 
-	for c in cartas:
+	for c in _cartas:
 		c.desabilita_hover_anim()
 		if c != carta:
 			c.disable_drag()
@@ -83,57 +81,57 @@ func _arrastar_carta_iniciado(carta: Carta) -> void:
 
 
 func _arrastar_carta_finalizado(carta: Carta) -> void:
-	carta_sendo_segurada = false
+	_carta_sendo_segurada = false
 
-	for c in cartas:
+	for c in _cartas:
 		c.habilita_hover_anim()
 		c.enable_drag()
 
-	if sobre_a_mao(carta.position):
-		var indice_carta = cartas.find(carta)
+	if _sobre_a_mao(carta.position):
+		var indice_carta = _cartas.find(carta)
 		var pos_alvo = indice_carta
 		var dist_minima = INF
 		
-		for i in range(posicoes.size()):
-			var dist = carta.position.distance_to(posicoes[i])
+		for i in range(_posicoes.size()):
+			var dist = carta.position.distance_to(_posicoes[i])
 			if dist < dist_minima:
 				dist_minima = dist
 				pos_alvo = i
 		
 		if pos_alvo != indice_carta:
-			cartas.remove_at(indice_carta)
-			cartas.insert(pos_alvo, carta)
-			calcula_posicoes()
+			_cartas.remove_at(indice_carta)
+			_cartas.insert(pos_alvo, carta)
+			_calcula_posicoes()
 	
-		anima_cartas()
+		_anima_cartas()
 		return
 
 	var monstro_slot = Partida.get_mesa().get_monstro_slot()
 	if monstro_slot and _carta_no_slot(monstro_slot, carta) and carta is Monstro:
 		remove_child(carta)
-		monstro_slot.add_monstro(carta)
+		monstro_slot.add_carta_no_slot(carta)
 		return
 	
 	var descarte_slot = Partida.get_mesa().get_descarte_slot()
 	if descarte_slot and _carta_no_slot(descarte_slot, carta):
 		remove_child(carta)
-		descarte_slot.add_descarte(carta)
+		descarte_slot.add_carta_no_slot(carta)
 		return
 
-	anima_cartas()
+	_anima_cartas()
 	return
 
-func anima_cartas() -> void:
-	for i in range(cartas.size()):
-		var carta = cartas[i]
+func _anima_cartas() -> void:
+	for i in range(_cartas.size()):
+		var carta = _cartas[i]
 		var tween = create_tween()
-		tween.tween_property(carta, "position", posicoes[i], 0.2)
+		tween.tween_property(carta, "position", _posicoes[i], 0.2)
 
 
-func sobre_a_mao(pos: Vector2) -> bool:
+func _sobre_a_mao(pos: Vector2) -> bool:
 	var area_mao := Rect2(
-		posicao_mao,
-		Vector2(largura_mao, altura_mao)
+		_posicao_mao,
+		Vector2(_largura_mao, _altura_mao)
 	)
 	return area_mao.has_point(pos)
 

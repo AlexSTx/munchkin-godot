@@ -4,6 +4,12 @@ signal put_card(carta: Carta)
 signal took_card(carta: Carta)
 
 var _carta: Carta = null
+@export var img: Texture2D
+
+func _ready() -> void:
+	super()
+	$Sprite2D.texture = img
+
 
 func add_carta(carta: Carta) -> void:
 	connect_carta(carta)

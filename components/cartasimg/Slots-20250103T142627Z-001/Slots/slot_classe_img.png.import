@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ubqnqiebvebj"
-path="res://.godot/imported/IMG_4639.png-f70b4e5c91aea77b655e962f56254986.ctex"
+uid="uid://chf8sf8bfw3ad"
+path="res://.godot/imported/slot_classe_img.png-eca5732a680b4f8c0b66ae56c52f8c9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4639.png"
-dest_files=["res://.godot/imported/IMG_4639.png-f70b4e5c91aea77b655e962f56254986.ctex"]
+source_file="res://components/cartasimg/Slots-20250103T142627Z-001/Slots/slot_classe_img.png"
+dest_files=["res://.godot/imported/slot_classe_img.png-eca5732a680b4f8c0b66ae56c52f8c9c.ctex"]
 
 [params]
 

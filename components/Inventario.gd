@@ -15,7 +15,6 @@ func _ready():
 	self.visible = false
 	change_slots_collision_layer()
 	set_slots_signals()
-	set_texture()
 
 
 func _process(delta: float) -> void:
@@ -53,20 +52,6 @@ func set_slots_signals() -> void:
 			slot.put_card.connect(equip)
 			slot.took_card.connect(unequip)
 			
-func set_texture() -> void:
-	for c in get_children():
-		if c is SlotClasse:
-			c.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4636.png"))
-		elif c is SlotEquipamentoMao:
-			c.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4635.png"))
-		elif c is SlotArmadura:
-			c.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4638.png"))
-		elif c is SlotRaca:
-			c.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4634.png"))
-		elif c is SlotBotas:
-			c.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4637.png"))
-		elif c is SlotCapacete:
-			c.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4639.png"))
 
 func equip(carta: Carta) -> void:
 	if carta is Armadura:

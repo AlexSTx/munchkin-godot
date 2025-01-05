@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chf8sf8bfw3ad"
-path="res://.godot/imported/IMG_4636.png-aa8aef57274bf7fb3be7df249d8ab58f.ctex"
+uid="uid://bnc415fo8v4cy"
+path="res://.godot/imported/slot_monstro_img.png-bc7e18cdc2e84ffeb7d70aefc599567b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4636.png"
-dest_files=["res://.godot/imported/IMG_4636.png-aa8aef57274bf7fb3be7df249d8ab58f.ctex"]
+source_file="res://components/cartasimg/Slots-20250103T142627Z-001/Slots/slot_monstro_img.png"
+dest_files=["res://.godot/imported/slot_monstro_img.png-bc7e18cdc2e84ffeb7d70aefc599567b.ctex"]
 
 [params]
 

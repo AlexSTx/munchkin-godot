@@ -1,57 +1,78 @@
-[gd_scene load_steps=6 format=3 uid="uid://c155r4no5l5h4"]
+[gd_scene load_steps=11 format=3 uid="uid://c155r4no5l5h4"]
 
 [ext_resource type="Script" path="res://components/Inventario.gd" id="1_0n110"]
-[ext_resource type="Texture2D" uid="uid://q80x3eosoeny" path="res://assets/CardSlot.png" id="2_0dpbp"]
+[ext_resource type="PackedScene" uid="uid://b18y3wnfjp0xp" path="res://slot.tscn" id="2_57kpq"]
+[ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotClasse.gd" id="3_asxnn"]
+[ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotRaca.gd" id="4_wkfxn"]
+[ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotCapacete.gd" id="5_npxt8"]
+[ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotArmadura.gd" id="6_rhhqf"]
+[ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotBotas.gd" id="7_nuccs"]
+[ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotEquipamentoMao.gd" id="8_8x1bl"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4q32"]
-bg_color = Color(0.819608, 0.572549, 0.266667, 1)
+[sub_resource type="Gradient" id="Gradient_qmhq0"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.970889, 0.735002, 0.504971, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cl3p8"]
-size = Vector2(182, 264)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nhiik"]
+gradient = SubResource("Gradient_qmhq0")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ocq5"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-
-[node name="Inventario" type="Control"]
-z_index = 1
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Inventario" type="Node2D"]
 script = ExtResource("1_0n110")
 
-[node name="Panel" type="Panel" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_q4q32")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(28.125, 15.1904)
+texture = SubResource("GradientTexture2D_nhiik")
 
-[node name="Capacete" type="Area2D" parent="."]
-position = Vector2(140, 185)
-collision_layer = 2
-collision_mask = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Capacete"]
-light_mask = 2
-visibility_layer = 2
-texture = ExtResource("2_0dpbp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Capacete"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_cl3p8")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 1764.0
-offset_top = 40.0
-offset_right = 1883.0
-offset_bottom = 184.0
-theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = SubResource("StyleBoxFlat_0ocq5")
+[node name="BotaoFecharInventario" type="Button" parent="."]
+offset_left = 798.0
+offset_top = -461.0
+offset_right = 861.0
+offset_bottom = -394.0
 text = "X"
 
-[connection signal="button_up" from="Button" to="." method="_SairClicado"]
+[node name="SlotClasse" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-548, -298)
+script = ExtResource("3_asxnn")
+
+[node name="SlotClasse2" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-342, -299)
+script = ExtResource("3_asxnn")
+
+[node name="SlotRaca" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-547, -4)
+script = ExtResource("4_wkfxn")
+
+[node name="SlotRaca2" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-344, -3)
+script = ExtResource("4_wkfxn")
+
+[node name="SlotCapacete" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-759, -298)
+script = ExtResource("5_npxt8")
+
+[node name="SlotArmadura" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-757, -6)
+script = ExtResource("6_rhhqf")
+
+[node name="SlotBotas" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-755, 287)
+script = ExtResource("7_nuccs")
+
+[node name="SlotEquipamentoMao" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-546, 288)
+script = ExtResource("8_8x1bl")
+
+[node name="SlotEquipamentoMao2" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-340, 289)
+script = ExtResource("8_8x1bl")
+
+[connection signal="pressed" from="BotaoFecharInventario" to="." method="_on_botao_fechar_inventario_pressed"]

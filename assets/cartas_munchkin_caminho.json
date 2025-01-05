@@ -298,23 +298,23 @@
 		"CAMINHO": ""
 	},
 	{
-			"DECK": "PORTA",
-			"COR": "ROXO",
-			"TIPO": "EQUIPAMENTO",
-			"SUBTIPO": "ARMA1M",
-			"NIVEL": 4,
-			"NOME": "ESPADA BASTARDA TRAIÇOEIRA",
-			"TEXTO": "",
-			"COISA RUIM": "",
-			"O QUE DÁ": "BÔNUS",
-			"QUANTO": 2,
-			"TESOUROS": "",
-			"VALOR_MOEDA": 400,
-			"TAMANHO": "",
-			"EFEITOS": [
-				{
-					"TIPO": "ALT_FORCA",
-					"VALOR": 2
+		"DECK": "PORTA",
+		"COR": "ROXO",
+		"TIPO": "EQUIPAMENTO",
+		"SUBTIPO": "ARMA1M",
+		"NIVEL": 4,
+		"NOME": "ESPADA BASTARDA TRAIÇOEIRA",
+		"TEXTO": "",
+		"COISA RUIM": "",
+		"O QUE DÁ": "BÔNUS",
+		"QUANTO": 2,
+		"TESOUROS": "",
+		"VALOR_MOEDA": 400,
+		"TAMANHO": "",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA",
+				"VALOR": 2
 			}
 		],
 		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(7).PNG"
@@ -909,7 +909,7 @@
 		"O QUE DÁ": "",
 		"QUANTO": "",
 		"TESOUROS": "",
-		"VALOR_MOEDA":600,
+		"VALOR_MOEDA": 600,
 		"TAMANHO": "",
 		"EFEITOS": [
 			{
@@ -937,7 +937,7 @@
 		"O QUE DÁ": "",
 		"QUANTO": "",
 		"TESOUROS": "",
-		"VALOR_MOEDA":600,
+		"VALOR_MOEDA": 600,
 		"TAMANHO": "",
 		"EFEITOS": [
 			{
@@ -1481,7 +1481,7 @@
 			{
 				"TIPO": "ALT_FORCA",
 				"VALOR": 1,
-				"RESTRICOES" : [
+				"RESTRICOES": [
 					{
 						"TIPO": "RACA",
 						"VALOR": "ELFO"
@@ -1514,7 +1514,7 @@
 			{
 				"TIPO": "ALT_FORCA",
 				"VALOR": 5,
-				"RESTRICOES" : [
+				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
 						"VALOR": "COMBATE",
@@ -1543,7 +1543,7 @@
 			{
 				"TIPO": "ALT_FORCA",
 				"VALOR": 5,
-				"RESTRICOES" : [
+				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
 						"VALOR": "COMBATE",
@@ -1572,7 +1572,7 @@
 			{
 				"TIPO": "ALT_FORCA",
 				"VALOR": 3,
-				"RESTRICOES" : [
+				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
 						"VALOR": "COMBATE",
@@ -1846,7 +1846,8 @@
 				"TIPO": "REMOVER_RACA"
 			}
 		]
-	},{
+	},
+	{
 		"DECK": "PORTA",
 		"COR": "VERDE",
 		"TIPO": "MALDIÇÃO",
@@ -1883,7 +1884,6 @@
 			}
 		]
 	},
-	
 	{
 		"DECK": "PORTA",
 		"COR": "VERDE",
@@ -2097,7 +2097,7 @@
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
 		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(6).PNG",
-		"EFEITOS":[
+		"EFEITOS": [
 			{
 				"TIPO": "ALT_FORCA_SELF",
 				"VALOR": 5,
@@ -3750,7 +3750,6 @@
 		"TESOUROS": "",
 		"VALOR_MOEDA": 200,
 		"TAMANHO": "",
-		
 		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(8).PNG",
 		"EFEITOS": [
 			{
@@ -3773,7 +3772,6 @@
 		"TESOUROS": "",
 		"VALOR_MOEDA": 200,
 		"TAMANHO": "",
-		
 		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(9).PNG"
 	},
 	{
@@ -3854,7 +3852,7 @@
 		"COR": "LARANJA",
 		"TIPO": "MONSTRO",
 		"SUBTIPO": "",
-		"NIVEL": 14,
+		"NIVEL": 1,
 		"NOME": "DROOLING SLIME",
 		"TEXTO": "Yucky slime! +4 against Elves. Bad Stuff ",
 		"COISA RUIM": "Discard the Footgear you are wearing. Lose a level if you have no Footgear.",
@@ -3887,9 +3885,9 @@
 		"DECK": "PORTA",
 		"COR": "ROXO",
 		"TIPO": "EQUIPAMENTO",
-		"SUBTIPO": "ARMA1M",
+		"SUBTIPO": "ARMADURA",
 		"NIVEL": 2,
-		"NOME": "SHOT WIDE ARMOR",
+		"NOME": "SHORT WIDE ARMOR",
 		"TEXTO": "SÓ PARA ANÕES",
 		"COISA RUIM": "",
 		"O QUE DÁ": "BÔNUS",

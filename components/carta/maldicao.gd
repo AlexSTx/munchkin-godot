@@ -1,3 +1,2 @@
-extends Carta
+class_name Maldicao extends Carta
 
-class_name Maldicao

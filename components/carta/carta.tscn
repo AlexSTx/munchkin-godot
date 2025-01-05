@@ -8,17 +8,14 @@
 size = Vector2(180, 263)
 
 [node name="Carta" type="Node2D"]
-position = Vector2(151, 674)
 script = ExtResource("1_31pn7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -3)
 texture = ExtResource("1_n7qbv")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_tbtmb")
 
 [node name="ListaEfeitos" type="Node" parent="."]

@@ -1,6 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfvbhxfmih73u"]
+[gd_scene load_steps=3 format=3 uid="uid://dfvbhxfmih73u"]
 
 [ext_resource type="Script" path="res://components/Fase/FaseBatalha.gd" id="1_gindh"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxq8l"]
+bg_color = Color(0.852731, 0.177681, 0.211886, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+shadow_color = Color(0, 0, 0, 0.368627)
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
+
 [node name="Batalha" type="Node"]
 script = ExtResource("1_gindh")
+
+[node name="MensagemLabel" type="Label" parent="."]
+offset_left = 1143.0
+offset_top = 395.0
+offset_right = 1343.0
+offset_bottom = 434.0
+
+[node name="BotoesContainer" type="GridContainer" parent="."]
+offset_left = 1166.0
+offset_top = 442.0
+offset_right = 1264.0
+offset_bottom = 543.0
+theme_override_constants/v_separation = 50
+
+[node name="EnfrentarButton" type="Button" parent="BotoesContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_jxq8l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jxq8l")
+text = "Enfrentar"
+
+[node name="FugirButton" type="Button" parent="BotoesContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_jxq8l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jxq8l")
+text = "Fugir"
+
+[connection signal="pressed" from="BotoesContainer/EnfrentarButton" to="." method="_on_enfrentar_button_pressed"]
+[connection signal="pressed" from="BotoesContainer/FugirButton" to="." method="_on_fugir_button_pressed"]

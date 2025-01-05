@@ -73,7 +73,7 @@ static func criar_carta(dados : Dictionary) -> Carta:
 	
 	nova_carta.titulo = dados['NOME']
 	nova_carta.descricao = dados['TEXTO']
-	nova_carta.nivel = dados["NIVEL"] if dados['NIVEL'] is int else 0
+	nova_carta.nivel = int(dados["NIVEL"]) if int(dados['NIVEL']) is int else 0
 	(nova_carta.find_child("Sprite2D") as Sprite2D).texture = img
 	# Lidando com efeitos
 
@@ -166,7 +166,6 @@ static func criar_todas_as_cartas() -> Array[Carta]:
 	
 	return ret
 
-#TODO: Enum para representar as pilhas?
 static func criar_cartas_da_pilha(pilha : String):
 	var ret : Array[Carta] = []
 	# Ignoramos cartas sem imagem associada

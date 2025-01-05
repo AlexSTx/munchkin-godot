@@ -3,24 +3,40 @@ class_name MonstroSlot extends Slot
 signal monstro_added(monstro: Monstro)
 signal monstro_removed(monstro: Monstro)
 
-func add_carta_no_slot(carta: Carta) -> void:
+func _init() -> void:
+	disable_container()
+
+func add_carta(carta: Carta) -> void:
+	if not can_receive_cards or not carta is Monstro:
+		return
+	
+	connect_carta(carta)
+
 	var monstro = carta as Monstro
-	if _carta_no_slot:
-		remove_carta_do_slot()
-	_carta_no_slot = monstro
+	if _carta:
+		remove_carta(carta)
+	_carta = monstro
+  
+	print("print do monstro", monstro.nivel)
+
 	monstro.position = Vector2.ZERO
 	add_child(monstro)
-	monstro.visible = true
+
 	emit_signal("monstro_added", monstro)
 	monstro.disable_drag()
-	emit_signal("card_added", monstro)
 
 	# Aplica os efeitos do monstro ao jogador atual
-	monstro.aplicar_todos_efeitos(Partida.get_turno().get_jogador_atual() )
+	monstro.aplicar_todos_efeitos(Partida.get_turno().get_jogador_atual())
 
-func remove_carta_do_slot() -> void:
-	if _carta_no_slot:
-		var monstro = _carta_no_slot
+	
+func remove_carta(carta: Carta) -> void:
+	disconnect_carta(carta)
+	if _carta:
+		var monstro = _carta
 		remove_child(monstro)
-		_carta_no_slot = null
+		_carta = null
 		emit_signal("monstro_removed", monstro)
+		
+	
+func get_current_monstro() -> Monstro:
+	return _carta as Monstro

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b18y3wnfjp0xp"]
+
+[ext_resource type="Script" path="res://components/Slot/Slot.gd" id="1_mwg03"]
+[ext_resource type="Texture2D" uid="uid://q80x3eosoeny" path="res://assets/CardSlot.png" id="2_wjnak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmd75"]
+size = Vector2(181, 267)
+
+[node name="Slot" type="Node2D"]
+script = ExtResource("1_mwg03")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wjnak")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_qmd75")

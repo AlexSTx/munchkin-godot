@@ -7,7 +7,7 @@ class_name RestricaoSexo
 func _init(p_sexo : String = "Masculino") -> void:
 	self.sexo = p_sexo 
 
-func satisfaz_condicao( alvo: Object ) -> bool:
+func satisfaz_restricao( alvo: Object ) -> bool:
 	if alvo is not Jogador:
 		return false
 	

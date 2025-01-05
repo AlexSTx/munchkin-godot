@@ -39,6 +39,6 @@ func satisfaz_todas_condicoes(alvo : Object) -> bool:
 		if ef.restricoes.is_empty():
 			return true
 		for rest in ef.restricoes:
-			if rest.satisfaz_restricao(alvo): return false
+			if not rest.satisfaz_restricao(alvo): return false
 	
 	return true

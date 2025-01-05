@@ -27,6 +27,11 @@ func canceled_card_move(carta: Carta) -> void:
 	tween.tween_property(carta, "position", Vector2.ZERO, 0.2)
 
 
+func received_own_card(carta: Carta) -> void:
+	var tween = create_tween()
+	tween.tween_property(carta, "position", Vector2.ZERO, 0.2)
+
+
 func has_carta() -> bool:
 	return _carta != null
 

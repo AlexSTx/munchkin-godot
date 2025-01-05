@@ -11,12 +11,9 @@ var _fuga : int
 
 # Called when the node enters the scene tree for the first time.
 
-func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
-	var cena_inventario = preload("res://scenes/inventario.tscn").instantiate()
-	
+func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:	
 	_nome = nome
 	_sexo = sexo
-	_inventario = cena_inventario
 	_nivel = 0
 	_poder = 0
 	_ouro = 0

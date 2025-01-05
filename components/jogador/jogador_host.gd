@@ -2,6 +2,7 @@ class_name JogadorHost extends Jogador
 
 func _ready() -> void:
 	_mao = $Mao
+	_inventario = $Inventario
 	_inventario.inventario_opened.connect(_mao._on_hud_open)
 	_inventario.inventario_closed.connect(_mao._on_hud_closed)
 	

@@ -1,3 +1,1 @@
-extends Item
-
-class_name Pocao
+class_name Pocao extends Item

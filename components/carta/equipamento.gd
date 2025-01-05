@@ -1,6 +1,6 @@
-extends Item
+class_name Equipamento extends Item
 
-class_name Equipamento
+
 
 var modificador: int
 var efeito: Efeito

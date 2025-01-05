@@ -1,6 +1,6 @@
-extends Carta
+class_name Habilidade extends Carta
 
-class_name Habilidade
+
 
 var uso_unico: bool
 

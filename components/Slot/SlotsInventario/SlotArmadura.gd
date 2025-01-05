@@ -1,5 +1,7 @@
-extends Node2D
+class_name SlotArmadura extends Slot
 
+func accepts_card(carta: Carta) -> bool:
+	return carta is Armadura
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -7,6 +7,7 @@ signal carta_over(carta: Carta, container: CardContainer)
 @onready var area: Area2D = $Area2D
 
 var can_receive_cards := true
+var show_highlight = false
 
 
 func set_signals_to_manager(manager: CardManager) -> void:
@@ -71,7 +72,7 @@ func _ready() -> void:
 	area.area_exited.connect(_on_area_exited)
 
 
-func accepts_card(carta: Carta) -> bool:
+func accepts_card(_carta: Carta) -> bool:
 	return can_receive_cards
 
 
@@ -84,4 +85,12 @@ func enable_container() -> void:
 
 
 func _process(_delta: float) -> void:
+	pass
+
+
+func highlight() -> void:
+	pass
+
+
+func disable_highlight() -> void:
 	pass

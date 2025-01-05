@@ -58,12 +58,21 @@ func on_carta_over_container(carta: Carta, container: CardContainer) -> void:
 	if carta != current_carta:
 		return
 
+	if new_parent:
+		new_parent.disable_highlight()
+
+	if container.accepts_card(carta):
+		container.highlight()
+
 	new_parent = container
 
 
 func on_carta_leaving_container(carta: Carta, container: CardContainer) -> void:
 	if just_moved:
 		return 
+
+	if container:
+		container.disable_highlight()
 
 	print("CARD MANAGER - on_carta_leaving_container ", self.name)
 	left_curr_container = true

@@ -32,8 +32,8 @@ func _on_enfrentar_button_pressed() -> void:
 		for i in range(monstro_atual.tesouro):
 			Partida.get_mesa().get_tesouro().puxar_carta()
 		Partida.get_turno().get_jogador_atual().add_nivel(1) #ajustar dps
-		Partida.get_mesa().get_monstro_slot().remove_carta_do_slot()
-		Partida.get_mesa().get_descarte_slot().add_carta_no_slot(monstro_atual)
+		Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
+		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
 		finished.emit("Final", {})
 	else:
 		#colocar o "coisa ruim"

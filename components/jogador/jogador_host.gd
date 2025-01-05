@@ -2,6 +2,9 @@ class_name JogadorHost extends Jogador
 
 func _ready() -> void:
 	_mao = $Mao
+	_inventario.inventario_opened.connect(_mao._on_hud_open)
+	_inventario.inventario_closed.connect(_mao._on_hud_closed)
+	
 
 func _process(_delta: float) -> void:
 	$"Status/Nível".text = str(_nivel)
@@ -12,4 +15,3 @@ func _process(_delta: float) -> void:
 func set_jogador_host() -> void:
 	$"Status/Nome".text = _nome
 	add_child(_inventario)
-	add_child(_mao)

@@ -110,3 +110,17 @@ func _anima_cartas() -> void:
 		var carta = _cartas[i]
 		var tween = create_tween()
 		tween.tween_property(carta, "position", _posicoes[i], 0.2)
+
+
+func _on_hud_open() -> void:
+	print("ABRIU HUD")
+	for c in _cartas:
+		c.click_area.collision_layer = 2
+		c.click_area.collision_mask = 2
+
+
+func _on_hud_closed() -> void:
+	print("FECHOU HUD")
+	for c in _cartas:
+		c.click_area.collision_layer = 1
+		c.click_area.collision_mask = 1

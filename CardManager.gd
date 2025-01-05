@@ -1,4 +1,4 @@
-class_name CardManager extends CardContainer
+class_name CardManager extends Node
 
 var current_carta: Carta
 var current_parent: CardContainer

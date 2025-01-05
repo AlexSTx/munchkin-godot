@@ -39,4 +39,10 @@ text = "X"
 position = Vector2(-732, -254)
 script = ExtResource("3_s3tgc")
 
+[node name="Area2D" parent="Slot" index="1"]
+collision_layer = 2
+collision_mask = 2
+
 [connection signal="pressed" from="BotaoFecharInventario" to="." method="_on_botao_fechar_inventario_pressed"]
+
+[editable path="Slot"]

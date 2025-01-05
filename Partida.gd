@@ -31,6 +31,7 @@ func set_Partida(nomes_jogadores: Array[String]) -> void:
 
 func set_card_manager() -> void:
 	_card_manager = CardManager.new()
+	_card_manager.name = "CardManager"
 
 	_jogadores[0].get_mao().set_signals_to_manager(_card_manager)
 	_mesa.get_descarte_slot().set_signals_to_manager(_card_manager)

@@ -8,6 +8,8 @@ var _botas : Botas
 var _equipamentoMao : Array[EquipamentoMao]
 var _modificadores : Array
 
+signal inventario_opened
+signal inventario_closed
 
 func _ready():
 	self.visible = false
@@ -24,8 +26,10 @@ func _is_mao_cheia() -> bool:
 
 
 func _on_botao_fechar_inventario_pressed() -> void:
+	inventario_closed.emit()
 	self.visible = false
 
 
 func _on_botao_inventario_host_pressed() -> void:
+	inventario_opened.emit()
 	self.visible = true

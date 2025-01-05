@@ -5,6 +5,11 @@ signal took_card(carta: Carta)
 
 var _carta: Carta = null
 
+func satisfaz_cond(carta : Carta):
+	# Referencia direto ao jogador não é ideal
+	var host : Jogador = Partida.get_node("Jogador Host") as Jogador
+	return carta.satisfaz_todas_restricoes(host)
+
 func add_carta(carta: Carta) -> void:
 	connect_carta(carta)
 	if not can_receive_cards:
@@ -17,6 +22,13 @@ func add_carta(carta: Carta) -> void:
 	add_child(_carta)
 	_carta.position = Vector2.ZERO
 	put_card.emit(carta)
+	# Aplica os efeitos permanentes da carta
+	var host : Jogador = Partida.get_node("Jogador Host") as Jogador
+	for ef in carta.get_efeitos():
+		if ef.restricoes.has(RestricaoNaoEquipavel):
+			continue
+		
+		host.status.adicionar_efeito_ativo(ef)
 		
 
 func remove_carta(carta: Carta) -> void:
@@ -25,6 +37,12 @@ func remove_carta(carta: Carta) -> void:
 		remove_child(carta)
 		_carta = null
 		took_card.emit(carta)
+		# Remover efeitos permanentes da carta
+		var host : Jogador = Partida.get_node("Jogador Host") as Jogador
+		for ef in carta.get_efeitos():
+			# TODO: Melhorar esse sistema
+			if ef in host.status.efeitos_ativos.efeitos:
+				host.status.remover_efeito_ativo(ef)
 
 
 func canceled_card_move(carta: Carta) -> void:
@@ -68,3 +86,4 @@ func set_image(texture: Texture2D) -> void:
 	var sprite = $Sprite2D
 	if sprite:
 		sprite.texture = texture
+

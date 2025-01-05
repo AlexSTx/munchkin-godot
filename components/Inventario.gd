@@ -18,16 +18,11 @@ func _ready():
 	set_texture()
 
 
-func _process(delta: float) -> void:
-	pass
-
-
 func _is_mao_cheia() -> bool:
 	if _equipamentoMao.size() == 2 or (_equipamentoMao.size() == 1 and _equipamentoMao[0].get_qtd_maos() == 2):
 		return true
 	return false
-
-
+  
 func _on_botao_fechar_inventario_pressed() -> void:
 	inventario_closed.emit()
 	self.visible = false

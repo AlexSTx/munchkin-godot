@@ -1,5 +1,4 @@
-class_name EquipamentoMao extends Item
-
+class_name EquipamentoMao extends Equipamento
 
 
 var _qtd_maos: int

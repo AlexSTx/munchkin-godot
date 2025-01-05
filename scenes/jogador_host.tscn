@@ -1,5 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b4q7tohkk52jv"]
 
+
 [ext_resource type="Script" path="res://components/jogador/jogador_host.gd" id="1_563dp"]
 [ext_resource type="FontFile" uid="uid://caxypl3l1o65u" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_kyhlf"]
 [ext_resource type="Texture2D" uid="uid://d4i45cecc8qu" path="res://assets/player_img.png" id="2_re55y"]
@@ -8,7 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://c155r4no5l5h4" path="res://scenes/inventario.tscn" id="6_rfw8w"]
 [ext_resource type="PackedScene" uid="uid://u64w1b3qnkkv" path="res://scenes/mao.tscn" id="7_vfy2m"]
 
-[node name="Jogador Host" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8e04n"]
+size = Vector2(458, 348)
+
+[node name="Jogador Host" type="Area2D"]
 script = ExtResource("1_563dp")
 
 [node name="player_img_sombra" type="Sprite2D" parent="."]
@@ -107,6 +111,7 @@ offset_bottom = 1131.95
 scale = Vector2(0.581, 0.581)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_rkhj3")
+
 
 [node name="Inventario" parent="." instance=ExtResource("6_rfw8w")]
 z_index = 1

@@ -9,7 +9,7 @@ func _init(p_restricoes : Array[Restricao] = [], p_item : String = "") -> void:
 	self.item = p_item
 
 func aplicar( alvo : Object ) -> void:
-	super(alvo)
+	if not _pode_invocar(alvo): return
 	
 	if alvo is not Jogador: 
 		return

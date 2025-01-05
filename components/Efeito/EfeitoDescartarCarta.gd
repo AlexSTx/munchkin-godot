@@ -11,7 +11,7 @@ func _init(p_restricoes : Array[Restricao] = [], p_num_cartas : int = 1) -> void
 	self.num_cartas = p_num_cartas
 
 func aplicar( alvo : Object ) -> void:
-	super(alvo)
+	if not _pode_invocar(alvo): return
 	
 	if alvo is not Jogador:
 		return

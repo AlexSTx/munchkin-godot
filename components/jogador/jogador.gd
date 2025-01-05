@@ -12,8 +12,8 @@ var _fuga : int
 func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:	
 	_nome = nome
 	_sexo = sexo
-	_nivel = 0
-	_poder = 0
+	_nivel = 1
+	_poder = 1
 	_ouro = 0
 	_fuga = 0
 
@@ -64,8 +64,16 @@ func get_fuga() -> int:
 
 
 func set_nivel(valor : int) -> void:
-	self._nivel = valor if valor > 0 else 1
-	 #colocar logica de poder aqui
+	valor = valor if valor > 0 else 1
+	if self.nivel> valor :     #então o nivel foi reduzido
+		self.poder-= self.nivel-valor 
+		self._nivel = valor
+	else: #nivel aumentou ou permaneceu o mesmo
+		self.poder+= valor - self.nivel  
+		self._nivel = valor
+	
+	
+	
    
    
 func add_nivel(valor : int) -> void:

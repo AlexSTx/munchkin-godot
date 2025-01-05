@@ -58,6 +58,7 @@ static func criar_carta(dados : Dictionary) -> Carta:
 			nova_carta.set_script(Monstro)
 			(nova_carta as Monstro).zumbi = dados['SUBTIPO'] == "MORTO VIVO"
 			(nova_carta as Monstro).tesouro = int_if_not_empty(int(dados['TESOUROS']), 1)
+			(nova_carta as Monstro).bonus_derrota = int_if_not_empty(int(dados['QUANTO']), 1)
 			if 'COISA_RUIM' in dados:
 				(nova_carta as Monstro).coisa_ruim.efeitos = criar_lista_efeitos(dados['COISA_RUIM'], nova_carta)
 		"RAÇA":

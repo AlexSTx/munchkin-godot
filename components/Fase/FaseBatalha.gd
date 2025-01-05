@@ -31,7 +31,7 @@ func _on_enfrentar_button_pressed() -> void:
 		await get_tree().create_timer(1.0).timeout
 		for i in range(monstro_atual.tesouro):
 			Partida.get_mesa().get_tesouro().puxar_carta()
-		Partida.get_turno().get_jogador_atual().add_nivel(1) #ajustar dps
+		Partida.get_turno().get_jogador_atual().add_nivel(monstro_atual.bonus_derrota)
 		Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
 		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
 		finished.emit("Final", {})
@@ -46,7 +46,7 @@ func _on_fugir_button_pressed() -> void:
 	var dado = rng.randi_range(1, 6)
 	
 	# Atualizar mensagem
-	if dado >=5 :
+	if dado >= 5 :
 		mensagem_label.text = "Você rolou %d! Conseguiu fugir!" % dado
 		# Desabilitar botões durante a animação
 		enfrentar_button.disabled = true

@@ -92,4 +92,3 @@ func set_image(texture: Texture2D) -> void:
 	var sprite = $Sprite2D
 	if sprite:
 		sprite.texture = texture
-

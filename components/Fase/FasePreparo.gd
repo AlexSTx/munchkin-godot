@@ -20,6 +20,7 @@ func enter(previous_fase_path: String, data := {}) -> void:
 	Partida.get_mesa().get_porta().enable_click_area()
 	saquear.hide()
 	buscar_encrenca.hide()
+	Partida.get_mesa().get_monstro_slot().can_receive_cards=false
 
 func exit() -> void:
 	Partida.get_mesa().get_porta().disable_click_area()
@@ -40,6 +41,7 @@ func _sem_monstro() -> void:
 	if primeiro_turno == false:
 		saquear.show()
 		buscar_encrenca.show()
+		Partida.get_mesa().get_monstro_slot().can_receive_cards=true
 	
 func _on_saquear_button_pressed() -> void:
 	Partida.get_mesa().get_tesouro().puxar_carta()

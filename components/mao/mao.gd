@@ -43,10 +43,6 @@ func add_carta(carta: Carta) -> void:
 	_cartas.push_front(carta)
 	
 	add_child(carta)
-	
-	# DEBUG
-	print("POSICAO DA CARTAAM", carta.position)
-	print(_cartas)
 
 	_calcula_posicoes()
 	_anima_cartas()
@@ -108,38 +104,9 @@ func on_card_grab_ended(_carta: Carta) -> void:
 		c.habilita_hover_anim()
 		c.enable_drag()
 
-	# var monstro_slot = Partida.get_mesa().get_monstro_slot()
-	# if monstro_slot and _carta_no_slot(monstro_slot, carta) and carta is Monstro:
-	# 	remove_child(carta)
-	# 	monstro_slot.add_carta_no_slot(carta)
-	# 	return
-	
-	# var descarte_slot = Partida.get_mesa().get_descarte_slot()
-	# if descarte_slot and _carta_no_slot(descarte_slot, carta):
-	# 	remove_child(carta)
-	# 	descarte_slot.add_carta_no_slot(carta)
-	# 	return
-
 
 func _anima_cartas() -> void:
 	for i in range(_cartas.size()):
 		var carta = _cartas[i]
 		var tween = create_tween()
 		tween.tween_property(carta, "position", _posicoes[i], 0.2)
-
-
-# func _sobre_a_mao(pos: Vector2) -> bool:
-# 	var area_mao := Rect2(
-# 		_posicao_mao,
-# 		Vector2(_largura_mao, _altura_mao)
-# 	)
-# 	return area_mao.has_point(pos)
-
-# func _carta_no_slot(slot: Slot, carta: Carta) -> bool:
-# 	var carta_rect = Rect2(
-# 		carta.global_position,
-# 		Vector2(200, 300))
-# 	var slot_rect := Rect2(
-# 		slot.position,
-# 		Vector2(200, 300))
-# 	return carta_rect.intersects(slot_rect)

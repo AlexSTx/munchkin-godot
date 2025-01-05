@@ -16,13 +16,15 @@ func _process(_delta: float) -> void:
 
 
 func set_Partida(nomes_jogadores: Array[String]) -> void:
-	_turno = load("res://scenes/turno.tscn").instantiate()
 	_mesa = load("res://scenes/mesa.tscn").instantiate()
 	add_child(_mesa)
+
 	_instancia_jogadores(nomes_jogadores)
 	_adiciona_e_seta_jogadores()
-	_mesa.set_mesa()
+	
+	_turno = load("res://scenes/turno.tscn").instantiate()
 	add_child(_turno)
+
 	set_card_manager()
 	add_child(_card_manager)
 
@@ -31,7 +33,6 @@ func set_card_manager() -> void:
 	_card_manager = CardManager.new()
 
 	_jogadores[0].get_mao().set_signals_to_manager(_card_manager)
-	# _jogadores[0].get_inventario().holding_card.connect(_card_manager.on_holding_card)
 	_mesa.get_descarte_slot().set_signals_to_manager(_card_manager)
 	_mesa.get_monstro_slot().set_signals_to_manager(_card_manager)
 	

@@ -25,14 +25,17 @@ func on_grab_ended(carta: Carta) -> void:
 			current_parent.canceled_card_move(carta)
 		else:
 			current_parent.received_own_card(carta)
-		return # aqui a carta tem que voltar pro pai original
+		return 
 	
 	if new_parent == current_parent:
 		current_parent.received_own_card(carta)
 		return
 
+	print("Novo container ----> ")
+	new_parent.print_tree_pretty()
+
 	current_parent.remove_child(carta)
-	new_parent.add_child(carta)
+	new_parent.add_carta(carta)
 
 
 func on_carta_over_container(carta: Carta, container: CardContainer) -> void:
@@ -44,6 +47,7 @@ func on_carta_over_container(carta: Carta, container: CardContainer) -> void:
 		return
 
 	new_parent = container
+	print(container)
 
 
 func on_carta_leaving_container(carta: Carta, container: CardContainer) -> void:

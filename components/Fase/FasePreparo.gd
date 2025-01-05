@@ -5,7 +5,7 @@ func _ready() -> void:
 	monstro_slot.monstro_added.connect(_iniciar_batalha)
 
 func enter(previous_fase_path: String, data := {}) -> void:
-	Partida.get_mesa().get_porta().setup_click_area()
+	Partida.get_mesa().get_porta().enable_click_area()
 	
 func exit() -> void:
 	Partida.get_mesa().get_porta().disable_click_area()

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c155r4no5l5h4"]
 
 [ext_resource type="Script" path="res://components/Inventario.gd" id="1_0n110"]
-[ext_resource type="Script" path="res://components/Slot/Slot.gd" id="2_c0m12"]
-[ext_resource type="Texture2D" uid="uid://q80x3eosoeny" path="res://assets/CardSlot.png" id="3_eh4b2"]
+[ext_resource type="PackedScene" uid="uid://b18y3wnfjp0xp" path="res://slot.tscn" id="2_57kpq"]
+[ext_resource type="Script" path="res://components/Slot/InventarioSlot.gd" id="3_s3tgc"]
 
 [sub_resource type="Gradient" id="Gradient_qmhq0"]
 offsets = PackedFloat32Array(0)
@@ -35,11 +35,8 @@ offset_right = 861.0
 offset_bottom = -394.0
 text = "X"
 
-[node name="Slot" type="Node2D" parent="."]
-position = Vector2(-753, -295)
-script = ExtResource("2_c0m12")
-
-[node name="Sprite2D" type="Sprite2D" parent="Slot"]
-texture = ExtResource("3_eh4b2")
+[node name="Slot" parent="." instance=ExtResource("2_57kpq")]
+position = Vector2(-732, -254)
+script = ExtResource("3_s3tgc")
 
 [connection signal="pressed" from="BotaoFecharInventario" to="." method="_on_botao_fechar_inventario_pressed"]

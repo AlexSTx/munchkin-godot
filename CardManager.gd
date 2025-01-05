@@ -5,6 +5,7 @@ var current_parent: CardContainer
 var new_parent: CardContainer
 
 var left_curr_container : bool
+var just_moved: bool
 
 func on_holding_card(carta: Carta, container: CardContainer) -> void:
 	print("CARD MANAGER - on_holding_card")
@@ -12,30 +13,37 @@ func on_holding_card(carta: Carta, container: CardContainer) -> void:
 	current_carta = carta
 	current_parent = container
 	left_curr_container = false
+	just_moved = false
 
 	carta.fim_do_arrasto.connect(on_grab_ended)
 
 
 func on_grab_ended(carta: Carta) -> void:
 	print("CARD MANAGER - on_grab_ended")
-	carta.fim_do_arrasto.disconnect(on_grab_ended)
 
 	if new_parent == null:
 		if left_curr_container:
 			current_parent.canceled_card_move(carta)
 		else:
 			current_parent.received_own_card(carta)
+		
+		carta.fim_do_arrasto.disconnect(on_grab_ended)
 		return 
 	
 	if new_parent == current_parent:
 		current_parent.received_own_card(carta)
+		carta.fim_do_arrasto.disconnect(on_grab_ended)
 		return
 
-	print("Novo container ----> ")
-	new_parent.print_tree_pretty()
+	if new_parent.accepts_card(carta):
+		just_moved = true
+		current_parent.remove_child(carta)
+		new_parent.add_carta(carta)
+	else:
+		current_parent.canceled_card_move(carta)
 
-	current_parent.remove_child(carta)
-	new_parent.add_carta(carta)
+	just_moved = false
+	carta.fim_do_arrasto.disconnect(on_grab_ended)
 
 
 func on_carta_over_container(carta: Carta, container: CardContainer) -> void:
@@ -51,6 +59,9 @@ func on_carta_over_container(carta: Carta, container: CardContainer) -> void:
 
 
 func on_carta_leaving_container(carta: Carta, container: CardContainer) -> void:
+	if just_moved:
+		return 
+
 	print("CARD MANAGER - on_carta_leaving_container")
 	left_curr_container = true
 

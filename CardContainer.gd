@@ -61,6 +61,10 @@ func _ready() -> void:
 	area.area_exited.connect(_on_area_exited)
 
 
+func accepts_card(carta: Carta) -> bool:
+	return can_receive_cards
+
+
 func disable_container() -> void:
 	can_receive_cards = false
 

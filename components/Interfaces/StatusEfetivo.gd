@@ -45,3 +45,7 @@ func adicionar_efeito_ativo(ef : Efeito):
 	if ef not in self.efeitos_ativos.efeitos:
 		self.efeitos_ativos.adicionar_efeito(ef)
 	self.recalcular()
+	
+func remover_efeito_ativo( ef : Efeito ):
+	self.efeitos_ativos.remover_efeito(ef)
+	self.recalcular()

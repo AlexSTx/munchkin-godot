@@ -21,8 +21,8 @@ func adicionar_efeito(efeito : Efeito) -> void:
 	self.efeitos.push_back(efeito)
 	lista_alterada.emit()
 
-func remover_efeito(index : int):
-	self.efeitos.remove_at(index)
+func remover_efeito(ef : Efeito):
+	self.efeitos.erase(ef)
 	lista_alterada.emit()
 
 func satisfaz_alguma_condicao(alvo : Object) -> bool:

@@ -89,12 +89,7 @@ func received_own_card(_carta: Carta) -> void:
 		_cartas.remove_at(indice_carta)
 		_cartas.insert(pos_alvo, _carta)
 		_calcula_posicoes()
-		carta.descartada_por.emit(self.get_parent())
-
-	if _carta_no_host(carta):
-		print("Carta no host")
-		if handle_carta_no_host(carta, descarte_slot) == OK:
-			return
+		_carta.descartada_por.emit(self.get_parent())
 
 	_anima_cartas()
 

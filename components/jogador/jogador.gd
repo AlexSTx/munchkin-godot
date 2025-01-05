@@ -15,8 +15,6 @@ signal mudou_nivel(novo_nivel : int)
 func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:	
 	_nome = nome
 	_sexo = sexo
-	_mao = cena_mao
-	_inventario = cena_inventario
 	_nivel = 1
 	_poder = 0
 	_ouro = 0
@@ -27,7 +25,6 @@ func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 func _on_carta_morreu(carta : Carta) -> void:
 	print("anao, vou tirar a carta")
 	carta.queue_free()
-
 
 func vender_item(_item : Item) -> int:
 	return 0

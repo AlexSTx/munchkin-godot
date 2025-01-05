@@ -31,12 +31,12 @@ func _on_enfrentar_button_pressed() -> void:
 		await get_tree().create_timer(1.0).timeout
 		for i in range(monstro_atual.tesouro):
 			Partida.get_mesa().get_tesouro().puxar_carta()
-		Partida.get_turno().get_jogador_atual().add_nivel(1) #ajustar dps
-		Partida.get_mesa().get_monstro_slot().remove_carta_do_slot()
-		Partida.get_mesa().get_descarte_slot().add_carta_no_slot(monstro_atual)
+		Partida.get_turno().get_jogador_atual().add_nivel(monstro_atual.bonus_derrota)
+		Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
+		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
 		finished.emit("Final", {})
 	else:
-		#colocar o "coisa ruim"
+		coisa_ruim()
 		pass
 
 func _on_fugir_button_pressed() -> void:
@@ -46,7 +46,7 @@ func _on_fugir_button_pressed() -> void:
 	var dado = rng.randi_range(1, 6)
 	
 	# Atualizar mensagem
-	if dado >=5 :
+	if dado >= 5 :
 		mensagem_label.text = "Você rolou %d! Conseguiu fugir!" % dado
 		# Desabilitar botões durante a animação
 		enfrentar_button.disabled = true
@@ -55,14 +55,20 @@ func _on_fugir_button_pressed() -> void:
 		await get_tree().create_timer(2.0).timeout
 		enfrentar_button.disabled = false
 		fugir_button.disabled = false
-		Partida.get_mesa().get_monstro_slot().remove_carta_do_slot()
-		Partida.get_mesa().get_descarte_slot().add_carta_no_slot(monstro_atual)
+		Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
+		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
 		finished.emit("Final", {})
 	else:
-		mensagem_label.text = "Você rolou %d! Não conseguiu fugir..." % dado
+		mensagem_label.text = "Você rolou %d! Não conseguiu fugir do Monstro" % dado
+		await get_tree().create_timer(2.0).timeout
+		mensagem_label.text = ""
+		coisa_ruim()
 
 func handle_input(_event: InputEvent) -> void:
 	pass
 
 func update(_delta: float) -> void:
+	pass
+	
+func coisa_ruim():
 	pass

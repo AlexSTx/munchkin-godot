@@ -6,6 +6,7 @@ var zumbi: bool
 var lutar_sozinho: bool
 var coisa_ruim : ListaEfeitos
 var status : StatusEfetivo
+var bonus_derrota: int
 
 func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _fuga: int = 0, _tesouro: int = 0, _zumbi: bool = false, _lutar_sozinho: bool = false):
 	super(_nivel, _titulo, _descricao)  # Chama o construtor da classe base

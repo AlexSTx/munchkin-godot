@@ -12,21 +12,23 @@ func _ready() -> void:
 	
 
 func _calcula_posicoes() -> void:
-	# var posicao_mao = area.position
-	var dimensoes_mao = area.find_child("CollisionShape2D").shape.size
+	var largura_carta = 180
+	var qtd_cartas = _cartas.size()
+
+	var padding = 10
 
 	_posicoes.clear()
 	
 	if _cartas.is_empty():
 		return
 	
-	var largura_total = 190 * (_cartas.size())
-	var pos_inicial_x = dimensoes_mao.x/2 - largura_total/2
+	var largura_total = (largura_carta + padding) * qtd_cartas
+	var pos_inicial_x = largura_carta/2.0 - largura_total/2.0
 
 	for i in range(_cartas.size()):
 		var pos := Vector2(
-			pos_inicial_x + 190 * i,
-			dimensoes_mao.y / 2
+			pos_inicial_x + (largura_carta + padding) * i,
+			0
 		)
 		_posicoes.append(pos)
 
@@ -124,23 +126,10 @@ func _on_hud_closed() -> void:
 		c.click_area.collision_layer = 1
 		c.click_area.collision_mask = 1
 
-func handle_carta_no_host(carta : Carta, descarte_slot : DescarteSlot):
-	var host : JogadorHost = Partida.get_node("Jogador Host") as JogadorHost
-	# TODO: Refatorar essas checagens para evitar repetições
-	if carta is Pocao or carta is Habilidade:
-		if carta.satisfaz_alguma_restricao(host) :
-			remove_child(carta)
-			descarte_slot.add_carta_no_slot(carta)
-			print("Carta " + carta.titulo + " pode ser usada. Aplicando efeitos")
-			carta.aplicar_todos_efeitos(host)
-			print("Efeitos Aplicados")
-			return OK
-	elif carta is Equipamento:
-		if host.get_inventario().equiparItem(carta) == OK:
-			remove_child(carta)
-			for ef in carta.get_efeitos():
-				if ef.restricoes.has(RestricaoNaoEquipavel):
-					continue
-				host.status.adicionar_efeito_ativo(ef)
-	else:
-			print("Carta não aplicável")
+		
+func get_limite():
+	return _limite_cartas
+
+func get_cartas_na_mao():
+	return _cartas.size()
+	

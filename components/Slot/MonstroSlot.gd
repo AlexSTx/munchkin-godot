@@ -3,13 +3,12 @@ class_name MonstroSlot extends Slot
 signal monstro_added(monstro: Monstro)
 signal monstro_removed(monstro: Monstro)
 
-func _init() -> void:
-	disable_container()
 
-func add_carta(carta: Carta) -> void:
-	if not can_receive_cards or not carta is Monstro:
-		return
-	
+func accepts_card(carta: Carta) -> bool:
+	return carta is Monstro and can_receive_cards
+
+
+func add_carta(carta: Carta) -> void:	
 	connect_carta(carta)
 
 	var monstro = carta as Monstro

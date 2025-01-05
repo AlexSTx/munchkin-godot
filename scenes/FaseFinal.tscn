@@ -19,6 +19,14 @@ shadow_offset = Vector2(5, 5)
 [node name="Final" type="Node"]
 script = ExtResource("1_hgxg1")
 
+[node name="MensagemLabel" type="Label" parent="."]
+offset_left = 655.0
+offset_top = 265.0
+offset_right = 895.0
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(0.990405, 0.0856147, 1.15514e-06, 1)
+theme_override_font_sizes/font_size = 42
+
 [node name="Button" type="Button" parent="."]
 anchors_preset = -1
 anchor_left = 0.683

@@ -3,12 +3,19 @@ class_name FasePreparo extends Fase
 @onready var saquear: Button = $SaquearButton
 @onready var buscar_encrenca: Button = $BuscarEncrenca
 @onready var mensagem_label: Label = $MensagemLabel
+
+var primeiro_turno:=true
 func _ready() -> void:
 	var monstro_slot = Partida.get_mesa().get_monstro_slot()
 	monstro_slot.monstro_added.connect(_iniciar_batalha)
 	Partida.get_mesa().get_porta().sem_monstro.connect(_sem_monstro)
 	saquear.hide()
 	buscar_encrenca.hide()
+	if primeiro_turno == true:
+		for i in range (3):
+			Partida.get_mesa().get_porta().puxar_carta()
+			Partida.get_mesa().get_tesouro().puxar_carta()
+		primeiro_turno=false
 func enter(previous_fase_path: String, data := {}) -> void:
 	Partida.get_mesa().get_porta().enable_click_area()
 	saquear.hide()
@@ -30,8 +37,9 @@ func _finalizar_turno_clicado() -> void:
 	finished.emit("Preparo", {})
 
 func _sem_monstro() -> void:
-	saquear.show()
-	buscar_encrenca.show()
+	if primeiro_turno == false:
+		saquear.show()
+		buscar_encrenca.show()
 	
 func _on_saquear_button_pressed() -> void:
 	Partida.get_mesa().get_tesouro().puxar_carta()

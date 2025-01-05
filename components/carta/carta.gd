@@ -23,3 +23,6 @@ func satisfaz_todas_restricoes( alvo : Object ) -> bool:
 
 func satisfaz_alguma_restricao( alvo : Object ) -> bool:
 	return $ListaEfeitos.satisfaz_alguma_condicao(alvo)
+
+func get_efeitos():
+	return $ListaEfeitos.efeitos

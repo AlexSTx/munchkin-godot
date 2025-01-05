@@ -1,4 +1,4 @@
-extends Item
+extends Equipamento
 
 class_name EquipamentoMao
 

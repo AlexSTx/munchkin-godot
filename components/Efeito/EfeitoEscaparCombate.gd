@@ -6,7 +6,7 @@ signal escapar_combate(jogador : Jogador)
 
 
 func aplicar( alvo : Object ) -> void:
-	super(alvo)
+	if not _pode_invocar(alvo): return
 	
 	if alvo is not Jogador:
 		return

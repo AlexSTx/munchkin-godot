@@ -15,7 +15,7 @@ func _init(p_monstro : Monstro, p_restricoes : Array[Restricao] = [], p_valor : 
 
 func aplicar( alvo : Object = self.monstro) -> void:
 	# Péssima solução, mas funciona
-	super(alvo)
+	if not _pode_invocar(alvo): return
 	
 	if alvo != self.monstro:
 		print("O efeito AumentarForçaPropria só deve ser utilizado no monstro atual, ignorando alvo " + alvo.name)

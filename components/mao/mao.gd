@@ -89,6 +89,12 @@ func received_own_card(_carta: Carta) -> void:
 		_cartas.remove_at(indice_carta)
 		_cartas.insert(pos_alvo, _carta)
 		_calcula_posicoes()
+		carta.descartada_por.emit(self.get_parent())
+
+	if _carta_no_host(carta):
+		print("Carta no host")
+		if handle_carta_no_host(carta, descarte_slot) == OK:
+			return
 
 	_anima_cartas()
 
@@ -122,3 +128,24 @@ func _on_hud_closed() -> void:
 	for c in _cartas:
 		c.click_area.collision_layer = 1
 		c.click_area.collision_mask = 1
+
+func handle_carta_no_host(carta : Carta, descarte_slot : DescarteSlot):
+	var host : JogadorHost = Partida.get_node("Jogador Host") as JogadorHost
+	# TODO: Refatorar essas checagens para evitar repetições
+	if carta is Pocao or carta is Habilidade:
+		if carta.satisfaz_alguma_restricao(host) :
+			remove_child(carta)
+			descarte_slot.add_carta_no_slot(carta)
+			print("Carta " + carta.titulo + " pode ser usada. Aplicando efeitos")
+			carta.aplicar_todos_efeitos(host)
+			print("Efeitos Aplicados")
+			return OK
+	elif carta is Equipamento:
+		if host.get_inventario().equiparItem(carta) == OK:
+			remove_child(carta)
+			for ef in carta.get_efeitos():
+				if ef.restricoes.has(RestricaoNaoEquipavel):
+					continue
+				host.status.adicionar_efeito_ativo(ef)
+	else:
+			print("Carta não aplicável")

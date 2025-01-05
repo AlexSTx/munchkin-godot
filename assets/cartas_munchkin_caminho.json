@@ -2075,7 +2075,12 @@
 		"TESOUROS": 4,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": ""
+		"CAMINHO": "",
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "RESET_NIVEL"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2103,6 +2108,12 @@
 					}
 				]
 			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -2
+			}
 		]
 	},
 	{
@@ -2119,7 +2130,20 @@
 		"TESOUROS": 1,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441.PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441.PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1,
+				"TRIGGER": "FUGA"
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -2
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2183,7 +2207,19 @@
 		"TESOUROS": 4,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(2).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(2).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA",
+				"VALOR": -4,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "ELFO"
+					}
+				]
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2263,7 +2299,29 @@
 		"TESOUROS": 2,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(13).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(13).PNG",
+		"EFEITOS":[
+			{
+				"TIPO":"ALT_FORCA_SELF",
+				"VALOR": 6,
+				"RESTRICOES":[
+					{
+						"TIPO": "RACA",
+						"VALOR": "ELFO"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "CAPACETE"
+			},
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2295,7 +2353,35 @@
 		"TESOUROS": 3,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(23).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(23).PNG",
+		"EFEITOS": [
+			{
+				"TIPO":"ALT_FORCA_SELF",
+				"VALOR": 4,
+				"RESTRICOES": [
+					{
+						"TIPO": "CLASSE",
+						"VALOR": "CLERIGO"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -2
+			},
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "ELFO"
+					}
+				]
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2343,7 +2429,19 @@
 		"TESOUROS": 1,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(18).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(18).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FUGA",
+				"VALOR": 1
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2407,7 +2505,25 @@
 		"TESOUROS": 2,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(16).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(16).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 5,
+				"RESTRICOES": [
+					{
+						"TIPO": "CLASSE",
+						"VALOR": "MAGO"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -2
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2423,7 +2539,19 @@
 		"TESOUROS": 4,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(11).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(11).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 4,
+				"RESTRICOES": [
+					{
+						"TIPO": "CLASSE",
+						"VALOR": "GUERREIRO"
+					}
+				]
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2487,7 +2615,24 @@
 		"TESOUROS": 2,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(22).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(22).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 6,
+				"RESTRICOES": [
+					{
+						"TIPO": "CLASSE",
+						"VALOR": "GUERREIRO"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "REMOVER_RACA"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2551,7 +2696,25 @@
 		"TESOUROS": 1,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(2).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(2).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 3,
+				"RESTRICOES": [
+					{
+						"TIPO": "CLASSE",
+						"VALOR": "CLERIGO"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2567,7 +2730,35 @@
 		"TESOUROS": 3,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(24).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(24).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 3,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "ANAO"
+					}
+				]
+			},
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 3,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "HALFLING"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "CAPACETE"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -2599,7 +2790,19 @@
 		"TESOUROS": 1,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(1).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(1).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FUGA",
+				"VALOR": -1
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": -1
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -3615,7 +3818,13 @@
 		"TESOUROS": 2,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438.PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438.PNG",
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "DESCARTAR_CARTA",
+				"VALOR": 6
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -3631,7 +3840,12 @@
 		"TESOUROS": 4,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(4).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(4).PNG",
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "RESET_NIVEL"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",
@@ -3647,7 +3861,25 @@
 		"TESOUROS": 1,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4439(3).PNG"
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4439(3).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 4,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "ELFO"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM":[
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "BOTA"
+			}
+		]
 	},
 	{
 		"DECK": "PORTA",

@@ -10,12 +10,18 @@ class_name Efeito
 func _init(p_restricoes : Array[Restricao] = [], p_permanente : bool = false) -> void:
 	self.restricoes = p_restricoes
 	self.permanente = p_permanente
-	
-func aplicar( alvo : Object ) -> void:
+
+func _pode_invocar(alvo : Object) -> bool:
 	if "status" not in alvo:
 		print(alvo.to_string() + " não possui propriedade \"status\"")
-		return
-	for rest in self.restricoes:
-		if rest.satisfaz_restricao(alvo):
-			return
+		return false
+	if self.restricoes.is_empty():
+		return true
+	else:
+		for rest in self.restricoes:
+			if rest.satisfaz_restricao(alvo):
+				return true
+		return false
+
+func aplicar( alvo : Object ) -> void:
 	return

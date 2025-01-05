@@ -166,7 +166,6 @@ static func criar_todas_as_cartas() -> Array[Carta]:
 	
 	return ret
 
-#TODO: Enum para representar as pilhas?
 static func criar_cartas_da_pilha(pilha : String):
 	var ret : Array[Carta] = []
 	# Ignoramos cartas sem imagem associada

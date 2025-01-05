@@ -12,4 +12,3 @@ func aplicar( alvo : Object ) -> void:
 	super(alvo)
 	var p : Jogador = alvo
 	p.add_nivel(self.valor)
-	

@@ -12,5 +12,5 @@ func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _valo
 	_valor = _valor
 	_qtd_maos=_qtd_maos
 
-func get_qtd_maos():
+func get_qtd_maos() -> int:
 	return _qtd_maos;

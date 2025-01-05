@@ -112,6 +112,7 @@ texture_normal = ExtResource("5_rkhj3")
 visible = false
 
 [node name="Mao" parent="." instance=ExtResource("7_vfy2m")]
+z_index = 1
 position = Vector2(824, 735)
 
 [connection signal="pressed" from="BotaoInventarioHost" to="Inventario" method="_on_botao_inventario_host_pressed"]

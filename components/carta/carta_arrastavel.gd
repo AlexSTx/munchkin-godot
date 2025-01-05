@@ -14,53 +14,14 @@ var animacao_hover: Tween
 @export var drag_enabled = true
 @export var cancela_arrasto = false
 
-var click_area: Area2D 
-var sprite: Sprite2D 
-
-@export var textura: Texture2D
+@onready var click_area: Area2D = $Area2D
 
 func _ready() -> void:
 	posicao_original = position
-	setup_click_area()
-	setup_sprite()
-
-	if textura:
-		sprite.textura = textura
 
 	click_area.input_event.connect(_on_click_area_input_event)
 	click_area.mouse_entered.connect(_mouse_na_carta)
 	click_area.mouse_exited.connect(_mouse_saiu_da_carta)
-
-
-func setup_sprite() -> void:
-	sprite = Sprite2D.new()
-	sprite.name = "Sprite2D"
-	add_child(sprite)
-
-
-func set_image(nova_textura: Texture2D) -> void:
-	textura = nova_textura
-	if sprite:
-		sprite.texture = textura
-
-	if click_area and click_area.get_child(0) is CollisionShape2D:
-		var colisao = click_area.get_child(0) as CollisionShape2D
-		var area_colisao = colisao.shape as RectangleShape2D
-		if textura:
-			area_colisao.size = textura.get_size()
-
-
-func setup_click_area() -> void:
-	click_area = Area2D.new()
-	click_area.name = "ClickArea"
-	
-	var colisao = CollisionShape2D.new()
-	var area_colisao = RectangleShape2D.new()
-	area_colisao.size = Vector2(200, 300)  
-	colisao.shape = area_colisao
-	
-	add_child(click_area)
-	click_area.add_child(colisao)
 
 
 func _mouse_na_carta() -> void:
@@ -73,6 +34,7 @@ func _mouse_na_carta() -> void:
 	animacao_hover = create_tween()
 	animacao_hover.tween_property(self, "scale", Vector2.ONE * 1.2, 0.1)
 
+
 func _mouse_saiu_da_carta() -> void:
 	if arrastando:
 		return
@@ -82,6 +44,7 @@ func _mouse_saiu_da_carta() -> void:
 	
 	animacao_hover = create_tween()
 	animacao_hover.tween_property(self, "scale", Vector2.ONE, 0.1  )
+
 
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if not drag_enabled:

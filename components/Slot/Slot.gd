@@ -5,6 +5,11 @@ signal took_card(carta: Carta)
 
 var _carta: Carta = null
 
+func satisfaz_cond(carta : Carta):
+	# Referencia direto ao jogador não é ideal
+	var host : Jogador = Partida.get_node("Jogador Host") as Jogador
+	return carta.satisfaz_todas_restricoes(host)
+
 func add_carta(carta: Carta) -> void:
 	connect_carta(carta)
 	if not can_receive_cards:

@@ -8,6 +8,9 @@ func _ready() -> void:
 
 
 func enter(previous_fase_path: String, data := {}) -> void:
+	if fase_bot():
+		exit()
+		finished.emit("Preparo", {})
 	button.show()
 	pass
 

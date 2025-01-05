@@ -15,6 +15,7 @@ func _ready() -> void:
 	
 	set_label_etapa()
 	set_label_jogador_atual()
+	fase_atual.set_jogador_atual(Partida.get_jogadores()[jogador_atual])
 	fase_atual.enter("")
 
 func _trocar_de_fase(next_fase_path: String, data: Dictionary) -> void:
@@ -29,6 +30,7 @@ func _trocar_de_fase(next_fase_path: String, data: Dictionary) -> void:
 		set_label_jogador_atual()
 	fase_atual = get_node(next_fase_path)
 	set_label_etapa()
+	fase_atual.set_jogador_atual(Partida.get_jogadores()[jogador_atual])
 	fase_atual.enter(previous_fase_path, data)
 
 

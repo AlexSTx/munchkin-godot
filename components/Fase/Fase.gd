@@ -13,5 +13,11 @@ func exit() -> void:
 func set_fase() -> void:
 	pass
 
+func fase_bot() -> bool:
+	return (_jogador_atual != Partida.get_jogadores()[0])
+
 func get_jogador_atual() -> Jogador:
 	return _jogador_atual
+
+func set_jogador_atual(jogador: Jogador) -> void:
+	_jogador_atual = jogador

@@ -2300,11 +2300,11 @@
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
 		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(13).PNG",
-		"EFEITOS":[
+		"EFEITOS": [
 			{
-				"TIPO":"ALT_FORCA_SELF",
+				"TIPO": "ALT_FORCA_SELF",
 				"VALOR": 6,
-				"RESTRICOES":[
+				"RESTRICOES": [
 					{
 						"TIPO": "RACA",
 						"VALOR": "ELFO"
@@ -2356,7 +2356,7 @@
 		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(23).PNG",
 		"EFEITOS": [
 			{
-				"TIPO":"ALT_FORCA_SELF",
+				"TIPO": "ALT_FORCA_SELF",
 				"VALOR": 4,
 				"RESTRICOES": [
 					{
@@ -3858,7 +3858,7 @@
 				]
 			}
 		],
-		"EFEITOS_COISA_RUIM":[
+		"EFEITOS_COISA_RUIM": [
 			{
 				"TIPO": "REMOVER_ITEM",
 				"VALOR": "BOTA"

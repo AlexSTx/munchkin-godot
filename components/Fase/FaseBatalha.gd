@@ -14,6 +14,9 @@ func _ready() -> void:
 	mensagem_label.hide()
 
 func enter(previous_fase_path: String, data := {}) -> void:
+	if fase_bot():
+		exit()
+		finished.emit("Final", {})
 	monstro_atual = Partida.get_mesa().get_monstro_slot().get_current_monstro()
 	print(monstro_atual)
 	botoes_container.show()

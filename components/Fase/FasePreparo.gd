@@ -16,7 +16,11 @@ func _ready() -> void:
 			Partida.get_mesa().get_porta().puxar_carta()
 			Partida.get_mesa().get_tesouro().puxar_carta()
 		primeiro_turno=false
+
 func enter(previous_fase_path: String, data := {}) -> void:
+	if fase_bot():
+		exit()
+		finished.emit("Batalha", {})
 	Partida.get_mesa().get_porta().enable_click_area()
 	saquear.hide()
 	buscar_encrenca.hide()
@@ -26,6 +30,7 @@ func exit() -> void:
 	Partida.get_mesa().get_porta().disable_click_area()
 	saquear.hide()
 	buscar_encrenca.hide()
+
 func _iniciar_batalha(monstro: Monstro) -> void:
 	saquear.hide()
 	buscar_encrenca.hide()

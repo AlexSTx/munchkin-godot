@@ -28,7 +28,7 @@ func exit() -> void:
 	mensagem_label.hide()
 	mensagem_label.text = ""
 
-func _on_enfrentar_button_pressed() -> void:
+func _enfrentar_monstro() -> void:
 	if Partida.get_turno().get_jogador_atual().get_nivel() + 16 >  monstro_atual.nivel: #tirar o +16 quando o inventario estiver funcionando
 		mensagem_label.text = "Você derrotou o monstro!"
 		await get_tree().create_timer(1.0).timeout
@@ -42,7 +42,7 @@ func _on_enfrentar_button_pressed() -> void:
 		coisa_ruim()
 		pass
 
-func _on_fugir_button_pressed() -> void:
+func _fuga() -> void:
 	# Gerar número aleatório entre 1 e 6
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -67,11 +67,5 @@ func _on_fugir_button_pressed() -> void:
 		mensagem_label.text = ""
 		coisa_ruim()
 
-func handle_input(_event: InputEvent) -> void:
-	pass
-
-func update(_delta: float) -> void:
-	pass
-	
 func coisa_ruim():
 	pass

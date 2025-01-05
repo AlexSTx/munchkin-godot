@@ -83,6 +83,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6ckka")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6ckka")
 text = "Finalizar Turno"
 
-[connection signal="pressed" from="SaquearButton" to="." method="_on_saquear_button_pressed"]
-[connection signal="pressed" from="BuscarEncrenca" to="." method="_on_buscar_encrenca_pressed"]
-[connection signal="button_up" from="FinalizarTurno" to="." method="_finalizar_turno_clicado"]
+[connection signal="pressed" from="SaquearButton" to="." method="_saquear_sala"]
+[connection signal="pressed" from="BuscarEncrenca" to="." method="_buscar_encrenca"]
+[connection signal="button_up" from="FinalizarTurno" to="." method="_finalizar_turno"]

@@ -9,10 +9,12 @@ func _ready() -> void:
 
 func enter(previous_fase_path: String, data := {}) -> void:
 	if fase_bot():
-		exit()
+		button.hide()
+		await get_tree().create_timer(2.0).timeout
 		finished.emit("Preparo", {})
-	button.show()
-	pass
+	else:
+		button.show()
+		pass
 
 
 func exit() -> void: 

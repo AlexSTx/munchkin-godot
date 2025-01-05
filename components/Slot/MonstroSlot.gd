@@ -9,18 +9,18 @@ func _init() -> void:
 func add_carta(carta: Carta) -> void:
 	if not can_receive_cards or not carta is Monstro:
 		return
-    
-  connect_carta(carta)
+	
+	connect_carta(carta)
 
-  var monstro = carta as Monstro
+	var monstro = carta as Monstro
 	if _carta:
 		remove_carta(carta)
 	_carta = monstro
   
-	print("print do monstro", _monstro.nivel)
+	print("print do monstro", monstro.nivel)
 
 	monstro.position = Vector2.ZERO
-	add_child(_monstro)
+	add_child(monstro)
 
 	emit_signal("monstro_added", monstro)
 	monstro.disable_drag()
@@ -37,6 +37,6 @@ func remove_carta(carta: Carta) -> void:
 		_carta = null
 		emit_signal("monstro_removed", monstro)
 		
-    
+	
 func get_current_monstro() -> Monstro:
 	return _carta as Monstro

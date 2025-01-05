@@ -3638,7 +3638,7 @@
 		"COR": "LARANJA",
 		"TIPO": "MONSTRO",
 		"SUBTIPO": "",
-		"NIVEL": 14,
+		"NIVEL": 1,
 		"NOME": "DROOLING SLIME",
 		"TEXTO": "Yucky slime! +4 against Elves. Bad Stuff ",
 		"COISA RUIM": "Discard the Footgear you are wearing. Lose a level if you have no Footgear.",

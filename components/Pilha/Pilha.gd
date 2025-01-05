@@ -1,6 +1,7 @@
 class_name Pilha extends CardContainer
 
 @export var _cartas: Array[Carta]
+signal sem_monstro
 
 
 func _ready() -> void:	
@@ -30,6 +31,7 @@ func puxar_carta() -> void:
 				descarte_slot.add_carta(carta)
 			else:
 				Partida.get_jogadores()[0].get_mao().add_carta(carta)
+				emit_signal("sem_monstro")
 		else:
 			Partida.get_jogadores()[0].get_mao().add_carta(carta)
 		disable_click_area()

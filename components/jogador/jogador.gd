@@ -9,8 +9,6 @@ var _sexo : String
 var _ouro : int
 var _fuga : int
 
-# Called when the node enters the scene tree for the first time.
-
 func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:	
 	_nome = nome
 	_sexo = sexo
@@ -20,10 +18,6 @@ func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 	_fuga = 0
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
 func _on_carta_morreu(carta : Carta) -> void:
 	print("anao, vou tirar a carta")
 	carta.queue_free()
@@ -32,37 +26,50 @@ func _on_carta_morreu(carta : Carta) -> void:
 func vender_item(_item : Item) -> int:
 	return 0
 
+
 func jogar_dado() -> int:
 	return randi() % 6 + 1
+
 
 func get_nome() -> String:
 	return _nome
 	
+  
 func get_sexo() -> String:
 	return _sexo
+
 
 func get_mao() -> Mao:
 	return _mao
 	
+  
 func get_inventario() -> Inventario:
 	return _inventario
+
 
 func get_nivel() -> int:
 	return _nivel
 	
+  
 func get_poder() -> int:
 	return _poder
+
 
 func get_ouro() -> int:
 	return _ouro
 
+
 func get_fuga() -> int:
 	return _fuga
 
+
 func set_nivel(valor : int) -> void:
 	self._nivel = valor if valor > 0 else 1
-
+	 #colocar logica de poder aqui
+   
+   
 func add_nivel(valor : int) -> void:
 	self._nivel += valor
+	self._poder+=valor
 	if self._nivel < 1:
 		self._nivel = 1

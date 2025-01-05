@@ -476,7 +476,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "CLASSE",
-						"VALOR": "LADRAO",
+						"VALOR": "LADRÃO",
 						"INVERSO": true
 					}
 				]
@@ -584,7 +584,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "CLASSE",
-						"VALOR": "LADRAO"
+						"VALOR": "LADRÃO"
 					}
 				]
 			}
@@ -812,7 +812,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "RACA",
-						"VALOR": "ANAO"
+						"VALOR": "ANÃO"
 					}
 				]
 			}
@@ -918,7 +918,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "RACA",
-						"VALOR": "ANAO"
+						"VALOR": "ANÃO"
 					}
 				]
 			}
@@ -2104,7 +2104,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "RACA",
-						"VALOR": "ANAO"
+						"VALOR": "ANÃO"
 					}
 				]
 			}
@@ -2738,7 +2738,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "RACA",
-						"VALOR": "ANAO"
+						"VALOR": "ANÃO"
 					}
 				]
 			},
@@ -3902,7 +3902,7 @@
 				"RESTRICOES": [
 					{
 						"TIPO": "RACA",
-						"VALOR": "ANAO"
+						"VALOR": "ANÃO"
 					}
 				]
 			}

@@ -28,7 +28,7 @@ func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 	_poder = 0
 	_ouro = 0
 	_fuga = 0
-	status = StatusEfetivo.new(_nivel, _fuga)
+	status = StatusEfetivo.new(self, _nivel, _fuga)
 	mudou_nivel.connect(status.alterar_nivel_base)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -16,6 +16,7 @@ func satisfaz_cond(carta : Carta):
 	var host : Jogador = Partida.get_node("Jogador Host") as Jogador
 	return carta.satisfaz_todas_restricoes(host)
 
+
 func add_carta(carta: Carta) -> void:
 	connect_carta(carta)
 	if not can_receive_cards:

@@ -1,8 +1,9 @@
 class_name Slot extends CardContainer
 
+signal put_card(carta: Carta)
+signal took_card(carta: Carta)
+
 var _carta: Carta = null
-
-
 
 func add_carta(carta: Carta) -> void:
 	connect_carta(carta)
@@ -15,14 +16,16 @@ func add_carta(carta: Carta) -> void:
 	_carta = carta
 	add_child(_carta)
 	_carta.position = Vector2.ZERO
+	put_card.emit(carta)
 		
 
 func remove_carta(carta: Carta) -> void:
 	if carta == _carta:
 		disconnect_carta(carta)
 		remove_child(carta)
-
 		_carta = null
+		took_card.emit(carta)
+
 
 func canceled_card_move(carta: Carta) -> void:
 	var tween = create_tween()

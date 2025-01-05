@@ -13,8 +13,8 @@ position = Vector2(10, 0)
 script = ExtResource("1_mwg03")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(11, -3.00001)
-scale = Vector2(0.172414, 0.155)
+position = Vector2(2.00001, -3.00001)
+scale = Vector2(0.164918, 0.155)
 texture = SubResource("CompressedTexture2D_u6dym")
 
 [node name="Area2D" type="Area2D" parent="."]

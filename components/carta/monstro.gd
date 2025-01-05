@@ -1,6 +1,4 @@
-extends Carta
-
-class_name Monstro
+class_name Monstro extends Carta
 
 var fuga: int
 var tesouro: int

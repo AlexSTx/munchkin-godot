@@ -1,7 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://u64w1b3qnkkv"]
+[gd_scene load_steps=3 format=3 uid="uid://u64w1b3qnkkv"]
 
 [ext_resource type="Script" path="res://components/mao/mao.gd" id="1_8tfrc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_de2dp"]
+size = Vector2(1100, 350)
 
 [node name="Mao" type="Node2D"]
 z_index = 2
 script = ExtResource("1_8tfrc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(544, 166)
+shape = SubResource("RectangleShape2D_de2dp")

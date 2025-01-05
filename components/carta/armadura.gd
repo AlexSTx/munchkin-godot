@@ -1,7 +1,4 @@
-extends Equipamento
-
-class_name Armadura
-
+class_name Armadura extends Equipamento
 
 func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _valor: int=0, _modificador: int=0): #falta Efeito
 	nivel = _nivel

@@ -1,6 +1,4 @@
-extends Node
-
-class_name Jogador
+class_name Jogador extends Node
 
 var _nome : String
 var _mao : Mao
@@ -11,25 +9,14 @@ var _sexo : String
 var _ouro : int
 var _fuga : int
 
-# Called when the node enters the scene tree for the first time.
-
-func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
-	var cena_inventario = preload("res://scenes/inventario.tscn").instantiate()
-	var cena_mao = preload("res://scenes/mao.tscn").instantiate()
-	
+func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:	
 	_nome = nome
 	_sexo = sexo
-	_mao = cena_mao
-	_inventario = cena_inventario
-	_nivel = 1
-	_poder = 1
+	_nivel = 0
+	_poder = 0
 	_ouro = 0
 	_fuga = 0
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
 
 func _on_carta_morreu(carta : Carta) -> void:
 	print("anao, vou tirar a carta")
@@ -39,36 +26,48 @@ func _on_carta_morreu(carta : Carta) -> void:
 func vender_item(_item : Item) -> int:
 	return 0
 
+
 func jogar_dado() -> int:
 	return randi() % 6 + 1
+
 
 func get_nome() -> String:
 	return _nome
 	
+  
 func get_sexo() -> String:
 	return _sexo
+
 
 func get_mao() -> Mao:
 	return _mao
 	
+  
 func get_inventario() -> Inventario:
 	return _inventario
+
 
 func get_nivel() -> int:
 	return _nivel
 	
+  
 func get_poder() -> int:
 	return _poder
+
 
 func get_ouro() -> int:
 	return _ouro
 
+
 func get_fuga() -> int:
 	return _fuga
+
 
 func set_nivel(valor : int) -> void:
 	self._nivel = valor if valor > 0 else 1
 	 #colocar logica de poder aqui
+   
+   
 func add_nivel(valor : int) -> void:
 	self._nivel += valor
 	self._poder+=valor

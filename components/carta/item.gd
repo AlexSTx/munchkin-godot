@@ -1,6 +1,5 @@
-extends Carta
+class_name Item extends Carta
 
-class_name Item
 
 var valor: int
 

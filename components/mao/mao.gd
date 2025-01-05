@@ -1,125 +1,103 @@
-class_name Mao extends Node2D
+class_name Mao extends CardContainer
 
 @export var _cartas: Array[Carta]
 var _posicoes: Array[Vector2]
-var _carta_sendo_segurada := false
-var _posicao_mao: Vector2
-var _largura_mao: float
-var _altura_mao: float
 var _limite_cartas: int
 	
 func _ready() -> void:
+	super()
 	_cartas = []
+	_limite_cartas = 6
 	_calcula_posicoes()
 	
-	child_entered_tree.connect(_entrou_carta)
-	child_exiting_tree.connect(_saiu_carta)
-
-
-func set_mao(pos: Vector2, width: float, height: float) -> void:
-	_limite_cartas = 6
-	_posicao_mao = pos
-	_largura_mao = width
-	_altura_mao = height
-	_calcula_posicoes()
-
 
 func _calcula_posicoes() -> void:
+	# var posicao_mao = area.position
+	var dimensoes_mao = area.find_child("CollisionShape2D").shape.size
+
 	_posicoes.clear()
 	
 	if _cartas.is_empty():
 		return
 	
-	var largura_total = 200 * (_cartas.size())
-	var pos_inicial_x = _posicao_mao.x + _largura_mao - largura_total
-	var pos_carta_y = _posicao_mao.y + (_altura_mao - 300) / 2
+	var largura_total = 190 * (_cartas.size())
+	var pos_inicial_x = dimensoes_mao.x/2 - largura_total/2
 
 	for i in range(_cartas.size()):
 		var pos := Vector2(
-			pos_inicial_x + 200 * i,
-			pos_carta_y
+			pos_inicial_x + 190 * i,
+			dimensoes_mao.y / 2
 		)
 		_posicoes.append(pos)
 
 
+func accepts_card(_carta: Carta) -> bool:
+	return _cartas.size() < _limite_cartas
+
+
 func add_carta(carta: Carta) -> void:
-	if _cartas.size() >= _limite_cartas:
-		return
+	connect_carta(carta)
 
 	_cartas.push_front(carta)
-	
 	add_child(carta)
-	carta.inicia_arrasto.connect(_arrastar_carta_iniciado.bind(carta))
-	carta.fim_do_arrasto.connect(_arrastar_carta_finalizado.bind(carta))
-	
+
 	_calcula_posicoes()
 	_anima_cartas()
 
 
-func _entrou_carta(node: Node) -> void:
-	if node is Carta and not _cartas.has(node):
-		add_carta(node as Carta)
+func remove_carta(carta: Carta) -> void:
+	disconnect_carta(carta)
+	remove_child(carta)
+
+	var i = _cartas.find(carta)
+	_cartas.remove_at(i)
+
+	_calcula_posicoes()
+	_anima_cartas()
 
 
-func _saiu_carta(node: Node) -> void:
-	if node is Carta:
-		var carta = node as Carta
-		var i = _cartas.find(carta)
-		_cartas.remove_at(i)
-		_calcula_posicoes()
-		_anima_cartas()
-
-
-func _arrastar_carta_iniciado(carta: Carta) -> void:
-	_carta_sendo_segurada = true
+func on_card_grab_started(carta: Carta) -> void:
+	print("MAO : ON CARD GRAB STARTED ", self.name)
+	super(carta)
 
 	for c in _cartas:
 		c.desabilita_hover_anim()
 		if c != carta:
 			c.disable_drag()
+
 	move_child(carta, -1)
 
 
-func _arrastar_carta_finalizado(carta: Carta) -> void:
-	_carta_sendo_segurada = false
+func canceled_card_move(_carta: Carta) -> void:
+	print("MAO - canceled_card_move ", self.name)
+	_anima_cartas()
 
+
+func received_own_card(_carta: Carta) -> void:
+	print("MAOP - received_own_card ", self.name)
+	var indice_carta = _cartas.find(_carta)
+	var pos_alvo = indice_carta
+	var dist_minima = INF
+	
+	for i in range(_posicoes.size()):
+		var dist = _carta.position.distance_to(_posicoes[i])
+		if dist < dist_minima:
+			dist_minima = dist
+			pos_alvo = i
+	
+	if pos_alvo != indice_carta:
+		_cartas.remove_at(indice_carta)
+		_cartas.insert(pos_alvo, _carta)
+		_calcula_posicoes()
+
+	_anima_cartas()
+
+
+func on_card_grab_ended(_carta: Carta) -> void:
 	for c in _cartas:
 		c.habilita_hover_anim()
 		c.enable_drag()
 
-	if _sobre_a_mao(carta.position):
-		var indice_carta = _cartas.find(carta)
-		var pos_alvo = indice_carta
-		var dist_minima = INF
-		
-		for i in range(_posicoes.size()):
-			var dist = carta.position.distance_to(_posicoes[i])
-			if dist < dist_minima:
-				dist_minima = dist
-				pos_alvo = i
-		
-		if pos_alvo != indice_carta:
-			_cartas.remove_at(indice_carta)
-			_cartas.insert(pos_alvo, carta)
-			_calcula_posicoes()
-	
-		_anima_cartas()
-		return
-
-	var monstro_slot = Partida.get_mesa().get_monstro_slot()
-	if monstro_slot and _carta_no_slot(monstro_slot, carta) and carta is Monstro:
-		remove_child(carta)
-		monstro_slot.add_carta_no_slot(carta)
-		return
-	
-	var descarte_slot = Partida.get_mesa().get_descarte_slot()
-	if descarte_slot and _carta_no_slot(descarte_slot, carta):
-		remove_child(carta)
-		descarte_slot.add_carta_no_slot(carta)
-		return
-
-	_anima_cartas()
-	return
 
 func _anima_cartas() -> void:
 	for i in range(_cartas.size()):
@@ -128,18 +106,19 @@ func _anima_cartas() -> void:
 		tween.tween_property(carta, "position", _posicoes[i], 0.2)
 
 
-func _sobre_a_mao(pos: Vector2) -> bool:
-	var area_mao := Rect2(
-		_posicao_mao,
-		Vector2(_largura_mao, _altura_mao)
-	)
-	return area_mao.has_point(pos)
+func _on_hud_open() -> void:
+	print("ABRIU HUD")
+	self.area.collision_layer = 2
+	self.area.collision_mask = 2
+	for c in _cartas:
+		c.click_area.collision_layer = 2
+		c.click_area.collision_mask = 2
 
-func _carta_no_slot(slot: Slot, carta: Carta) -> bool:
-	var carta_rect = Rect2(
-		carta.global_position,
-		Vector2(200, 300))
-	var slot_rect := Rect2(
-		slot.position,
-		Vector2(200, 300))
-	return carta_rect.intersects(slot_rect)
+
+func _on_hud_closed() -> void:
+	print("FECHOU HUD")
+	self.area.collision_layer = 1
+	self.area.collision_mask = 1
+	for c in _cartas:
+		c.click_area.collision_layer = 1
+		c.click_area.collision_mask = 1

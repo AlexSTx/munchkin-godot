@@ -10,9 +10,10 @@ func _ready() -> void:
 	saquear.hide()
 	buscar_encrenca.hide()
 func enter(previous_fase_path: String, data := {}) -> void:
-	Partida.get_mesa().get_porta().setup_click_area()
+	Partida.get_mesa().get_porta().enable_click_area()
 	saquear.hide()
 	buscar_encrenca.hide()
+
 func exit() -> void:
 	Partida.get_mesa().get_porta().disable_click_area()
 	saquear.hide()

@@ -1,6 +1,6 @@
-extends Item
+class_name EquipamentoMao extends Item
 
-class_name EquipamentoMao
+
 
 var _qtd_maos: int
 var carta_no_slot = false

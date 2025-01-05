@@ -122,3 +122,10 @@ func _on_hud_closed() -> void:
 	for c in _cartas:
 		c.click_area.collision_layer = 1
 		c.click_area.collision_mask = 1
+		
+func get_limite():
+	return _limite_cartas
+
+func get_cartas_na_mao():
+	return _cartas.size()
+	

@@ -18,11 +18,11 @@ func _init(
 	p_nivel : int = 1,
 	p_fuga : int = 0) -> void:
 
-		self._nivel_base = p_nivel if p_nivel >= 1 else 1
-		self.dono = p_dono as Jogador
-		self.nivel_efetivo = self._nivel_base
-		self.fuga_efetiva = p_fuga
-		self.efeitos_ativos = ListaEfeitos.new()
+	self._nivel_base = p_nivel if p_nivel >= 1 else 1
+	self.dono = p_dono as Jogador
+	self.nivel_efetivo = self._nivel_base
+	self.fuga_efetiva = p_fuga
+	self.efeitos_ativos = ListaEfeitos.new()
 
 func alterar_nivel_efetivo(valor : int):
 	self.nivel_efetivo += valor
@@ -42,9 +42,11 @@ func alterar_fuga_efetiva(valor : int):
 	self.fuga_efetiva += valor
 
 func adicionar_efeito_ativo(ef : Efeito):
+	if ef is EfeitoAlterarNivel:
+		return
 	if ef not in self.efeitos_ativos.efeitos:
 		self.efeitos_ativos.adicionar_efeito(ef)
-	self.recalcular()
+		self.recalcular()
 	
 func remover_efeito_ativo( ef : Efeito ):
 	self.efeitos_ativos.remover_efeito(ef)

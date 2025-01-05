@@ -19,8 +19,8 @@ func _ready() -> void:
 
 func enter(previous_fase_path: String, data := {}) -> void:
 	if fase_bot():
-		exit()
-		finished.emit("Batalha", {})
+		await get_tree().create_timer(2.0).timeout
+		finished.emit("Final", {})
 	Partida.get_mesa().get_porta().enable_click_area()
 	saquear.hide()
 	buscar_encrenca.hide()

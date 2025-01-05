@@ -10,9 +10,6 @@ func _ready() -> void:
 	_limite_cartas = 6
 	_calcula_posicoes()
 	
-	child_entered_tree.connect(_entrou_carta)
-	child_exiting_tree.connect(_saiu_carta)
-
 
 func _calcula_posicoes() -> void:
 	var posicao_mao = area.position
@@ -34,36 +31,33 @@ func _calcula_posicoes() -> void:
 		_posicoes.append(pos)
 
 
+func accepts_card(_carta: Carta) -> bool:
+	return _cartas.size() < _limite_cartas
+
+
 func add_carta(carta: Carta) -> void:
-	if _cartas.size() >= _limite_cartas:
-		return
-	
-	super(carta)
+	connect_carta(carta)
 
 	_cartas.push_front(carta)
-	
 	add_child(carta)
 
 	_calcula_posicoes()
 	_anima_cartas()
 
 
-func _entrou_carta(node: Node) -> void:
-	if node is Carta and not _cartas.has(node):
-		add_carta(node as Carta)
+func remove_carta(carta: Carta) -> void:
+	disconnect_carta(carta)
+	remove_child(carta)
 
+	var i = _cartas.find(carta)
+	_cartas.remove_at(i)
 
-func _saiu_carta(node: Node) -> void:
-	if node is Carta:
-		var carta = node as Carta
-		var i = _cartas.find(carta)
-		_cartas.remove_at(i)
-		_calcula_posicoes()
-		_anima_cartas()
+	_calcula_posicoes()
+	_anima_cartas()
 
 
 func on_card_grab_started(carta: Carta) -> void:
-	print("MAO : ON CARD GRAB STARTED")
+	print("MAO : ON CARD GRAB STARTED ", self.name)
 	super(carta)
 
 	for c in _cartas:
@@ -75,12 +69,12 @@ func on_card_grab_started(carta: Carta) -> void:
 
 
 func canceled_card_move(_carta: Carta) -> void:
-	print("MAO - canceled_card_move")
+	print("MAO - canceled_card_move ", self.name)
 	_anima_cartas()
 
 
 func received_own_card(_carta: Carta) -> void:
-	print("MAOP - received_own_card")
+	print("MAOP - received_own_card ", self.name)
 	var indice_carta = _cartas.find(_carta)
 	var pos_alvo = indice_carta
 	var dist_minima = INF
@@ -114,6 +108,8 @@ func _anima_cartas() -> void:
 
 func _on_hud_open() -> void:
 	print("ABRIU HUD")
+	self.area.collision_layer = 2
+	self.area.collision_mask = 2
 	for c in _cartas:
 		c.click_area.collision_layer = 2
 		c.click_area.collision_mask = 2
@@ -121,6 +117,8 @@ func _on_hud_open() -> void:
 
 func _on_hud_closed() -> void:
 	print("FECHOU HUD")
+	self.area.collision_layer = 1
+	self.area.collision_mask = 1
 	for c in _cartas:
 		c.click_area.collision_layer = 1
 		c.click_area.collision_mask = 1

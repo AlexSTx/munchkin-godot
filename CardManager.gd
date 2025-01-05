@@ -17,7 +17,7 @@ func reset_state() -> void:
 
 
 func on_holding_card(carta: Carta, container: CardContainer) -> void:
-	print("CARD MANAGER - on_holding_card")
+	print("CARD MANAGER - on_holding_card", self.name)
 
 	current_carta = carta
 	current_parent = container
@@ -28,35 +28,30 @@ func on_holding_card(carta: Carta, container: CardContainer) -> void:
 
 
 func on_grab_ended(carta: Carta) -> void:
-	print("CARD MANAGER - on_grab_ended ", just_moved)
+	print("CARD MANAGER - on_grab_ended ", self.name)
+	just_moved = true
 
 	if new_parent == null:
 		if left_curr_container:
 			current_parent.canceled_card_move(carta)
 		else:
 			current_parent.received_own_card(carta)
-		
-		carta.fim_do_arrasto.disconnect(on_grab_ended)
-		return 
-	
-	if new_parent == current_parent:
-		current_parent.received_own_card(carta)
-		carta.fim_do_arrasto.disconnect(on_grab_ended)
-		return
-
-	if new_parent.accepts_card(carta):
-		just_moved = true
-		current_parent.remove_child(carta)
-		new_parent.add_carta(carta)
 	else:
-		current_parent.canceled_card_move(carta)
+		if new_parent == current_parent:
+			current_parent.received_own_card(carta)
+		else:
+			if new_parent.accepts_card(carta):
+				current_parent.remove_carta(carta)
+				new_parent.add_carta(carta)
+			else:
+				current_parent.canceled_card_move(carta)
 
 	carta.fim_do_arrasto.disconnect(on_grab_ended)
 	reset_state()
 
 
 func on_carta_over_container(carta: Carta, container: CardContainer) -> void:
-	print("CARD MANAGER - on_carta_over_container")
+	print("CARD MANAGER - on_carta_over_container ", self.name)
 	if not container.can_receive_cards:
 		return
 
@@ -64,14 +59,13 @@ func on_carta_over_container(carta: Carta, container: CardContainer) -> void:
 		return
 
 	new_parent = container
-	print(container)
 
 
 func on_carta_leaving_container(carta: Carta, container: CardContainer) -> void:
 	if just_moved:
 		return 
 
-	print("CARD MANAGER - on_carta_leaving_container")
+	print("CARD MANAGER - on_carta_leaving_container ", self.name)
 	left_curr_container = true
 
 	if carta != current_carta:

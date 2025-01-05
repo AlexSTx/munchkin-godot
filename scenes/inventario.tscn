@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c155r4no5l5h4"]
+[gd_scene load_steps=5 format=3 uid="uid://c155r4no5l5h4"]
 
 [ext_resource type="Script" path="res://components/Inventario.gd" id="1_0n110"]
 [ext_resource type="PackedScene" uid="uid://b18y3wnfjp0xp" path="res://slot.tscn" id="2_57kpq"]
-[ext_resource type="Script" path="res://components/Slot/InventarioSlot.gd" id="3_s3tgc"]
 
 [sub_resource type="Gradient" id="Gradient_qmhq0"]
 offsets = PackedFloat32Array(0)
@@ -11,38 +10,22 @@ colors = PackedColorArray(0.970889, 0.735002, 0.504971, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_nhiik"]
 gradient = SubResource("Gradient_qmhq0")
 
-[node name="Inventario" type="Control"]
-z_index = 1
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Inventario" type="Node2D"]
 script = ExtResource("1_0n110")
+
+[node name="Slot" parent="." instance=ExtResource("2_57kpq")]
+z_index = 1
+position = Vector2(-711, -265)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(28.125, 15.1904)
 texture = SubResource("GradientTexture2D_nhiik")
 
 [node name="BotaoFecharInventario" type="Button" parent="."]
-layout_mode = 0
 offset_left = 798.0
 offset_top = -461.0
 offset_right = 861.0
 offset_bottom = -394.0
 text = "X"
 
-[node name="Slot" parent="." instance=ExtResource("2_57kpq")]
-position = Vector2(-732, -254)
-script = ExtResource("3_s3tgc")
-
-[node name="Area2D" parent="Slot" index="1"]
-collision_layer = 2
-collision_mask = 2
-
 [connection signal="pressed" from="BotaoFecharInventario" to="." method="_on_botao_fechar_inventario_pressed"]
-
-[editable path="Slot"]

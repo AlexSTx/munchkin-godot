@@ -16,7 +16,6 @@ func set_signals_to_manager(manager: CardManager) -> void:
 
 
 func on_card_grab_started(carta: Carta) -> void:
-	print("CARD-CONTAINER : on_card_grab_started")
 	holding_card.emit(carta, self)
 
 
@@ -25,7 +24,6 @@ func on_card_grab_ended(_carta: Carta) -> void:
 
 
 func _on_area_entered(other_area: Area2D) -> void:
-	print("CARD-CONTAINER : _on_area_entered")
 	var carta = other_area.get_parent() as CartaArrastavel
 	if not carta:
 		return
@@ -34,7 +32,7 @@ func _on_area_entered(other_area: Area2D) -> void:
 	
 
 func _on_area_exited(other_area: Area2D) -> void:
-	print("CARD-CONTAINER : _on_area_exited")
+	print("CARD-CONTAINER : _on_area_exited ", self.name)
 	var carta = other_area.get_parent() as CartaArrastavel
 	if not carta:
 		return
@@ -50,10 +48,22 @@ func canceled_card_move(_carta: Carta) -> void:
 	pass
 
 
-func add_carta(carta: Carta) -> void:
-	print("CARD-CONTAINER : add_carta")
+func connect_carta(carta: Carta) -> void:
 	carta.inicia_arrasto.connect(on_card_grab_started)
 	carta.fim_do_arrasto.connect(on_card_grab_ended)
+
+
+func disconnect_carta(carta: Carta) -> void:
+	carta.inicia_arrasto.disconnect(on_card_grab_started)
+	carta.fim_do_arrasto.disconnect(on_card_grab_ended)
+
+
+func add_carta(_carta: Carta) -> void:
+	pass
+
+
+func remove_carta(_carta: Carta) -> void:
+	pass
 
 
 func _ready() -> void:

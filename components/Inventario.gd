@@ -1,4 +1,4 @@
-class_name Inventario extends Node
+class_name Inventario extends Node2D
 
 var _classes : Array[Classe]
 var _racas : Array[Raca]
@@ -13,6 +13,7 @@ signal inventario_closed
 
 func _ready():
 	self.visible = false
+	change_slots_collision_layer()
 
 
 func _process(delta: float) -> void:
@@ -33,3 +34,11 @@ func _on_botao_fechar_inventario_pressed() -> void:
 func _on_botao_inventario_host_pressed() -> void:
 	inventario_opened.emit()
 	self.visible = true
+
+
+func change_slots_collision_layer() -> void:
+	for c in get_children():
+		if c is CardContainer:
+			var slot = c as CardContainer
+			slot.area.collision_layer = 2
+			slot.area.collision_mask = 2

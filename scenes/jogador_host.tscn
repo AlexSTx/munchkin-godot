@@ -109,7 +109,8 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_rkhj3")
 
 [node name="Inventario" parent="." instance=ExtResource("6_rfw8w")]
-visible = false
+z_index = 1
+position = Vector2(972, 540)
 
 [node name="Mao" parent="." instance=ExtResource("7_vfy2m")]
 z_index = 1

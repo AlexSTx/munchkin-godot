@@ -32,7 +32,6 @@ func puxar_carta() -> void:
 				Partida.get_jogadores()[0].get_mao().add_carta(carta)
 		else:
 			Partida.get_jogadores()[0].get_mao().add_carta(carta)
-		emit_signal("carta_puxada", carta)
 		disable_click_area()
 
 

@@ -34,6 +34,13 @@ func set_card_manager() -> void:
 	_card_manager.name = "CardManager"
 
 	_jogadores[0].get_mao().set_signals_to_manager(_card_manager)
+
+	var inventario_slots = _jogadores[0].get_inventario().get_children()
+	
+	for slot in inventario_slots:
+		if slot is CardContainer:
+			slot.set_signals_to_manager(_card_manager)
+
 	_mesa.get_descarte_slot().set_signals_to_manager(_card_manager)
 	_mesa.get_monstro_slot().set_signals_to_manager(_card_manager)
 	

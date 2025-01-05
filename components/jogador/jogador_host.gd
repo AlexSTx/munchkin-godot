@@ -15,4 +15,3 @@ func _process(_delta: float) -> void:
 
 func set_jogador_host() -> void:
 	$"Status/Nome".text = _nome
-	add_child(_inventario)

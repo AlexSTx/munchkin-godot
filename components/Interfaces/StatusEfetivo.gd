@@ -5,6 +5,9 @@ extends Resource
 
 class_name StatusEfetivo
 
+signal alterou_poder
+
+
 @export var nivel_efetivo : int
 # Podemos usar tanto para determinar a chance de fuga do jogador como um modificador de fuga do monstro
 @export var fuga_efetiva : int
@@ -33,6 +36,7 @@ func recalcular():
 	self.nivel_efetivo = self._nivel_base
 	self.fuga_efetiva = 0
 	self.efeitos_ativos.aplicar_efeitos(self.dono)
+	alterou_poder.emit()
 
 func alterar_nivel_base(novo_nivel : int):
 	self._nivel_base = novo_nivel

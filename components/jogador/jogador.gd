@@ -21,6 +21,7 @@ func set_jogador(nome : String = "", sexo : String = "Masculino") -> void:
 	_fuga = 0
 	status = StatusEfetivo.new(self, _nivel, _fuga)
 	mudou_nivel.connect(status.alterar_nivel_base)
+	status.alterou_poder.connect(self._on_alterou_poder)
 
 func _on_carta_morreu(carta : Carta) -> void:
 	print("anao, vou tirar a carta")
@@ -65,18 +66,14 @@ func get_ouro() -> int:
 func get_fuga() -> int:
 	return _fuga
 
+func _on_alterou_poder():
+	self._poder = self.status.nivel_efetivo
 
 func set_nivel(valor : int) -> void:
 	self._nivel = valor if valor > 0 else 1
 	mudou_nivel.emit(self._nivel)
   
-	valor = valor if valor > 0 else 1
-	if self.nivel> valor :     #então o nivel foi reduzido
-		self.poder-= self.nivel-valor 
-		self._nivel = valor
-	else: #nivel aumentou ou permaneceu o mesmo
-		self.poder+= valor - self.nivel  
-		self._nivel = valor
+	self._poder = self.status.nivel_efetivo
 	
 func add_nivel(valor : int) -> void:
 	self._nivel += valor

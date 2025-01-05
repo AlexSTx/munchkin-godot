@@ -1,10 +1,7 @@
 class_name Equipamento extends Item
 
-
-
 var modificador: int
 var efeito: Efeito
-
 
 func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _valor: int=0, _modificador: int=0, _efeito: Efeito = null): #falta Efeito
 	nivel = _nivel

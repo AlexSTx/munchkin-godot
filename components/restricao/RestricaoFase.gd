@@ -17,4 +17,4 @@ func satisfaz_restricao( alvo: Object ) -> bool:
 	
 	var fase_atual = Partida.get_turno().fase_atual
 	
-	return fase_atual.titulo == self.fase and (self.qualquer_jogador or fase_atual.get_jogador_atual() == alvo)
+	return fase_atual.name == self.fase and (self.qualquer_jogador or fase_atual.get_jogador_atual() == alvo)

@@ -114,6 +114,6 @@ position = Vector2(972, 540)
 
 [node name="Mao" parent="." instance=ExtResource("7_vfy2m")]
 z_index = 1
-position = Vector2(824, 735)
+position = Vector2(1340, 905)
 
 [connection signal="pressed" from="BotaoInventarioHost" to="Inventario" method="_on_botao_inventario_host_pressed"]

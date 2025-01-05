@@ -12,21 +12,23 @@ func _ready() -> void:
 	
 
 func _calcula_posicoes() -> void:
-	# var posicao_mao = area.position
-	var dimensoes_mao = area.find_child("CollisionShape2D").shape.size
+	var largura_carta = 180
+	var qtd_cartas = _cartas.size()
+
+	var padding = 10
 
 	_posicoes.clear()
 	
 	if _cartas.is_empty():
 		return
 	
-	var largura_total = 190 * (_cartas.size())
-	var pos_inicial_x = dimensoes_mao.x/2 - largura_total/2
+	var largura_total = (largura_carta + padding) * qtd_cartas
+	var pos_inicial_x = largura_carta/2.0 - largura_total/2.0
 
 	for i in range(_cartas.size()):
 		var pos := Vector2(
-			pos_inicial_x + 190 * i,
-			dimensoes_mao.y / 2
+			pos_inicial_x + (largura_carta + padding) * i,
+			0
 		)
 		_posicoes.append(pos)
 

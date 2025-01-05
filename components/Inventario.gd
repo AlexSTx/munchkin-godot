@@ -92,3 +92,25 @@ func unequip(carta: Carta) -> void:
 		var i = _equipamentoMao.find(carta)
 		if i != -1:
 			_equipamentoMao.remove_at(i)
+
+# var _classes : Array[Classe]
+# var _racas : Array[Raca]
+# var _capacete : Capacete
+# var _armadura : Armadura
+# var _botas : Botas
+# var _equipamentoMao : Array[EquipamentoMao]
+# var _modificadores : Array
+
+func ser_saqueado_inventario() -> Array[Carta]:
+
+	var cartas_saqueadas: Array[Carta] = []
+	var itens: Array[Cartas] = [_classes,_racas,_capacete,_armadura,_botas,_equipamentoMao,_modificadores]
+	
+	for e in itens:
+		for carta in itens[e]:
+			if carta != []:
+				cartas_saqueadas.append(carta)
+
+			unequip(carta)
+			
+	return cartas_saqueadas

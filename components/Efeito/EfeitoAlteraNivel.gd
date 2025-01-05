@@ -9,6 +9,7 @@ func _init(p_restricoes : Array[Restricao] = [], p_valor : int = 1) -> void:
 	self.valor = p_valor
 
 func aplicar( alvo : Object ) -> void:
-	super(alvo)
+	if not _pode_invocar(alvo): return
+	
 	var p : Jogador = alvo
 	p.add_nivel(self.valor)

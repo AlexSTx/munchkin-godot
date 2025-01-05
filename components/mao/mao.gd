@@ -91,6 +91,7 @@ func received_own_card(_carta: Carta) -> void:
 		_cartas.remove_at(indice_carta)
 		_cartas.insert(pos_alvo, _carta)
 		_calcula_posicoes()
+		_carta.descartada_por.emit(self.get_parent())
 
 	_anima_cartas()
 
@@ -124,6 +125,7 @@ func _on_hud_closed() -> void:
 	for c in _cartas:
 		c.click_area.collision_layer = 1
 		c.click_area.collision_mask = 1
+
 		
 func get_limite():
 	return _limite_cartas

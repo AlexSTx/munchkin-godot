@@ -15,5 +15,5 @@ func _init(_nivel: int = 0, _titulo: String = "", _descricao: String = "", _fuga
 	zumbi = _zumbi
 	lutar_sozinho = _lutar_sozinho
 	coisa_ruim = ListaEfeitos.new()
-	self.status = StatusEfetivo.new(_nivel, _fuga)
+	self.status = StatusEfetivo.new(self, _nivel, _fuga)
 	

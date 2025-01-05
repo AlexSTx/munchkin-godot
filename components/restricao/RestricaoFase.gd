@@ -11,7 +11,7 @@ func _init(p_fase : String = "BATALHA", p_qualquer = false) -> void:
 
 # Aqui o alvo deve ser o jogador jogando a carta
 
-func satisfaz_condicao( alvo: Object ) -> bool:
+func satisfaz_restricao( alvo: Object ) -> bool:
 	if alvo is not Jogador:
 		return false
 	

@@ -7,7 +7,7 @@ signal invocar_monstro(monstro : Monstro)
 
 # Nesse caso, o alvo é o monstro que queremos invocar no combate
 func aplicar( alvo : Object ) -> void:
-	super(alvo)
+	if not _pode_invocar(alvo): return
 	
 	if alvo is not Monstro:
 		print(alvo.to_string() + " não é um monstro que pode ser invocado")

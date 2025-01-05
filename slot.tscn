@@ -1,16 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://b18y3wnfjp0xp"]
 
 [ext_resource type="Script" path="res://components/Slot/Slot.gd" id="1_mwg03"]
-[ext_resource type="Texture2D" uid="uid://q80x3eosoeny" path="res://assets/CardSlot.png" id="2_wjnak"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u6dym"]
+load_path = "res://.godot/imported/IMG_4652.png-903eea83c0efb7b51967d4ca58c907c8.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmd75"]
 size = Vector2(181, 267)
 
 [node name="Slot" type="Node2D"]
+position = Vector2(10, 0)
 script = ExtResource("1_mwg03")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_wjnak")
+position = Vector2(11, -3.00001)
+scale = Vector2(0.172414, 0.155)
+texture = SubResource("CompressedTexture2D_u6dym")
 
 [node name="Area2D" type="Area2D" parent="."]
 

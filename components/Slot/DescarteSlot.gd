@@ -1,6 +1,10 @@
 class_name DescarteSlot extends Slot
 
+
+
+
 signal carta_descartada
+
 
 func add_carta(carta: Carta) -> void:
 	connect_carta(carta)
@@ -16,3 +20,8 @@ func add_carta(carta: Carta) -> void:
 
 	carta_descartada.emit()
 	carta.disable_drag()
+
+func set_image(texture: Texture2D) -> void:
+	var sprite = $Sprite2D
+	if sprite:
+		sprite.texture = texture

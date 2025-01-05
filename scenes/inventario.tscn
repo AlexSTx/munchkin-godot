@@ -32,47 +32,47 @@ text = "X"
 
 [node name="SlotClasse" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-548, -298)
+position = Vector2(-535, -288)
 script = ExtResource("3_asxnn")
 
 [node name="SlotClasse2" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-342, -299)
+position = Vector2(-308, -290)
 script = ExtResource("3_asxnn")
 
 [node name="SlotRaca" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-547, -4)
+position = Vector2(-537, 19)
 script = ExtResource("4_wkfxn")
 
 [node name="SlotRaca2" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-344, -3)
+position = Vector2(-310, 16)
 script = ExtResource("4_wkfxn")
 
 [node name="SlotCapacete" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-759, -298)
+position = Vector2(-763, -286)
 script = ExtResource("5_npxt8")
 
 [node name="SlotArmadura" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-757, -6)
+position = Vector2(-763, 20)
 script = ExtResource("6_rhhqf")
 
 [node name="SlotBotas" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-755, 287)
+position = Vector2(-762, 326)
 script = ExtResource("7_nuccs")
 
 [node name="SlotEquipamentoMao" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-546, 288)
+position = Vector2(-535, 324)
 script = ExtResource("8_8x1bl")
 
 [node name="SlotEquipamentoMao2" parent="." instance=ExtResource("2_57kpq")]
 z_index = 1
-position = Vector2(-340, 289)
+position = Vector2(-309, 322)
 script = ExtResource("8_8x1bl")
 
 [connection signal="pressed" from="BotaoFecharInventario" to="." method="_on_botao_fechar_inventario_pressed"]

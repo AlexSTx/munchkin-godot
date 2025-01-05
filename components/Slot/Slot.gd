@@ -63,3 +63,8 @@ func _draw() -> void:
 		var size = $Area2D/CollisionShape2D.shape.size
 		var rect = Rect2(-size/2, size)  
 		draw_rect(rect, Color.WHITE, false, 8.0)
+
+func set_image(texture: Texture2D) -> void:
+	var sprite = $Sprite2D
+	if sprite:
+		sprite.texture = texture

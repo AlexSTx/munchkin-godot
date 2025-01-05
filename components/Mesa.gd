@@ -7,7 +7,7 @@ class_name Mesa extends Node2D
 
 func _ready() -> void:
 	_porta.setup_highlight()
-
+	_descarte_slot.set_image(load("res://components/cartasimg/Slots-20250103T142627Z-001/Slots/IMG_4651.png"))
 func get_porta() -> PilhaPorta:
 	return _porta
 	

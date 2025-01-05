@@ -7,9 +7,8 @@ func _init() -> void:
 	disable_container()
 
 func add_carta(carta: Carta) -> void:
-	if not can_receive_cards or not carta is Monstro:
+	if not carta is Monstro:
 		return
-	
 	connect_carta(carta)
 
 	var monstro = carta as Monstro

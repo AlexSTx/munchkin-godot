@@ -63,12 +63,13 @@ func _fuga() -> void:
 		fugir_button.disabled = false
 		Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
 		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
-		finished.emit("Final", {})
+		finished.emit("Preparo", {})
 	else:
 		mensagem_label.text = "Você rolou %d! Não conseguiu fugir do Monstro" % dado
 		await get_tree().create_timer(2.0).timeout
 		mensagem_label.text = ""
 		coisa_ruim()
+		finished.emit("Preparo", {})
 
 func coisa_ruim():
 	monstro_atual.coisa_ruim.aplicar_efeitos(Partida.get_turno().get_jogador_atual())

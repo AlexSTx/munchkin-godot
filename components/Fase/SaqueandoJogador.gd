@@ -1,7 +1,7 @@
 class_name SaqueandoJogador extends Fase
 
-var cartas_saqueadas: Array[Carta]
-var jogadores: Array[Jogador]
+var _cartas_saqueadas: Array[Carta]
+var _jogadores: Array[Jogador]
 
 func enter(previous_fase_path: String, data := {}) -> void:
 	if fase_bot():
@@ -9,18 +9,20 @@ func enter(previous_fase_path: String, data := {}) -> void:
 		finished.emit("Preparo", {})
 	else:
 		saqueiaJogador(_jogador_atual)
-		finished.emit("Preparo", {})
+		exit()
+
+func exit() -> void:
+	finished.emit("Preparo", {})
 
 func saqueiaJogador(jogador: Jogador) -> void:
 	
-	cartas_saqueadas.append_array(jogador.get_mao().ser_saqueado())
-	cartas_saqueadas.append_array(jogador.get_inventario().ser_saqueado_inventario())
+	_cartas_saqueadas.append_array(jogador.get_mao().ser_saqueado())
+	_cartas_saqueadas.append_array(jogador.get_inventario().ser_saqueado_inventario())
 	
-	jogadores = Partida.get_jogadores()
-	# 1° dar uma carta pra cada jogador do bolo e jogar resto fora
-	for jog in jogadores:
-		if jog != jogador and cartas_saqueadas.size() > 0:
-			jog.get_mao().add_carta(cartas_saqueadas.pop_at(0))
+	_jogadores = Partida.get_jogadores()
+	for jog in _jogadores:
+		if jog != jogador and _cartas_saqueadas.size() > 0:
+			jog.get_mao().add_carta(_cartas_saqueadas.pop_at(0))
 
 	_jogador_atual.set_nivel(1)
 	_jogador_atual.set_jogador(_jogador_atual.get_nome(),_jogador_atual.get_sexo())

@@ -60,12 +60,13 @@ func _on_fugir_button_pressed() -> void:
 		fugir_button.disabled = false
 		Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
 		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
-		finished.emit("Final", {})
+		finished.emit("Preparo", {})
 	else:
 		mensagem_label.text = "Você rolou %d! Não conseguiu fugir do Monstro" % dado
 		await get_tree().create_timer(2.0).timeout
 		mensagem_label.text = ""
 		coisa_ruim()
+		finished.emit("Preparo", {})
 
 func handle_input(_event: InputEvent) -> void:
 	pass
@@ -74,9 +75,4 @@ func update(_delta: float) -> void:
 	pass
 	
 func coisa_ruim():
-	var saqueando_jogador = SaqueandoJogador.new()
-	saqueando_jogador.saqueiaJogador(get_jogador_atual())
-	
-	Partida.get_turno().get_jogador_atual().set_nivel(1)
-	Partida.get_turno().get_jogador_atual().set_jogador(get_jogador_atual().get_nome(),get_jogador_atual().get_sexo())
-	print("CHEGUEI AQUIIII")
+	pass

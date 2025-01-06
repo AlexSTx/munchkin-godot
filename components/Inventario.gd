@@ -98,21 +98,36 @@ func ser_saqueado_inventario() -> Array[Carta]:
 	
 	if _classes.size()>0:
 		cartas_saqueadas.append_array(_classes)
-		_classes.clear()
+		for i in _classes:
+			var slot = i.get_parent() as SlotClasse
+			slot.remove_carta(i)
+			unequip(i)
 	if _racas.size()>0:
 		cartas_saqueadas.append_array(_racas)
-		_racas.clear()
+		for i in _racas:
+			var slot = i.get_parent() as SlotRaca
+			slot.remove_carta(i)
+			unequip(i)
 	if _capacete != null:
 		cartas_saqueadas.append(_capacete)
-		_capacete.clear()
+		var slot = _capacete.get_parent() as SlotCapacete
+		slot.remove_carta(_capacete)
+		unequip(_capacete)
 	if _armadura != null:
 		cartas_saqueadas.append(_armadura)
-		_armadura.clear()
+		var slot = _armadura.get_parent() as SlotArmadura
+		slot.remove_carta(_armadura)
+		unequip(_armadura)
 	if _botas != null:
 		cartas_saqueadas.append(_botas)
-		_botas.clear()
+		var slot = _botas.get_parent() as SlotBotas
+		slot.remove_carta(_botas)
+		unequip(_botas)
 	if _equipamentoMao.size()>0:
 		cartas_saqueadas.append_array(_equipamentoMao)
-		_equipamentoMao.clear()
+		for i in _equipamentoMao:
+			var slot = i.get_parent() as SlotEquipamentoMao
+			slot.remove_carta(i)
+			unequip(i)
 
 	return cartas_saqueadas

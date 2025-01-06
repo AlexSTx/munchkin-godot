@@ -29,7 +29,7 @@ func exit() -> void:
 	mensagem_label.text = ""
 
 func _on_enfrentar_button_pressed() -> void:
-	if Partida.get_turno().get_jogador_atual().get_nivel() + 16 >  monstro_atual.nivel: #tirar o +16 quando o inventario estiver funcionando
+	if Partida.get_turno().get_jogador_atual().get_poder() >  monstro_atual.nivel: #tirar o +16 quando o inventario estiver funcionando
 		mensagem_label.text = "Você derrotou o monstro!"
 		await get_tree().create_timer(1.0).timeout
 		for i in range(monstro_atual.tesouro):
@@ -74,4 +74,5 @@ func update(_delta: float) -> void:
 	pass
 	
 func coisa_ruim():
-	pass
+	Partida.get_turno().get_jogador_atual().set_nivel(1)
+	print("CHEGUEI AQUIIII")

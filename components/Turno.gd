@@ -4,18 +4,19 @@ var fase_inicial : Fase
 @onready var label_fase = get_node("Etapa")
 @onready var label_jogador_vez = get_node("Jogador_atual")
 @onready var fase_atual: Fase = (func () -> Fase:
-	return fase_inicial if fase_inicial != null else get_child(2)
+	return get_child(2)
 ).call()
 
-var jogador_atual: int # indice do jogador atual na lista de jogadores em Partida
+var jogador_atual: Jogador
+var indice_jogador_atual:= 0
 
 func _ready() -> void:
 	for fase_node: Fase in find_children("*", "Fase"):
 		fase_node.finished.connect(_trocar_de_fase)
-	
+	jogador_atual = Partida.get_jogadores()[0]
 	set_label_etapa()
 	set_label_jogador_atual()
-	fase_atual.set_jogador_atual(Partida.get_jogadores()[jogador_atual])
+	fase_atual.set_jogador_atual(jogador_atual)
 	fase_atual.enter("")
 
 func _trocar_de_fase(next_fase_path: String, data: Dictionary) -> void:
@@ -30,15 +31,16 @@ func _trocar_de_fase(next_fase_path: String, data: Dictionary) -> void:
 		set_label_jogador_atual()
 	fase_atual = get_node(next_fase_path)
 	set_label_etapa()
-	fase_atual.set_jogador_atual(Partida.get_jogadores()[jogador_atual])
+	fase_atual.set_jogador_atual(jogador_atual)
 	fase_atual.enter(previous_fase_path, data)
 
 
 func _troca_jogador_atual() -> void:
-	if jogador_atual < len(Partida.get_jogadores())-1:
-		jogador_atual += 1
+	if indice_jogador_atual < len(Partida.get_jogadores())-1:
+		indice_jogador_atual += 1
 	else:
-		jogador_atual = 0
+		indice_jogador_atual = 0
+	jogador_atual = Partida.get_jogadores()[indice_jogador_atual]
 
 
 func set_label_jogador_atual() -> void:
@@ -57,4 +59,4 @@ func set_visibilidade_labels(estado: bool) -> void:
 
 
 func get_jogador_atual() -> Jogador:
-	return Partida.get_jogadores()[jogador_atual]
+	return jogador_atual

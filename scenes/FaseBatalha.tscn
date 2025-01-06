@@ -48,5 +48,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jxq8l")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jxq8l")
 text = "Fugir"
 
-[connection signal="pressed" from="BotoesContainer/EnfrentarButton" to="." method="_on_enfrentar_button_pressed"]
-[connection signal="pressed" from="BotoesContainer/FugirButton" to="." method="_on_fugir_button_pressed"]
+[connection signal="pressed" from="BotoesContainer/EnfrentarButton" to="." method="_enfrentar_monstro"]
+[connection signal="pressed" from="BotoesContainer/FugirButton" to="." method="_fuga"]

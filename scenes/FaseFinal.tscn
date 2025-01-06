@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4j0ugmgos8lc"]
+
+[ext_resource type="Script" path="res://components/Fase/FaseFinal.gd" id="1_hgxg1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8t1a"]
+bg_color = Color(0.852731, 0.177681, 0.211886, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+shadow_color = Color(0, 0, 0, 0.368627)
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
+
+[node name="Final" type="Node"]
+script = ExtResource("1_hgxg1")
+
+[node name="MensagemLabel" type="Label" parent="."]
+offset_left = 655.0
+offset_top = 265.0
+offset_right = 895.0
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(0.990405, 0.0856147, 1.15514e-06, 1)
+theme_override_font_sizes/font_size = 42
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.683
+anchor_top = 0.451
+anchor_right = 0.683
+anchor_bottom = 0.451
+offset_left = -161.36
+offset_top = -25.08
+offset_right = 62.6399
+offset_bottom = 24.92
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_x8t1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x8t1a")
+text = "Finalizar turno"
+
+[connection signal="pressed" from="Button" to="." method="_on_prox_button_up"]

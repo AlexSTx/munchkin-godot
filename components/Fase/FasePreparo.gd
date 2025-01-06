@@ -37,7 +37,7 @@ func _iniciar_batalha(monstro: Monstro) -> void:
 	finished.emit("Batalha", {"inimigo": monstro})
 
 #Remover dps da IA do oponente estiver pronto
-func _finalizar_turno_clicado() -> void:
+func _finalizar_turno() -> void:
 	saquear.hide()
 	buscar_encrenca.hide()
 	finished.emit("Preparo", {})
@@ -48,14 +48,14 @@ func _sem_monstro() -> void:
 		buscar_encrenca.show()
 		Partida.get_mesa().get_monstro_slot().can_receive_cards=true
 	
-func _on_saquear_button_pressed() -> void:
+func _saquear_sala() -> void:
 	Partida.get_mesa().get_tesouro().puxar_carta()
 	finished.emit("Final", {})
 	saquear.hide()
 	buscar_encrenca.hide()
 
 
-func _on_buscar_encrenca_pressed() -> void:
+func _buscar_encrenca() -> void:
 	mensagem_label.text = "Arraste uma carta Monstro para o Slot"
 	await get_tree().create_timer(2.0).timeout
 	mensagem_label.text = ""

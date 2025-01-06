@@ -22,7 +22,7 @@ func add_carta(carta: Carta) -> void:
 	if not can_receive_cards:
 		return
 
-	if has_carta():
+	if has_carta(): 
 		return 
 
 	_carta = carta
@@ -32,11 +32,8 @@ func add_carta(carta: Carta) -> void:
 	# Aplica os efeitos permanentes da carta
 	var host : Jogador = Partida.get_node("Jogador Host") as Jogador
 	for ef in carta.get_efeitos():
-		if ef.restricoes.has(RestricaoNaoEquipavel):
-			continue
-		
-		host.status.adicionar_efeito_ativo(ef)
-		
+		if not ef.restricoes.has(RestricaoNaoEquipavel):
+			host.status.adicionar_efeito_ativo(ef)
 
 func remove_carta(carta: Carta) -> void:
 	if carta == _carta:

@@ -191,27 +191,34 @@
 		"TAMANHO": "",
 		"CAMINHO": "cartasimg/PortaAjustada/IMG_4439(15).PNG"
 	},
-	{
-		"DECK": "PORTA",
-		"COR": "ROXO",
-		"TIPO": "EQUIPAMENTO",
-		"SUBTIPO": "CAPACETE",
-		"NIVEL": 3,
-		"NOME": "ELMO DA CORAGEM",
-		"TEXTO": "",
+{
+		"DECK": "TESOURO",
+		"COR": "",
+		"TIPO": "ITEM",
+		"SUBTIPO": "POÇÃO",
+		"NIVEL": "",
+		"NOME": "NASTY-TASTING SPORTS DRINK",
+		"TEXTO": "USE DURANTE QUALQUER COMBATE. DÁ +2 PARA QUALQUER UM DOS LADOS. USO ÚNICO",
 		"COISA RUIM": "",
-		"O QUE DÁ": "BÔNUS",
-		"QUANTO": 1,
+		"O QUE DÁ": "",
+		"QUANTO": "",
 		"TESOUROS": "",
 		"VALOR_MOEDA": 200,
 		"TAMANHO": "",
 		"EFEITOS": [
 			{
 				"TIPO": "ALT_FORCA",
-				"VALOR": 1
+				"VALOR": 2,
+				"RESTRICOES": [
+					{
+						"TIPO": "FASE",
+						"VALOR": "COMBATE",
+						"QUALQUER": true
+					}
+				]
 			}
 		],
-		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(5).PNG"
+		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(4).PNG"
 	},
 	{
 		"DECK": "PORTA",
@@ -1868,31 +1875,25 @@
 			}
 		]
 	},
-	{
+{
 		"DECK": "PORTA",
 		"COR": "LARANJA",
 		"TIPO": "MONSTRO",
 		"SUBTIPO": "",
-		"NIVEL": 4,
-		"NOME": "HARPIAS",
-		"TEXTO": "ELAS RESISTEM À MAGIA. +5 CONNTRA MAGOS.",
-		"COISA RUIM": "A MUSICA DELAS É RUIM DEMAIS. VOCÊ PERDE 2 NÍVEIS.",
+		"NIVEL": 2,
+		"NOME": "RÃS VOADORAS",
+		"TEXTO": "-1 PARA FUGIR",
+		"COISA RUIM": "ELAS MORDEM! VOCÊ PERDE 2 NÍVEIS.",
 		"O QUE DÁ": "",
 		"QUANTO": "",
-		"TESOUROS": 2,
+		"TESOUROS": 1,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(16).PNG",
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(1).PNG",
 		"EFEITOS": [
 			{
-				"TIPO": "ALT_FORCA_SELF",
-				"VALOR": 5,
-				"RESTRICOES": [
-					{
-						"TIPO": "CLASSE",
-						"VALOR": "MAGO"
-					}
-				]
+				"TIPO": "ALT_FUGA",
+				"VALOR": -1
 			}
 		],
 		"EFEITOS_COISA_RUIM": [
@@ -2018,78 +2019,7 @@
 			}
 		]
 	},
-	{
-		"DECK": "PORTA",
-		"COR": "LARANJA",
-		"TIPO": "MONSTRO",
-		"SUBTIPO": "",
-		"NIVEL": 12,
-		"NOME": "PÉ GRANDE",
-		"TEXTO": "+3 CONTRA ANÕES E HALFLINGS",
-		"COISA RUIM": "TE PISOTEA E COME SEU CHAPÉU. VOCÊ PERDE QUALQUER COISA QUE ESTIVER USANDO NA CABEÇA.",
-		"O QUE DÁ": "",
-		"QUANTO": "",
-		"TESOUROS": 3,
-		"VALOR_MOEDA": "",
-		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(24).PNG",
-		"EFEITOS": [
-			{
-				"TIPO": "ALT_FORCA_SELF",
-				"VALOR": 3,
-				"RESTRICOES": [
-					{
-						"TIPO": "RACA",
-						"VALOR": "ANÃO"
-					}
-				]
-			},
-			{
-				"TIPO": "ALT_FORCA_SELF",
-				"VALOR": 3,
-				"RESTRICOES": [
-					{
-						"TIPO": "RACA",
-						"VALOR": "HALFLING"
-					}
-				]
-			}
-		],
-		"EFEITOS_COISA_RUIM": [
-			{
-				"TIPO": "REMOVER_ITEM",
-				"VALOR": "CAPACETE"
-			}
-		]
-	},
-	{
-		"DECK": "PORTA",
-		"COR": "LARANJA",
-		"TIPO": "MONSTRO",
-		"SUBTIPO": "",
-		"NIVEL": 2,
-		"NOME": "RÃS VOADORAS",
-		"TEXTO": "-1 PARA FUGIR",
-		"COISA RUIM": "ELAS MORDEM! VOCÊ PERDE 2 NÍVEIS.",
-		"O QUE DÁ": "",
-		"QUANTO": "",
-		"TESOUROS": 1,
-		"VALOR_MOEDA": "",
-		"TAMANHO": "",
-		"CAMINHO": "cartasimg/PortaAjustada/IMG_4441(1).PNG",
-		"EFEITOS": [
-			{
-				"TIPO": "ALT_FUGA",
-				"VALOR": -1
-			}
-		],
-		"EFEITOS_COISA_RUIM": [
-			{
-				"TIPO": "ALT_NIVEL",
-				"VALOR": -2
-			}
-		]
-	},
+	
 	{
 		"DECK": "PORTA",
 		"COR": "",
@@ -2284,6 +2214,28 @@
 		"TIPO": "",
 		"SUBTIPO": "",
 		"NIVEL": "",
+		"NOME": "MASSACRE DE FORMIGAS COM ÁGUA FERVENDO",
+		"TEXTO": "",
+		"COISA RUIM": "",
+		"O QUE DÁ": "",
+		"QUANTO": "",
+		"TESOUROS": "",
+		"VALOR_MOEDA": "",
+		"TAMANHO": "",
+		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(14).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_NIVEL",
+				"VALOR": 1
+			}
+		]
+	},
+	{
+		"DECK": "PORTA",
+		"COR": "",
+		"TIPO": "",
+		"SUBTIPO": "",
+		"NIVEL": "",
 		"NOME": "ERRO DE SOMA CONVENIENTE",
 		"TEXTO": "",
 		"COISA RUIM": "",
@@ -2297,6 +2249,50 @@
 			{
 				"TIPO": "ALT_NIVEL",
 				"VALOR": 1
+			}
+		]
+	},
+	{
+		"DECK": "PORTA",
+		"COR": "LARANJA",
+		"TIPO": "MONSTRO",
+		"SUBTIPO": "",
+		"NIVEL": 12,
+		"NOME": "PÉ GRANDE",
+		"TEXTO": "+3 CONTRA ANÕES E HALFLINGS",
+		"COISA RUIM": "TE PISOTEA E COME SEU CHAPÉU. VOCÊ PERDE QUALQUER COISA QUE ESTIVER USANDO NA CABEÇA.",
+		"O QUE DÁ": "",
+		"QUANTO": "",
+		"TESOUROS": 3,
+		"VALOR_MOEDA": "",
+		"TAMANHO": "",
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4438(24).PNG",
+		"EFEITOS": [
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 3,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "ANÃO"
+					}
+				]
+			},
+			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 3,
+				"RESTRICOES": [
+					{
+						"TIPO": "RACA",
+						"VALOR": "HALFLING"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
+				"TIPO": "REMOVER_ITEM",
+				"VALOR": "CAPACETE"
 			}
 		]
 	},
@@ -2328,50 +2324,42 @@
 			}
 		]
 	},
-	{
+
+		{
 		"DECK": "PORTA",
-		"COR": "",
-		"TIPO": "",
+		"COR": "LARANJA",
+		"TIPO": "MONSTRO",
 		"SUBTIPO": "",
-		"NIVEL": "",
-		"NOME": "MASSACRE DE FORMIGAS COM ÁGUA FERVENDO",
-		"TEXTO": "",
-		"COISA RUIM": "",
+		"NIVEL": 4,
+		"NOME": "HARPIAS",
+		"TEXTO": "ELAS RESISTEM À MAGIA. +5 CONNTRA MAGOS.",
+		"COISA RUIM": "A MUSICA DELAS É RUIM DEMAIS. VOCÊ PERDE 2 NÍVEIS.",
 		"O QUE DÁ": "",
 		"QUANTO": "",
-		"TESOUROS": "",
+		"TESOUROS": 2,
 		"VALOR_MOEDA": "",
 		"TAMANHO": "",
-		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(14).PNG",
+		"CAMINHO": "cartasimg/PortaAjustada/IMG_4443(16).PNG",
 		"EFEITOS": [
 			{
+				"TIPO": "ALT_FORCA_SELF",
+				"VALOR": 5,
+				"RESTRICOES": [
+					{
+						"TIPO": "CLASSE",
+						"VALOR": "MAGO"
+					}
+				]
+			}
+		],
+		"EFEITOS_COISA_RUIM": [
+			{
 				"TIPO": "ALT_NIVEL",
-				"VALOR": 1
+				"VALOR": -2
 			}
 		]
 	},
-	{
-		"DECK": "PORTA",
-		"COR": "",
-		"TIPO": "",
-		"SUBTIPO": "",
-		"NIVEL": "",
-		"NOME": "SUBORNAR O MESTRE COM COMIDA",
-		"TEXTO": "",
-		"COISA RUIM": "",
-		"O QUE DÁ": "",
-		"QUANTO": "",
-		"TESOUROS": "",
-		"VALOR_MOEDA": "",
-		"TAMANHO": "",
-		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4444(11).PNG",
-		"EFEITOS": [
-			{
-				"TIPO": "ALT_NIVEL",
-				"VALOR": 1
-			}
-		]
-	},
+	
 	{
 		"DECK": "TESOURO",
 		"COR": "",
@@ -2496,33 +2484,27 @@
 	},
 	{
 		"DECK": "TESOURO",
-		"COR": "",
-		"TIPO": "ITEM",
-		"SUBTIPO": "POÇÃO",
-		"NIVEL": "",
-		"NOME": "NASTY-TASTING SPORTS DRINK",
-		"TEXTO": "USE DURANTE QUALQUER COMBATE. DÁ +2 PARA QUALQUER UM DOS LADOS. USO ÚNICO",
+		"COR": "ROXO",
+		"TIPO": "EQUIPAMENTO",
+		"SUBTIPO": "CAPACETE",
+		"NIVEL": 3,
+		"NOME": "ELMO DA CORAGEM",
+		"TEXTO": "",
 		"COISA RUIM": "",
-		"O QUE DÁ": "",
-		"QUANTO": "",
+		"O QUE DÁ": "BÔNUS",
+		"QUANTO": 1,
 		"TESOUROS": "",
 		"VALOR_MOEDA": 200,
 		"TAMANHO": "",
 		"EFEITOS": [
 			{
 				"TIPO": "ALT_FORCA",
-				"VALOR": 2,
-				"RESTRICOES": [
-					{
-						"TIPO": "FASE",
-						"VALOR": "COMBATE",
-						"QUALQUER": true
-					}
-				]
+				"VALOR": 1
 			}
 		],
-		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(4).PNG"
+		"CAMINHO": "cartasimg/Tesouro-20241228T234428Z-001/Tesouro/IMG_4442(5).PNG"
 	},
+	
 	{
 		"DECK": "TESOURO",
 		"COR": "",

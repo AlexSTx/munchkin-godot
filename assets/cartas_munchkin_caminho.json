@@ -2512,6 +2512,7 @@
 			{
 				"TIPO": "ALT_FORCA",
 				"VALOR": 2,
+				"TRIGGER": "DESCARTE",
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",
@@ -2541,6 +2542,7 @@
 		"EFEITOS": [
 			{
 				"TIPO": "ALT_NIVEL",
+				"TRIGGER": "DESCARTE",
 				"VALOR": 1
 			}
 		]
@@ -2563,6 +2565,7 @@
 			{
 				"TIPO": "ALT_FORCA",
 				"VALOR": 2,
+				"TRIGGER": "DESCARTE",
 				"RESTRICOES": [
 					{
 						"TIPO": "FASE",

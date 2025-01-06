@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://usm20bfs4tlc"]
+[gd_scene load_steps=7 format=3 uid="uid://usm20bfs4tlc"]
 
 [ext_resource type="Script" path="res://components/InserirNome.gd" id="1_mt5ep"]
-[ext_resource type="Texture2D" uid="uid://d1snsy4nmvgq6" path="res://assets/backgrounds/dark_souls_remastered_wallpaper__4k__by_danilloff_dgzpw6k-fullview.jpg" id="2_2oqhp"]
+[ext_resource type="Texture2D" uid="uid://dvxitb1mjsi12" path="res://assets/backgrounds/bg_modojogo.png" id="2_8kd0e"]
+[ext_resource type="Texture2D" uid="uid://8jdccto86wrm" path="res://assets/elements/snake.png" id="2_8436q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djtl4"]
-texture = ExtResource("2_2oqhp")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_was6f"]
 bg_color = Color(0.169245, 0.169245, 0.169245, 1)
@@ -136,6 +136,18 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = SubResource("StyleBoxFlat_seiow")
 theme_override_styles/normal = SubResource("StyleBoxFlat_seiow")
 text = "Voltar"
+
+[node name="Snake" type="Sprite2D" parent="."]
+position = Vector2(973.158, 160.27)
+rotation = -1.57934
+scale = Vector2(1.54829, 1.45823)
+texture = ExtResource("2_8436q")
+
+[node name="BgModojogo" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(2198, 71)
+scale = Vector2(2.3237, 1.94352)
+texture = ExtResource("2_8kd0e")
 
 [connection signal="text_changed" from="Nome/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Enter" to="." method="_on_enter_pressed"]

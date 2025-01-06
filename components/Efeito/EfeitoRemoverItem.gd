@@ -34,5 +34,4 @@ func aplicar( alvo : Object ) -> void:
 				var slot = i.get_parent() as SlotEquipamentoMao
 				slot.remove_carta(i)
 				inv.unequip(i)
-	
-	print("Não foi possível encontrar " + self.item + " no equipamento do jogador")
+	(alvo as Jogador).status.recalcular()

@@ -95,7 +95,6 @@ func unequip(carta: Carta) -> void:
 
 func ser_saqueado_inventario() -> Array[Carta]:
 	var cartas_saqueadas: Array[Carta] = []
-	var itens: Array[Carta] = []
 	
 	if _classes.size()>0:
 		cartas_saqueadas.append_array(_classes)

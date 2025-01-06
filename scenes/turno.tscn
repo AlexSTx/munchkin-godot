@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://components/Turno.gd" id="1_27k3b"]
 [ext_resource type="PackedScene" uid="uid://uu8k41awueia" path="res://scenes/FasePreparo.tscn" id="2_kq1ht"]
 [ext_resource type="PackedScene" uid="uid://dfvbhxfmih73u" path="res://scenes/FaseBatalha.tscn" id="3_fpa2p"]
-[ext_resource type="PackedScene" uid="uid://b4j0ugmgos8lc" path="res://scenes/SaqueandoJogador.tscn" id="4_2p5i5"]
+[ext_resource type="Script" path="res://components/Fase/SaqueandoJogador.gd" id="4_n8f74"]
 
 [node name="Turno" type="Node"]
 script = ExtResource("1_27k3b")
@@ -44,4 +44,5 @@ horizontal_alignment = 1
 
 [node name="Batalha" parent="." instance=ExtResource("3_fpa2p")]
 
-[node name="SaqueandoJogador" parent="." instance=ExtResource("4_2p5i5")]
+[node name="SaqueandoJogador" type="Node" parent="."]
+script = ExtResource("4_n8f74")

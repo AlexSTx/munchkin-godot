@@ -16,7 +16,7 @@ func _ready() -> void:
 func enter(previous_fase_path: String, data := {}) -> void:
 	if fase_bot():
 		exit()
-		finished.emit("Final", {})
+		finished.emit("Preparo", {})
 	monstro_atual = Partida.get_mesa().get_monstro_slot().get_current_monstro()
 	print(monstro_atual)
 	botoes_container.show()
@@ -37,7 +37,7 @@ func _enfrentar_monstro() -> void:
 		Partida.get_turno().get_jogador_atual().add_nivel(monstro_atual.bonus_derrota)
 		Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
 		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
-		finished.emit("Final", {})
+		finished.emit("Preparo", {})
 	else:
 		mensagem_label.text = "Você perdeu para o Monstro"
 		await get_tree().create_timer(2.0).timeout
@@ -72,7 +72,7 @@ func _fuga() -> void:
 		finished.emit("Preparo", {})
 
 func coisa_ruim():
-	monstro_atual.coisa_ruim.aplicar_efeitos(Partida.get_turno().get_jogador_atual())
+	monstro_atual.coisa_ruim.aplicar_efeitos(_jogador_atual)
 	Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
 	Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
-	finished.emit("Final", {})
+	finished.emit("Preparo", {})

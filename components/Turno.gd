@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func _trocar_de_fase(next_fase_path: String, data: Dictionary) -> void:
 	if not has_node(next_fase_path):
-		printerr(owner.name + ": tentou transicionar para estado " + next_fase_path + ", mas ele não existe.")
+		#printerr(owner.name + ": tentou transicionar para estado " + next_fase_path + ", mas ele não existe.")
 		return 
 	var previous_fase_path := fase_atual.name
 

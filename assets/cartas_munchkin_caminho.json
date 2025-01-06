@@ -2608,6 +2608,9 @@
 			{
 				"TIPO": "REMOVER_ITEM",
 				"VALOR": "BOTA"
+			},
+			{
+				"TIPO": "MORTE"
 			}
 		]
 	},

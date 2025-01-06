@@ -118,6 +118,8 @@ static func criar_lista_efeitos(efeitos, carta : Carta) -> Array[Efeito]:
 				novo_efeito = EfeitoRemoverItem.new(restricoes, ef['VALOR'])
 			"ALT_FORCA_SELF":
 				novo_efeito = EfeitoAumentarForcaPropria.new(carta, restricoes, ef['VALOR'])
+			"MORTE":
+				novo_efeito = EfeitoMorte.new(restricoes)
 			var outro:
 				print("Efeito " + outro +" ainda não foi implementado.")
 				continue

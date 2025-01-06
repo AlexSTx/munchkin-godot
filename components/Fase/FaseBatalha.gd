@@ -74,5 +74,9 @@ func update(_delta: float) -> void:
 	pass
 	
 func coisa_ruim():
+	var saqueando_jogador = SaqueandoJogador.new()
+	saqueando_jogador.saqueiaJogador(get_jogador_atual())
+	
 	Partida.get_turno().get_jogador_atual().set_nivel(1)
+	Partida.get_turno().get_jogador_atual().set_jogador(get_jogador_atual().get_nome(),get_jogador_atual().get_sexo())
 	print("CHEGUEI AQUIIII")

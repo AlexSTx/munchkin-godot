@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://components/Mesa.gd" id="1_aqtq4"]
 [ext_resource type="PackedScene" uid="uid://byd2jimgsln8t" path="res://scenes/PilhaTesouro.tscn" id="2_20mlc"]
 [ext_resource type="PackedScene" uid="uid://c0p8p5o1indvj" path="res://scenes/PilhaPorta.tscn" id="3_jsfhx"]
-[ext_resource type="PackedScene" uid="uid://b18y3wnfjp0xp" path="res://slot.tscn" id="4_0dh1d"]
+[ext_resource type="PackedScene" path="res://slot.tscn" id="4_0dh1d"]
 [ext_resource type="Script" path="res://components/Slot/DescarteSlot.gd" id="5_f88lb"]
 [ext_resource type="Texture2D" uid="uid://c832gkgmuleqp" path="res://components/cartasimg/Slots-20250103T142627Z-001/Slots/slot_descarte_img.png" id="6_gthq8"]
 [ext_resource type="Script" path="res://components/Slot/MonstroSlot.gd" id="6_q311i"]

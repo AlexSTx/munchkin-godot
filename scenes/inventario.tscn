@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://c155r4no5l5h4"]
 
 [ext_resource type="Script" path="res://components/Inventario.gd" id="1_0n110"]
-[ext_resource type="PackedScene" uid="uid://b18y3wnfjp0xp" path="res://slot.tscn" id="2_57kpq"]
+[ext_resource type="PackedScene" path="res://slot.tscn" id="2_57kpq"]
 [ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotClasse.gd" id="3_asxnn"]
 [ext_resource type="Texture2D" uid="uid://chf8sf8bfw3ad" path="res://components/cartasimg/Slots-20250103T142627Z-001/Slots/slot_classe_img.png" id="4_vuhtb"]
 [ext_resource type="Script" path="res://components/Slot/SlotsInventario/SlotRaca.gd" id="4_wkfxn"]

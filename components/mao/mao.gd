@@ -91,7 +91,6 @@ func received_own_card(_carta: Carta) -> void:
 		_cartas.remove_at(indice_carta)
 		_cartas.insert(pos_alvo, _carta)
 		_calcula_posicoes()
-		_carta.descartada_por.emit(self.get_parent())
 
 	_anima_cartas()
 

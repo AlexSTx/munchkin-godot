@@ -15,4 +15,5 @@ func add_carta(carta: Carta) -> void:
 	carta.position = Vector2.ZERO
 
 	carta_descartada.emit()
+	carta.descartada_por.emit(Partida.get_jogadores()[0])
 	carta.disable_drag()

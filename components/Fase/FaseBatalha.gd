@@ -29,7 +29,7 @@ func exit() -> void:
 	mensagem_label.text = ""
 
 func _enfrentar_monstro() -> void:
-	if Partida.get_turno().get_jogador_atual().get_nivel() + 16 >  monstro_atual.nivel: #tirar o +16 quando o inventario estiver funcionando
+	if Partida.get_turno().get_jogador_atual().get_poder()> monstro_atual.nivel:
 		mensagem_label.text = "Você derrotou o monstro!"
 		await get_tree().create_timer(1.0).timeout
 		for i in range(monstro_atual.tesouro):
@@ -39,6 +39,9 @@ func _enfrentar_monstro() -> void:
 		Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
 		finished.emit("Final", {})
 	else:
+		mensagem_label.text = "Você perdeu para o Monstro"
+		await get_tree().create_timer(2.0).timeout
+		mensagem_label.text = ""
 		coisa_ruim()
 		pass
 
@@ -68,4 +71,7 @@ func _fuga() -> void:
 		coisa_ruim()
 
 func coisa_ruim():
-	pass
+	monstro_atual.coisa_ruim.aplicar_efeitos(Partida.get_turno().get_jogador_atual())
+	Partida.get_mesa().get_monstro_slot().remove_carta(monstro_atual)
+	Partida.get_mesa().get_descarte_slot().add_carta(monstro_atual)
+	finished.emit("Final", {})

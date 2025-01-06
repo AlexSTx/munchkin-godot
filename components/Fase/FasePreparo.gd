@@ -20,7 +20,7 @@ func _ready() -> void:
 func enter(previous_fase_path: String, data := {}) -> void:
 	if fase_bot():
 		await get_tree().create_timer(2.0).timeout
-		finished.emit("Final", {})
+		finished.emit("Preparo", {})
 	Partida.get_mesa().get_porta().enable_click_area()
 	saquear.hide()
 	buscar_encrenca.hide()
@@ -50,7 +50,7 @@ func _sem_monstro() -> void:
 	
 func _saquear_sala() -> void:
 	Partida.get_mesa().get_tesouro().puxar_carta()
-	finished.emit("Final", {})
+	finished.emit("Preparo", {})
 	saquear.hide()
 	buscar_encrenca.hide()
 

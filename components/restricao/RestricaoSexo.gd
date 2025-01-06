@@ -11,4 +11,4 @@ func satisfaz_restricao( alvo: Object ) -> bool:
 	if alvo is not Jogador:
 		return false
 	
-	return (alvo as Jogador).sexo == self.sexo
+	return (alvo as Jogador).get_sexo() == self.sexo

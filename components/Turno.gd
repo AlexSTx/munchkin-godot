@@ -4,7 +4,7 @@ var fase_inicial : Fase
 @onready var label_fase = get_node("Etapa")
 @onready var label_jogador_vez = get_node("Jogador_atual")
 @onready var fase_atual: Fase = (func () -> Fase:
-	return fase_inicial if fase_inicial != null else get_child(2)
+	return get_child(2)
 ).call()
 
 var jogador_atual: int # indice do jogador atual na lista de jogadores em Partida
